@@ -1,3 +1,4 @@
+import argparse
 import os
 import json
 from typing import Optional, Dict, List
@@ -29,26 +30,9 @@ def parse_page(page: Optional[int]=None) -> Optional[List[Dict[str, str]]]:
     table_headers = [th.text.strip() for th in trs[0].select('th')]
     return [dict(zip(table_headers, [td.text.strip() for td in tr.select('td')])) for tr in trs[1:]]
 
-# Get contract source code
-def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_fail=False) -> None:
-    address = contract['Address']
-    contract_name = contract['Contract Name']
-    url = ETHERSCAN_CONTRACT_SOURCE_URL.format(address)
-    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
-
-    if resp.status_code != 200:
-        if retry > 0:
-            time.sleep(retry_delay)
-            f'Download source failed for {address} {contract_name}, status {resp.status_code}, retry in {retry_delay} secs'
-            return download_source(contract, retry-1, retry_delay)
-        else:
-            if throw_if_fail:
-                raise Exception(f'Download source abort for {address} {contract_name}, status {resp.status_code}')
-            return
-                
-    
-    soup = BeautifulSoup(resp.content, 'lxml')
-
+def parse_source_soup(soup, address=None, contract_name=None):
+    address = address or soup.select('title')[0].text.split(r'|')[1].strip().split()[-1]
+    contract_name = contract_name or soup.select('title')[0].text.split(r'|')[0].strip()
     parent = f'{ROOT_DIR}/{address}_{contract_name}'
     os.makedirs(parent, exist_ok=True)
 
@@ -81,8 +65,30 @@ def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_f
 
     for source_file_name, source_code in zip(files, sources):
         write_source_file(source_file_name, source_code)
-        
-if __name__ == '__main__':
+    
+
+# Get contract source code
+def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_fail=False) -> None:
+    address = contract['Address']
+    contract_name = contract['Contract Name']
+    url = ETHERSCAN_CONTRACT_SOURCE_URL.format(address)
+    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
+
+    if resp.status_code != 200:
+        if retry > 0:
+            time.sleep(retry_delay)
+            f'Download source failed for {address} {contract_name}, status {resp.status_code}, retry in {retry_delay} secs'
+            return download_source(contract, retry-1, retry_delay)
+        else:
+            if throw_if_fail:
+                raise Exception(f'Download source abort for {address} {contract_name}, status {resp.status_code}')
+            return
+                
+    
+    soup = BeautifulSoup(resp.content, 'lxml')
+    parse_source_soup(soup, address, contract_name)
+    
+def fetch_all():
     contracts = [c for p in range(1, 21) for c in parse_page(p)]
     now = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}"
 
@@ -91,3 +97,32 @@ if __name__ == '__main__':
 
     for contract in contracts:
         download_source(contract)
+
+def download_url(url, retry=3, retry_delay=5, throw_if_fail=False):
+    address = url.split('/')[-1].split('#')[0]
+    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
+
+    if resp.status_code != 200:
+        if retry > 0:
+            time.sleep(retry_delay)
+            f'Download source failed for {url}, status {resp.status_code}, retry in {retry_delay} secs'
+            return download_url(url, retry-1, retry_delay)
+        else:
+            if throw_if_fail:
+                raise Exception(f'Download source abort for {url}, status {resp.status_code}')
+            return
+
+    soup = BeautifulSoup(resp.content, 'lxml')
+    parse_source_soup(soup, address)
+        
+if __name__ == '__main__':
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--url", type=str, help="URL of contract to download")
+    args = ap.parse_args()
+    url = args.url
+    if url:
+        download_url(url)
+    else:
+        fetch_all()
+    
+    
