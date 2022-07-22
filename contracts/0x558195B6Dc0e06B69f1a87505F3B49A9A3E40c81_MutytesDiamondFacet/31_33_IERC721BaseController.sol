@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+/**
+ * @title Partial ERC721 interface required by controller functions
+ */
+interface IERC721BaseController {
+    error NonExistentToken(uint256 tokenId);
+}
