@@ -18,17 +18,28 @@ ROOT_DIR = './contracts'
 os.makedirs(ROOT_DIR, exist_ok=True)
 
 # Crawl meta info of contracts by page
-def parse_page(page: Optional[int]=None) -> Optional[List[Dict[str, str]]]:
+def parse_page(page: Optional[int]=None, retry=3, retry_delay=5) -> Optional[List[Dict[str, str]]]:
     url = ETHERSCAN_VERIFIED_CONTRACT_URL if page is None else f'{ETHERSCAN_VERIFIED_CONTRACT_URL}/{page}'
     print(f'Crawling {url}')
     resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
     if resp.status_code != 200:
         print(f'No results found on page: {page}, http status: {resp.status_code}')
         return None
-    soup = BeautifulSoup(resp.content, 'lxml')
-    trs = soup.select('tr')
-    table_headers = [th.text.strip() for th in trs[0].select('th')]
-    return [dict(zip(table_headers, [td.text.strip() for td in tr.select('td')])) for tr in trs[1:]]
+    try:
+        soup = BeautifulSoup(resp.content, 'lxml')
+        trs = soup.select('tr')
+        table_headers = [th.text.strip() for th in trs[0].select('th')]
+        return [dict(zip(table_headers, [td.text.strip() for td in tr.select('td')])) for tr in trs[1:]]
+    except Exception as e:
+        print(f'Error {e}')
+        if retry > 0:
+            time.sleep(retry_delay)
+            f'Parse page failed for {url}, status {resp.status_code}, retry in {retry_delay} secs'
+            return parse_page(page, retry-1, retry_delay)
+        else:
+            raise e
+
+            
 
 def parse_source_soup(soup, address=None, contract_name=None):
     address = address or soup.select('title')[0].text.split(r'|')[1].strip().split()[-1]
@@ -56,8 +67,7 @@ def parse_source_soup(soup, address=None, contract_name=None):
 
     if not files:
         if not sources:
-            print(f'No source code found for {address} {contract_name}')
-            return
+            raise Exception(f'No source code found for {address} {contract_name}')
         if len(sources) > 1:
             raise Exception(f'Multiple source with no file name? {address} {contract_name}')
         write_source_file(f'{contract_name}.sol', sources[0])
@@ -74,19 +84,24 @@ def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_f
     url = ETHERSCAN_CONTRACT_SOURCE_URL.format(address)
     resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
 
-    if resp.status_code != 200:
+    def maybe_retry(e=None):
         if retry > 0:
             time.sleep(retry_delay)
             f'Download source failed for {address} {contract_name}, status {resp.status_code}, retry in {retry_delay} secs'
             return download_source(contract, retry-1, retry_delay)
         else:
             if throw_if_fail:
-                raise Exception(f'Download source abort for {address} {contract_name}, status {resp.status_code}')
+                raise e or Exception(f'Download source abort for {address} {contract_name}, status {resp.status_code}')
             return
+
+    if resp.status_code != 200:
+        maybe_retry()
                 
-    
-    soup = BeautifulSoup(resp.content, 'lxml')
-    parse_source_soup(soup, address, contract_name)
+    try:
+        soup = BeautifulSoup(resp.content, 'lxml')
+        parse_source_soup(soup, address, contract_name)
+    except Exception as e:
+        maybe_retry(e)
     
 def fetch_all():
     contracts = [c for p in range(1, 21) for c in parse_page(p)]
