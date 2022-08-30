@@ -39,11 +39,22 @@ def parse_page(page: Optional[int]=None, retry=3, retry_delay=5) -> Optional[Lis
         else:
             raise e
 
-            
+# Parse meta data from source code page         
+def parse_for_inpage_meta(soup):
+    rows = [t.text.strip().split('\n', maxsplit=1) for t in soup.select('#ContentPlaceHolder1_contractCodeDiv .row div')]
+    # rows = [t.text.strip().split('\n+', maxsplit=1) for t in soup.select('#ContentPlaceHolder1_contractCodeDiv .row div')]
+    rows = [[t[0].strip(), t[1].strip()] for t in rows if len(t) == 2]
+    rows = [t for t in rows if '\n' not in t[1]]
+    return dict(rows)
+
+def parse_for_contract_name(soup):
+    meta = parse_for_inpage_meta(soup)
+    return meta['Contract Name:']
+
 
 def parse_source_soup(soup, address=None, contract_name=None):
     address = address or soup.select('title')[0].text.split(r'|')[1].strip().split()[-1]
-    contract_name = contract_name or soup.select('title')[0].text.split(r'|')[0].strip()
+    contract_name = contract_name or parse_for_contract_name(soup)
     parent = f'{ROOT_DIR}/{address}_{contract_name}'
     os.makedirs(parent, exist_ok=True)
 
@@ -64,6 +75,8 @@ def parse_source_soup(soup, address=None, contract_name=None):
 
     files =  [parse_for_file_name(name.text) for name in soup.select('.d-flex > .text-secondary') if '.sol' in name.text.strip()]
     sources = [source.text for source in soup.select('.js-sourcecopyarea')]
+    inpage_meta = parse_for_inpage_meta(soup)
+    write_source_file(f'inpage_meta.json', json.dumps(inpage_meta))
 
     if not files:
         if not sources:
@@ -75,7 +88,22 @@ def parse_source_soup(soup, address=None, contract_name=None):
 
     for source_file_name, source_code in zip(files, sources):
         write_source_file(source_file_name, source_code)
-    
+
+# Save metadata of a contract to a json file
+def write_meta_json(contract: Dict[str, str]):
+    address = contract['Address']
+    contract_name = contract['Contract Name']
+
+    if not (address and contract_name):
+        raise Exception(f'Bad meta data in {contract}')
+
+    parent = f'{ROOT_DIR}/{address}_{contract_name}'
+    os.makedirs(parent, exist_ok=True)
+    f = f'{parent}/meta.json'
+
+    if not os.path.exists(f):
+        with open(f, 'w') as f:
+            f.write(json.dumps(contract, indent=2))
 
 # Get contract source code
 def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_fail=False) -> None:
@@ -111,6 +139,7 @@ def fetch_all():
         f.write(json.dumps(contracts, indent=2))
 
     for contract in contracts:
+        write_meta_json(contract)
         download_source(contract)
 
 def download_url(url, retry=3, retry_delay=5, throw_if_fail=False):
