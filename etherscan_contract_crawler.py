@@ -17,6 +17,12 @@ ETHERSCAN_CONTRACT_SOURCE_URL = 'https://etherscan.io/address/{}#code'
 ROOT_DIR = './contracts'
 os.makedirs(ROOT_DIR, exist_ok=True)
 
+INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
+                    'Compiler Version': 'version',
+                    'Optimization Enabled': 'optimizations',
+                    'Other Settings:': 'settings'}
+    
+
 # Crawl meta info of contracts by page
 def parse_page(page: Optional[int]=None, retry=3, retry_delay=5) -> Optional[List[Dict[str, str]]]:
     url = ETHERSCAN_VERIFIED_CONTRACT_URL if page is None else f'{ETHERSCAN_VERIFIED_CONTRACT_URL}/{page}'
@@ -44,17 +50,20 @@ def parse_for_inpage_meta(soup):
     rows = [t.text.strip().split('\n', maxsplit=1) for t in soup.select('#ContentPlaceHolder1_contractCodeDiv .row div')]
     # rows = [t.text.strip().split('\n+', maxsplit=1) for t in soup.select('#ContentPlaceHolder1_contractCodeDiv .row div')]
     rows = [[t[0].strip(), t[1].strip()] for t in rows if len(t) == 2]
-    rows = [t for t in rows if '\n' not in t[1]]
+    rows = [(INPAGE_META_TEXT[t[0]], t[1]) for t in rows if t[0] in INPAGE_META_TEXT]
     return dict(rows)
 
 def parse_for_contract_name(soup):
     meta = parse_for_inpage_meta(soup)
-    return meta['Contract Name:']
-
+    return meta['contract_name']
 
 def parse_source_soup(soup, address=None, contract_name=None):
     address = address or soup.select('title')[0].text.split(r'|')[1].strip().split()[-1]
-    contract_name = contract_name or parse_for_contract_name(soup)
+    contract_name = contract_name or parse_for_contract_name(soup) or ''
+
+    if not contract_name:
+        print(f'ERROR: No contract name found in {address}')
+
     parent = f'{ROOT_DIR}/{address}_{contract_name}'
     os.makedirs(parent, exist_ok=True)
 
