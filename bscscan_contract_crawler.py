@@ -11,10 +11,10 @@ REQ_HEADER = {
     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36',
 }
 
-ETHERSCAN_VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
-ETHERSCAN_CONTRACT_SOURCE_URL = 'https://etherscan.io/address/{}#code'
+BSCSCAN_VERIFIED_CONTRACT_URL = 'https://bscscan.com/contractsVerified'
+BSCSCAN_CONTRACT_SOURCE_URL = 'https://bscscan.com/address/{}#code'
 
-ROOT_DIR = './contracts'
+ROOT_DIR = './bsc_contracts'
 os.makedirs(ROOT_DIR, exist_ok=True)
 
 INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
@@ -25,7 +25,7 @@ INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
 
 # Crawl meta info of contracts by page
 def parse_page(page: Optional[int]=None, retry=3, retry_delay=5) -> Optional[List[Dict[str, str]]]:
-    url = ETHERSCAN_VERIFIED_CONTRACT_URL if page is None else f'{ETHERSCAN_VERIFIED_CONTRACT_URL}/{page}'
+    url = BSCSCAN_VERIFIED_CONTRACT_URL if page is None else f'{BSCSCAN_VERIFIED_CONTRACT_URL}/{page}'
     print(f'Crawling {url}')
     resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
     if resp.status_code != 200:
@@ -82,7 +82,7 @@ def parse_source_soup(soup, address=None, contract_name=None):
         with open(f, 'w') as f:
             f.write(source_code)
 
-    files =  [parse_for_file_name(name.text) for name in soup.select('.d-flex > .text-secondary') if '.sol' in name.text.strip()]
+    files = [parse_for_file_name(name.text) for name in soup.select('.d-flex > .text-secondary') if '.sol' in name.text.strip()]
     sources = [source.text for source in soup.select('.js-sourcecopyarea')]
     inpage_meta = parse_for_inpage_meta(soup)
     write_source_file(f'inpage_meta.json', json.dumps(inpage_meta))
@@ -118,7 +118,7 @@ def write_meta_json(contract: Dict[str, str]):
 def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_fail=False) -> None:
     address = contract['Address']
     contract_name = contract['Contract Name']
-    url = ETHERSCAN_CONTRACT_SOURCE_URL.format(address)
+    url = BSCSCAN_CONTRACT_SOURCE_URL.format(address)
     resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
 
     def maybe_retry(e=None):
@@ -173,6 +173,7 @@ if __name__ == '__main__':
     ap.add_argument("--url", type=str, help="URL of contract to download")
     args = ap.parse_args()
     url = args.url
+    
     if url:
         download_url(url)
     else:
