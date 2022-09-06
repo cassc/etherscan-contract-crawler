@@ -141,7 +141,7 @@ def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_f
         maybe_retry(e)
     
 def fetch_all():
-    contracts = [c for p in range(1, 2) for c in parse_page(p)]
+    contracts = [c for p in range(1, 21) for c in parse_page(p)]
     now = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}"
 
     with open(f'{ROOT_DIR}/contracts_{now}.json', 'w') as f:
