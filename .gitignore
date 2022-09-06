@@ -1,4 +1,4 @@
-/contracts
+contracts/*
 /.DS_Store
-/bsc_contracts
+bsc_contracts/*
 /.idea
