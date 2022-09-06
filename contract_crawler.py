@@ -184,7 +184,7 @@ if __name__ == '__main__':
 
     elif web == 'bscscan':
         VERIFIED_CONTRACT_URL = 'https://bscscan.com/contractsVerified'
-        CONTRACT_SOURCE_URL = 'https://bscscan.com/address/{}#code'
+        CONTRACT_SOURCE_URL   = 'https://bscscan.com/address/{}#code'
         ROOT_DIR = './bsc_contracts'
         os.makedirs(ROOT_DIR, exist_ok=True)
     else:

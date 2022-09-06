@@ -4,6 +4,15 @@ Crawl the latest verified contract source code from Etherscan. Usage:
 python etherscan_contract_crawler.py
 ```
 
+To use a unified crawler for etherscan and bscscan:
+
+``` bash
+python contract_crawler.py --web etherscan
+python contract_crawler.py --web bscscan
+python contract_crawler.py --web etherscan --url URL_HERE
+python contract_crawler.py --web bscscan   --url URL_HERE
+```
+
 Crawled contracts will be saved in `contracts` folder, each contract
 can have multiple source files, and the source files will be placed in
 a folder with the format
