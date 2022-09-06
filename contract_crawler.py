@@ -11,8 +11,8 @@ REQ_HEADER = {
     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36',
 }
 
-ETHERSCAN_VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
-ETHERSCAN_CONTRACT_SOURCE_URL = 'https://etherscan.io/address/{}#code'
+VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
+CONTRACT_SOURCE_URL   = 'https://etherscan.io/address/{}#code'
 
 ROOT_DIR = './contracts'
 os.makedirs(ROOT_DIR, exist_ok=True)
@@ -21,11 +21,11 @@ INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
                     'Compiler Version': 'version',
                     'Optimization Enabled': 'optimizations',
                     'Other Settings:': 'settings'}
-    
+
 
 # Crawl meta info of contracts by page
 def parse_page(page: Optional[int]=None, retry=3, retry_delay=5) -> Optional[List[Dict[str, str]]]:
-    url = ETHERSCAN_VERIFIED_CONTRACT_URL if page is None else f'{ETHERSCAN_VERIFIED_CONTRACT_URL}/{page}'
+    url = VERIFIED_CONTRACT_URL if page is None else f'{VERIFIED_CONTRACT_URL}/{page}'
     print(f'Crawling {url}')
     resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
     if resp.status_code != 200:
@@ -118,7 +118,7 @@ def write_meta_json(contract: Dict[str, str]):
 def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_fail=False) -> None:
     address = contract['Address']
     contract_name = contract['Contract Name']
-    url = ETHERSCAN_CONTRACT_SOURCE_URL.format(address)
+    url = CONTRACT_SOURCE_URL.format(address)
     resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
 
     def maybe_retry(e=None):
@@ -167,11 +167,31 @@ def download_url(url, retry=3, retry_delay=5, throw_if_fail=False):
 
     soup = BeautifulSoup(resp.content, 'lxml')
     parse_source_soup(soup, address)
-        
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
+    ap.add_argument("--web", default="etherscan",type=str, help="Choose website, etherscan(default) or bscscan")
     ap.add_argument("--url", type=str, help="URL of contract to download")
     args = ap.parse_args()
+
+    web = args.web
+    if web == 'etherscan':
+        VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
+        CONTRACT_SOURCE_URL   = 'https://etherscan.io/address/{}#code'
+        ROOT_DIR = './contracts'
+        os.makedirs(ROOT_DIR, exist_ok=True)
+
+    elif web == 'bscscan':
+        VERIFIED_CONTRACT_URL = 'https://bscscan.com/contractsVerified'
+        CONTRACT_SOURCE_URL   = 'https://bscscan.com/address/{}#code'
+        ROOT_DIR = './bsc_contracts'
+        os.makedirs(ROOT_DIR, exist_ok=True)
+    else:
+        assert False, 'Invalid website, choose etherscan or bscscan'
+    print(VERIFIED_CONTRACT_URL)
+    print(CONTRACT_SOURCE_URL)
+    print(ROOT_DIR)
     url = args.url
     if url:
         download_url(url)
