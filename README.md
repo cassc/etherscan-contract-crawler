@@ -2,6 +2,8 @@ Crawl the latest verified contract source code from Etherscan. Usage:
 
 ``` bash
 python etherscan_contract_crawler.py
+
+python etherscan_contract_crawler.py --url 
 ```
 
 To use a unified crawler for etherscan and bscscan:
