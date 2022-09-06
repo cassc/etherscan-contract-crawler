@@ -84,6 +84,10 @@ def parse_source_soup(soup, address=None, contract_name=None):
 
     files =  [parse_for_file_name(name.text) for name in soup.select('.d-flex > .text-secondary') if '.sol' in name.text.strip()]
     sources = [source.text for source in soup.select('.js-sourcecopyarea')]
+
+    if len(sources) != len(files): # some bscscan contracts have different DOM structure
+        sources = [source.text for source in soup.select('pre.editor')] 
+
     inpage_meta = parse_for_inpage_meta(soup)
     write_source_file(f'inpage_meta.json', json.dumps(inpage_meta))
 
@@ -188,7 +192,8 @@ if __name__ == '__main__':
         ROOT_DIR = './bsc_contracts'
         os.makedirs(ROOT_DIR, exist_ok=True)
     else:
-        assert False, 'Invalid website, choose etherscan or bscscan'
+        raise Exception('Invalid website, choose etherscan or bscscan')
+
     print(VERIFIED_CONTRACT_URL)
     print(CONTRACT_SOURCE_URL)
     print(ROOT_DIR)
