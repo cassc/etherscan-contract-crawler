@@ -45,7 +45,7 @@ def parse_page(page: Optional[int]=None, retry=3, retry_delay=5) -> Optional[Lis
         else:
             raise e
 
-# Parse meta data from source code page         
+# Parse meta data from source code page
 def parse_for_inpage_meta(soup):
     rows = [t.text.strip().split('\n', maxsplit=1) for t in soup.select('#ContentPlaceHolder1_contractCodeDiv .row div')]
     # rows = [t.text.strip().split('\n+', maxsplit=1) for t in soup.select('#ContentPlaceHolder1_contractCodeDiv .row div')]
@@ -86,7 +86,7 @@ def parse_source_soup(soup, address=None, contract_name=None):
     sources = [source.text for source in soup.select('.js-sourcecopyarea')]
 
     if len(sources) != len(files): # some bscscan contracts have different DOM structure
-        sources = [source.text for source in soup.select('pre.editor')] 
+        sources = [source.text for source in soup.select('pre.editor')]
 
     inpage_meta = parse_for_inpage_meta(soup)
     write_source_file(f'inpage_meta.json', json.dumps(inpage_meta))
@@ -137,13 +137,13 @@ def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_f
 
     if resp.status_code != 200:
         maybe_retry()
-                
+
     try:
         soup = BeautifulSoup(resp.content, 'lxml')
         parse_source_soup(soup, address, contract_name)
     except Exception as e:
         maybe_retry(e)
-    
+
 def fetch_all():
     contracts = [c for p in range(1, 21) for c in parse_page(p)]
     now = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}"
@@ -175,32 +175,41 @@ def download_url(url, retry=3, retry_delay=5, throw_if_fail=False):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument("--web", default="etherscan",type=str, help="Choose website, etherscan(default) or bscscan")
-    ap.add_argument("--url", type=str, help="URL of contract to download")
+    ap.add_argument("--web", default="etherscan", type=str,
+                    help="Choose website, etherscan(default) or bscscan.")
+    ap.add_argument("--url", type=str, help="URL of contract to download.")
+    ap.add_argument("--address", type=str, help="Contract address to download.")
+    ap.add_argument("-o", dest="output_dir", type=str, help="Output directory.")
     args = ap.parse_args()
 
     web = args.web
+    output_dir = args.output_dir
+    url = args.url
+    address = args.address
+
     if web == 'etherscan':
         VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
         CONTRACT_SOURCE_URL   = 'https://etherscan.io/address/{}#code'
-        ROOT_DIR = './contracts'
+        ROOT_DIR = output_dir if output_dir else './contracts'
         os.makedirs(ROOT_DIR, exist_ok=True)
 
     elif web == 'bscscan':
         VERIFIED_CONTRACT_URL = 'https://bscscan.com/contractsVerified'
         CONTRACT_SOURCE_URL   = 'https://bscscan.com/address/{}#code'
-        ROOT_DIR = './bsc_contracts'
+        ROOT_DIR = output_dir if output_dir  else './bsc_contracts'
         os.makedirs(ROOT_DIR, exist_ok=True)
     else:
         raise Exception('Invalid website, choose etherscan or bscscan')
 
     print(VERIFIED_CONTRACT_URL)
     print(CONTRACT_SOURCE_URL)
-    print(ROOT_DIR)
-    url = args.url
+    print("Output directory: " + ROOT_DIR)
+
     if url:
+        download_url(url)
+    elif address:
+        url = CONTRACT_SOURCE_URL.format(address)
+        print("URL: " + str(url))
         download_url(url)
     else:
         fetch_all()
-    
-    
