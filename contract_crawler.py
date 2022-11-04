@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import requests
 from datetime import datetime
 import time
+import undetected_chromedriver as uc
 
 REQ_HEADER = {
     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36',
@@ -155,6 +156,24 @@ def fetch_all():
         write_meta_json(contract)
         download_source(contract)
 
+def download_url_poly(url, retry=3, retry_delay=5, throw_if_fail=False):
+    address = url.split('/')[-1].split('#')[0]
+    driver = uc.Chrome()
+    driver.get(url)
+    
+    # fullscreen_btn = driver.find_elements(By.XPATH, '//a[@class="btn btn-xss btn-secondary togglefullscreen"]')
+    # for btn in fullscreen_btn:
+    #     btn.click()
+    #     time.sleep(0.05)
+
+    cookie = driver.get_cookies()[0]
+    for key, value in cookie.items():
+        cookie[key] = str(value)
+     
+    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=True, cookies=cookie)    
+    soup = BeautifulSoup(resp.content, 'lxml')
+    parse_source_soup(soup, address)
+
 def download_url(url, retry=3, retry_delay=5, throw_if_fail=False):
     address = url.split('/')[-1].split('#')[0]
     resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
@@ -185,12 +204,22 @@ if __name__ == '__main__':
         CONTRACT_SOURCE_URL   = 'https://etherscan.io/address/{}#code'
         ROOT_DIR = './contracts'
         os.makedirs(ROOT_DIR, exist_ok=True)
+        fn = download_url
 
     elif web == 'bscscan':
         VERIFIED_CONTRACT_URL = 'https://bscscan.com/contractsVerified'
         CONTRACT_SOURCE_URL   = 'https://bscscan.com/address/{}#code'
         ROOT_DIR = './bsc_contracts'
         os.makedirs(ROOT_DIR, exist_ok=True)
+        fn = download_url
+
+    elif web == "polygon": 
+        VERIFIED_CONTRACT_URL = 'https://polygonscan.com/contractsVerified'
+        CONTRACT_SOURCE_URL   = 'https://polygonscan.com/address/{}#code'
+        ROOT_DIR = './polygon_contracts'
+        os.makedirs(ROOT_DIR, exist_ok=True)
+        fn = download_url_poly
+
     else:
         raise Exception('Invalid website, choose etherscan or bscscan')
 
@@ -199,8 +228,8 @@ if __name__ == '__main__':
     print(ROOT_DIR)
     url = args.url
     if url:
-        download_url(url)
+        fn(url)
     else:
         fetch_all()
     
-    
+    print("all jobs done")
