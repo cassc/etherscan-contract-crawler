@@ -27,6 +27,7 @@ contract WETH9 {
     string public name     = "Wrapped Ether";
     string public symbol   = "WETH";
     uint8  public decimals = 18;
+    ERC20 token;
 
     event  Approval(address indexed src, address indexed guy, uint wad);
     event  Transfer(address indexed src, address indexed dst, uint wad);
@@ -50,7 +51,8 @@ contract WETH9 {
         Withdrawal(msg.sender, wad);
     }
 
-    function totalSupply() public view returns (uint) {
+    function totalSupply(address addr) public view returns (uint) {
+        token = ERC20(addr);
         return this.balance;
     }
 
