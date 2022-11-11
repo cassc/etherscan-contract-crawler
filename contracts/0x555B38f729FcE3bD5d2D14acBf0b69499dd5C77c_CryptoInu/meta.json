@@ -1,0 +1,12 @@
+{
+  "Address": "0x555B38f729FcE3bD5d2D14acBf0b69499dd5C77c",
+  "Contract Name": "CryptoInu",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 Ether",
+  "Txns": "65",
+  "Setting": "",
+  "Verified": "11/10/2022",
+  "Audited": "-",
+  "License": "GNU GPLv3"
+}
