@@ -1,0 +1,12 @@
+{
+  "Address": "0x4ec410180Bf0987Bec4d803b3e6381cFb218CBc1",
+  "Contract Name": "DigitalDollar",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 Ether",
+  "Txns": "178",
+  "Setting": "",
+  "Verified": "11/15/2022",
+  "Audited": "-",
+  "License": "GNU GPLv3"
+}
