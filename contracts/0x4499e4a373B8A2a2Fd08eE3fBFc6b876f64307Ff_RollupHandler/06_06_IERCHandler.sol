@@ -1,0 +1,25 @@
+// SPDX-License-Identifier: LGPL-3.0-only
+pragma solidity ^0.8.0;
+
+interface IERCHandler {
+    /// @notice gets token contract address.
+    /// @param resourceID resource ID that is mapped to the contract address.
+    /// @return tokenContractAddress contract address that is mapped to the resource ID.
+    function _resourceIDToTokenContractAddress(bytes32 resourceID)
+        external
+        view
+        returns (address);
+
+    /// @notice Correlates {resourceID} with {contractAddress}.
+    /// @param resourceID ResourceID to be used when making deposits.
+    /// @param contractAddress Address of contract to be called when a deposit is made and a deposited is executed.
+    function setResource(bytes32 resourceID, address contractAddress) external;
+
+    /// @notice Marks {contractAddress} as mintable/burnable.
+    /// @param contractAddress Address of contract to be used when making or executing deposits.
+    function setBurnable(address contractAddress) external;
+
+    /// @notice Withdraw funds from ERC safes.
+    /// @param data ABI-encoded withdrawal params relevant to the handler.
+    function withdraw(bytes memory data) external;
+}
