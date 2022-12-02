@@ -2,11 +2,11 @@
 
 pragma solidity >=0.8.0 <0.9.0;
 
-import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "./01_10_OwnableUpgradeable.sol";
 
-import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "./interfaces/IEscrowBuyer.sol";
-import "./interfaces/ICryptopunksMarket.sol";
+import "./02_10_Initializable.sol";
+import "./08_10_IEscrowBuyer.sol";
+import "./07_10_ICryptopunksMarket.sol";
 
 contract CryptopunksEscrowBuyer is
     Initializable,

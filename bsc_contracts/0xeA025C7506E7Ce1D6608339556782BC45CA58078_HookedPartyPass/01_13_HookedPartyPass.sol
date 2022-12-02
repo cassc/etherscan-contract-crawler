@@ -2,10 +2,10 @@
 
 pragma solidity ^0.8.9;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
+import "./02_13_ERC721.sol";
+import "./03_13_Ownable.sol";
+import "./04_13_ReentrancyGuard.sol";
+import "./05_13_Counters.sol";
 
 contract HookedPartyPass is ERC721, ReentrancyGuard, Ownable {
   using Counters for Counters.Counter;

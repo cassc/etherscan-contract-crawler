@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { BasicOrderParameters } from "../seaport/lib/ConsiderationStructs.sol";
+import "./10_10_ConsiderationStructs.sol";
 
-import "./IBNPLMarket.sol";
+import "./06_10_IBNPLMarket.sol";
 
 /**
  * @notice It is the interface of functions that we use for the canonical WETH contract.
