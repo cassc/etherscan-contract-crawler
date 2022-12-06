@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: Unlicensed
 
 
-import '@openzeppelin/contracts/security/ReentrancyGuard.sol';
-import '@openzeppelin/contracts/access/Ownable.sol';
+import "./07_11_ReentrancyGuard.sol";
+import "./06_11_Ownable.sol";
 import "./05_11_Strings.sol";
 import "./04_11_draft-EIP712.sol";
 import "./03_11_ECDSA.sol";
-import 'erc721a/contracts/ERC721A.sol';
+import "./02_11_ERC721A.sol";
 
 
 pragma solidity 0.8.7;
