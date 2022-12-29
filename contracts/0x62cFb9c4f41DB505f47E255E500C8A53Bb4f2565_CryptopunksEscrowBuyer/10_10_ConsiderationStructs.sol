@@ -7,7 +7,7 @@ import {
     BasicOrderType,
     ItemType,
     Side
-import "./09_10_ConsiderationEnums.sol";
+} from "./09_10_ConsiderationEnums.sol";
 
 /**
  * @dev An order contains eleven components: an offerer, a zone (or account that

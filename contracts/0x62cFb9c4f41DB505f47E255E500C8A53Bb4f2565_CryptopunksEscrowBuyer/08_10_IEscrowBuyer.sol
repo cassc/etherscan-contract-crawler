@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./10_10_ConsiderationStructs.sol";
+import { BasicOrderParameters } from "./10_10_ConsiderationStructs.sol";
 
 import "./06_10_IBNPLMarket.sol";
 
