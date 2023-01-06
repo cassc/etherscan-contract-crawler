@@ -4,9 +4,9 @@
 
 pragma solidity ^0.8.4;
 
-import './IERC721AUpgradeable.sol';
-import {ERC721AStorage} from './ERC721AStorage.sol';
-import './ERC721A__Initializable.sol';
+import "./11_18_IERC721AUpgradeable.sol";
+import {ERC721AStorage} from "./12_18_ERC721AStorage.sol";
+import "./13_18_ERC721A__Initializable.sol";
 
 /**
  * @dev Interface of ERC721 token receiver.

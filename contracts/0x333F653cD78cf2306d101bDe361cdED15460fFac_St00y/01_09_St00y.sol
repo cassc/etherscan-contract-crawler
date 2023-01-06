@@ -2,12 +2,12 @@
 
 pragma solidity ^0.8.4;
 
-import "hardhat/console.sol";
-import "erc721a/contracts/ERC721A.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-import "@openzeppelin/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
+import "./02_09_console.sol";
+import "./03_09_ERC721A.sol";
+import "./04_09_Ownable.sol";
+import "./05_09_ReentrancyGuard.sol";
+import "./06_09_Address.sol";
+import "./07_09_Strings.sol";
 
 contract St00y is ERC721A, Ownable, ReentrancyGuard {
     using Address for address;

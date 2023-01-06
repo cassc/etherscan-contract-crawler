@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.10;
 
-import './DepositQueue.sol';
-import './IHyksos.sol';
+import "./06_07_DepositQueue.sol";
+import "./07_07_IHyksos.sol";
 
 abstract contract HyksosBase is IHyksos, DepositQueue {
 

@@ -4,12 +4,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import '@openzeppelin/contracts/token/ERC721/IERC721.sol';
-import 'erc721a-upgradeable/contracts/ERC721AUpgradeable.sol';
-import '@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol';
-import '@openzeppelin/contracts-upgradeable/interfaces/IERC2981Upgradeable.sol';
-import "@openzeppelin/contracts-upgradeable/utils/cryptography/ECDSAUpgradeable.sol";
-import './BannersStorage.sol';
+import "./06_18_IERC721.sol";
+import "./04_18_ERC721AUpgradeable.sol";
+import "./03_18_OwnableUpgradeable.sol";
+import "./05_18_IERC2981Upgradeable.sol";
+import "./07_18_ECDSAUpgradeable.sol";
+import "./02_18_BannersStorage.sol";
 
     error AllowMintingDisabled();
     error ClaimingDisabled();
