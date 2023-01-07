@@ -1,0 +1,12 @@
+{
+  "Address": "0x2BA35bE4988DAEea16881DDc91D2872010bc7181",
+  "Contract Name": "GenesisErc",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 Ether",
+  "Txns": "35",
+  "Setting": "",
+  "Verified": "1/6/2023",
+  "Audited": "-",
+  "License": "GNU GPLv3"
+}
