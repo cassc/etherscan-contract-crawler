@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 /// @title: blue edition 1
 /// @author: manifold.xyz
 
-import "./manifold/ERC721Creator.sol";
+import "./02_05_ERC721Creator.sol";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                            //
