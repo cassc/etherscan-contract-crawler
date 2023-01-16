@@ -18,11 +18,11 @@
 
 pragma solidity ^0.8.7;
 
-import "./SafeMathUpgradeable.sol";
-import "./SafeERC20Upgradeable.sol";
-import "./EulerToolsStorage.sol";
-import "./ERC20Standard.sol";
-import "./SafeETH.sol";
+import "./32_33_SafeMathUpgradeable.sol";
+import "./30_33_SafeERC20Upgradeable.sol";
+import "./16_33_EulerToolsStorage.sol";
+import "./13_33_ERC20Standard.sol";
+import "./31_33_SafeETH.sol";
 
 
 contract EulerTools is EulerToolsStorage, ERC20Standard {

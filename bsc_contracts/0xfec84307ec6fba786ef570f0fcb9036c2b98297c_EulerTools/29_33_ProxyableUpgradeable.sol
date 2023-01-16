@@ -18,8 +18,8 @@
 
 pragma solidity 0.8.7;
 
-import "./AccessControlEnumerableUpgradeable.sol";
-import "./ICheckRoleProxy.sol";
+import "./02_33_AccessControlEnumerableUpgradeable.sol";
+import "./19_33_ICheckRoleProxy.sol";
 
 abstract contract ProxyableUpgradeable is AccessControlEnumerableUpgradeable, ICheckRoleProxy {
 

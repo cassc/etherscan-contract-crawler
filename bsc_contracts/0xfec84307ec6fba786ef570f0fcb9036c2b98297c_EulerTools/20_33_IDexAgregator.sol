@@ -18,7 +18,7 @@
 
 pragma solidity ^0.8.7;
 
-import "./IDexAgregatorModel.sol";
+import "./21_33_IDexAgregatorModel.sol";
 
 interface IDexAgregator is IDexAgregatorModel {
 

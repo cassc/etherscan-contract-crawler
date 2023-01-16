@@ -18,8 +18,8 @@
 
 pragma solidity ^0.8.7;
 
-import "./draft-ERC20PermitUpgradeable.sol";
-import "./EulerContract.sol";
+import "./08_33_draft-ERC20PermitUpgradeable.sol";
+import "./15_33_EulerContract.sol";
 
 contract ERC20Standard is ERC20PermitUpgradeable, EulerContract {
 

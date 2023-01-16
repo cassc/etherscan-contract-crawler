@@ -18,11 +18,11 @@
 
 pragma solidity ^0.8.7;
 
-import "./PausableUpgradeable.sol";
-import "./IManagerTax.sol";
-import "./IGlobalStorage.sol";
-import "./IDexAgregator.sol";
-import "./ProxyableUpgradeable.sol";
+import "./28_33_PausableUpgradeable.sol";
+import "./26_33_IManagerTax.sol";
+import "./25_33_IGlobalStorage.sol";
+import "./20_33_IDexAgregator.sol";
+import "./29_33_ProxyableUpgradeable.sol";
 
 abstract contract EulerContract is ProxyableUpgradeable, PausableUpgradeable {
 
