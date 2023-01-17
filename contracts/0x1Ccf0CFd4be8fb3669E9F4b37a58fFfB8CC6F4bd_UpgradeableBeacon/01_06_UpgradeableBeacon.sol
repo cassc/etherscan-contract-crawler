@@ -1,0 +1,1 @@
+import "@openzeppelin/contracts/proxy/beacon/UpgradeableBeacon.sol";
