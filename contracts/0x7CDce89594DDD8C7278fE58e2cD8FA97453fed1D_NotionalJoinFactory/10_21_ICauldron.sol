@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-import "./IFYToken.sol";
-import "./IOracle.sol";
-import "./DataTypes.sol";
+import "./11_21_IFYToken.sol";
+import "./12_21_IOracle.sol";
+import "./13_21_DataTypes.sol";
 
 interface ICauldron {
     /// @dev Variable rate lending oracle for an underlying

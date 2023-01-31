@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-import "./IFYToken.sol";
-import "./IOracle.sol";
+import "./11_21_IFYToken.sol";
+import "./12_21_IOracle.sol";
 
 library DataTypes {
     // ======== Cauldron data types ========

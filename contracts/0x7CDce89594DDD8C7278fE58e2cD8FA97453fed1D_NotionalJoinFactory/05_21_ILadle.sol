@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-import "./IJoin.sol";
-import "./ICauldron.sol";
+import "./08_21_IJoin.sol";
+import "./10_21_ICauldron.sol";
 
 interface ILadle {
     function joins(bytes6) external view returns (IJoin);

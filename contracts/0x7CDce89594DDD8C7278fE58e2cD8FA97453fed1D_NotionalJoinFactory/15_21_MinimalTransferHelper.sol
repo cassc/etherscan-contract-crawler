@@ -3,8 +3,8 @@
 
 pragma solidity >=0.6.0;
 
-import "./IERC20.sol";
-import "../utils/RevertMsgExtractor.sol";
+import "./09_21_IERC20.sol";
+import "./21_21_RevertMsgExtractor.sol";
 
 
 // helper methods for transferring ERC20 tokens that do not consistently return true/false

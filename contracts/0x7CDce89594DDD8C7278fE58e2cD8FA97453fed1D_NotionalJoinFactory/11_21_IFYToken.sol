@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-import "./IERC5095.sol";
-import "./IJoin.sol";
+import "./14_21_IERC5095.sol";
+import "./08_21_IJoin.sol";
 
 interface IFYToken is IERC5095 {
     /// @dev Source of redemption funds.

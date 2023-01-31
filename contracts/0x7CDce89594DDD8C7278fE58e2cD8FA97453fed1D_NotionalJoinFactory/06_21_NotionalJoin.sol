@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity >=0.8.13;
 
-import "../../interfaces/IJoin.sol";
-import "@yield-protocol/utils-v2/contracts/token/IERC20.sol";
-import "@yield-protocol/utils-v2/contracts/token/MinimalTransferHelper.sol";
-import "@yield-protocol/utils-v2/contracts/access/AccessControl.sol";
-import "@yield-protocol/utils-v2/contracts/math/WMul.sol";
-import "@yield-protocol/utils-v2/contracts/math/WDiv.sol";
-import "@yield-protocol/utils-v2/contracts/cast/CastU256U128.sol";
-import "./IBatchAction.sol";
-import "./ERC1155.sol";
+import "./08_21_IJoin.sol";
+import "./09_21_IERC20.sol";
+import "./15_21_MinimalTransferHelper.sol";
+import "./02_21_AccessControl.sol";
+import "./16_21_WMul.sol";
+import "./17_21_WDiv.sol";
+import "./18_21_CastU256U128.sol";
+import "./19_21_IBatchAction.sol";
+import "./20_21_ERC1155.sol";
 
 contract NotionalJoin is IJoin, ERC1155TokenReceiver, AccessControl {
     using WMul for uint256;

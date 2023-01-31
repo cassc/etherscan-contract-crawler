@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./IJoin.sol";
+import "./08_21_IJoin.sol";
 
 interface ILadleGov {
     function joins(bytes6) external view returns (IJoin);

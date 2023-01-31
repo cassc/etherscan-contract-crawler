@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import "@yield-protocol/utils-v2/contracts/token/IERC20.sol";
+import "./09_21_IERC20.sol";
 
 interface IERC5095 is IERC20 {
     /// @dev Asset that is returned on redemption.
