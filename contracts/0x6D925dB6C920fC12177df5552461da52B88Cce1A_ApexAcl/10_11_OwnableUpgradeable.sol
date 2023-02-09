@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
-import "ContextUpgradeable.sol";
-import "Initializable.sol";
+import "./11_11_ContextUpgradeable.sol";
+import "./09_11_Initializable.sol";
 
 abstract contract OwnableUpgradeable is Initializable, ContextUpgradeable {
     address private _owner;

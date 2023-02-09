@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 /// @title: Secret Gifts from Marshall L.
 /// @author: manifold.xyz
 
-import "./manifold/ERC1155Creator.sol";
+import "./02_05_ERC1155Creator.sol";
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                       //

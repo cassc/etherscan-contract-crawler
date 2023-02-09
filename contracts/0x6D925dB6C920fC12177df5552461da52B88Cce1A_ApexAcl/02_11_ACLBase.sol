@@ -1,8 +1,8 @@
 // 61f5a666f1e2638ad41e1350907deced9dabdb64
 pragma solidity ^0.8.0;
 
-import "UUPSUpgradeable.sol";
-import "OwnableUpgradeable.sol";
+import "./03_11_UUPSUpgradeable.sol";
+import "./10_11_OwnableUpgradeable.sol";
 
 abstract contract ACLBase is OwnableUpgradeable, UUPSUpgradeable {
 	address public safeAddress;

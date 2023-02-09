@@ -3,11 +3,11 @@
 
 pragma solidity ^0.8.2;
 
-import "IBeaconUpgradeable.sol";
-import "draft-IERC1822Upgradeable.sol";
-import "AddressUpgradeable.sol";
-import "StorageSlotUpgradeable.sol";
-import "Initializable.sol";
+import "./06_11_IBeaconUpgradeable.sol";
+import "./04_11_draft-IERC1822Upgradeable.sol";
+import "./07_11_AddressUpgradeable.sol";
+import "./08_11_StorageSlotUpgradeable.sol";
+import "./09_11_Initializable.sol";
 
 /**
  * @dev This abstract contract provides getters and event emitting update functions for
