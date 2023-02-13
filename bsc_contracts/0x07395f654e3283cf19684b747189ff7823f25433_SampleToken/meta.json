@@ -1,0 +1,12 @@
+{
+  "Address": "0x07395f654e3283cf19684b747189ff7823f25433",
+  "Contract Name": "SampleToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 BNB",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "2/12/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
