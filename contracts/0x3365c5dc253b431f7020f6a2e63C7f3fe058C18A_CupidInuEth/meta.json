@@ -1,0 +1,12 @@
+{
+  "Address": "0x3365c5dc253b431f7020f6a2e63C7f3fe058C18A",
+  "Contract Name": "CupidInuEth",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "101",
+  "Setting": "",
+  "Verified": "2/12/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

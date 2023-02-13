@@ -1,0 +1,12 @@
+{
+  "Address": "0x128Ce3A3D48f27CE35A3F810cF2cddD2f6879b13",
+  "Contract Name": "UniswapWormholeMessageSender",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/12/2023",
+  "Audit": "-",
+  "License": "-"
+}

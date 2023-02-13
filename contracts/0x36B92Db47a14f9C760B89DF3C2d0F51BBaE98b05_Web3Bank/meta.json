@@ -1,0 +1,12 @@
+{
+  "Address": "0x36B92Db47a14f9C760B89DF3C2d0F51BBaE98b05",
+  "Contract Name": "Web3Bank",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "12",
+  "Setting": "",
+  "Verified": "2/12/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x81F2Ae9f56D4e32fE5a87C19213bF9dE6ec2b17B",
+  "Contract Name": "KRAIT",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "1 wei",
+  "Txns": "65",
+  "Setting": "",
+  "Verified": "2/12/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

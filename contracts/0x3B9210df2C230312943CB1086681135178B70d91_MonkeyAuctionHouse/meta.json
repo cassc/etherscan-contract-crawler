@@ -1,0 +1,12 @@
+{
+  "Address": "0x3B9210df2C230312943CB1086681135178B70d91",
+  "Contract Name": "MonkeyAuctionHouse",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0.005 ETH",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "2/12/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
