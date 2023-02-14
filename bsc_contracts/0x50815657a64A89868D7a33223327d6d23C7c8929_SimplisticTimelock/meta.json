@@ -1,0 +1,12 @@
+{
+  "Address": "0x50815657a64A89868D7a33223327d6d23C7c8929",
+  "Contract Name": "SimplisticTimelock",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 BNB",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/13/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

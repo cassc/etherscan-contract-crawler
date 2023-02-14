@@ -1,0 +1,12 @@
+{
+  "Address": "0xDB90f999A8DD48192c2E98e4dC843a527f57d06A",
+  "Contract Name": "HoldingFeeDistributor",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "2/13/2023",
+  "Audited": "-",
+  "License": "GNU GPLv3"
+}
