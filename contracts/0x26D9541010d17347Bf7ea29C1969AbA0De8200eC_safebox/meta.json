@@ -1,0 +1,12 @@
+{
+  "Address": "0x26D9541010d17347Bf7ea29C1969AbA0De8200eC",
+  "Contract Name": "safebox",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0 ETH",
+  "Txns": "20",
+  "Setting": "-",
+  "Verified": "2/13/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

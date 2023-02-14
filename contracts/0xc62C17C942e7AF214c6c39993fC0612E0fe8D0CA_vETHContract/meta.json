@@ -1,0 +1,12 @@
+{
+  "Address": "0xc62C17C942e7AF214c6c39993fC0612E0fe8D0CA",
+  "Contract Name": "vETHContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0.14204795818542865 ETH",
+  "Txns": "85",
+  "Setting": "",
+  "Verified": "2/13/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

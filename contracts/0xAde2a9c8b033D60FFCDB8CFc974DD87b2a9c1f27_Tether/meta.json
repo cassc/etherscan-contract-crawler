@@ -1,0 +1,12 @@
+{
+  "Address": "0xAde2a9c8b033D60FFCDB8CFc974DD87b2a9c1f27",
+  "Contract Name": "Tether",
+  "Compiler": "Solidity",
+  "Version": "0.5.0",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "2/13/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

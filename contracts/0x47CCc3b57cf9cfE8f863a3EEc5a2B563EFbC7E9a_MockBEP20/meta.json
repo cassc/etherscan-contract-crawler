@@ -1,0 +1,12 @@
+{
+  "Address": "0x47CCc3b57cf9cfE8f863a3EEc5a2B563EFbC7E9a",
+  "Contract Name": "MockBEP20",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/14/2023",
+  "Audit": "-",
+  "License": "None"
+}

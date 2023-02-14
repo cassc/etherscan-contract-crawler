@@ -1,0 +1,12 @@
+{
+  "Address": "0x3C34eC4d452CB8b6D0b84a10F101E1f391E8F346",
+  "Contract Name": "FatCatEth",
+  "Compiler": "Solidity",
+  "Version": "0.5.15",
+  "Balance": "0 ETH",
+  "Txns": "123",
+  "Setting": "-",
+  "Verified": "2/13/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

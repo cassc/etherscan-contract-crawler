@@ -1,0 +1,12 @@
+{
+  "Address": "0x8A0eeDA8a788BD1Da811DABF331A2B21b19Af15E",
+  "Contract Name": "WstETHChainlinkOracle",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/14/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x878337e0D904798c7d9be3863BF5c850a08d060e",
+  "Contract Name": "GovernedPaymentSplitter",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/14/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x16E48f81101E9193FfB358D22cb48729FE9466b6",
+  "Contract Name": "SimpleTokenWithAntibot",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.13",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/13/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x1B6CB26C8CEe59F30929A25fb91b39C557e61340",
+  "Contract Name": "ABGenesis",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "2/14/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
