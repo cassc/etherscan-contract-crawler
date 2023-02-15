@@ -1,0 +1,12 @@
+{
+  "Address": "0x324973aF77B73Cea9a876CF5Ff6d84889A4a2413",
+  "Contract Name": "UniswapFeeCollector",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.7.6",
+  "Balance": "0 ETH",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "2/14/2023",
+  "Audit": "-",
+  "License": "-"
+}

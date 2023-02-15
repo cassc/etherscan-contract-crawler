@@ -1,0 +1,12 @@
+{
+  "Address": "0x5e27b71B47542CF8FDEa378Fe2EeA3D90Ee48fE8",
+  "Contract Name": "ShibaGenesis",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "1 wei",
+  "Txns": "60",
+  "Setting": "",
+  "Verified": "2/14/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0xceF4E511a8067fB459176db62D651ed1d1e0b2cB",
+  "Contract Name": "BalancerV2Router",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/14/2023",
+  "Audit": "-",
+  "License": "-"
+}

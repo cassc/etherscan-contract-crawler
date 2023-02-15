@@ -1,0 +1,12 @@
+{
+  "Address": "0x565920093eFcFC47d5ca19E82950CBbE3178F389",
+  "Contract Name": "Aithereum",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0.010734251622976417 ETH",
+  "Txns": "64",
+  "Setting": "",
+  "Verified": "2/15/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

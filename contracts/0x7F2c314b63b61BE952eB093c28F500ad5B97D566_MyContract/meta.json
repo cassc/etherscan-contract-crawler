@@ -1,0 +1,12 @@
+{
+  "Address": "0x7F2c314b63b61BE952eB093c28F500ad5B97D566",
+  "Contract Name": "MyContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0 ETH",
+  "Txns": "41",
+  "Setting": "-",
+  "Verified": "2/14/2023",
+  "Audit": "-",
+  "License": "None"
+}
