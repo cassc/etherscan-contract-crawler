@@ -1,0 +1,12 @@
+{
+  "Address": "0x41dc9ccf759f3D3f6FBEB87a38f2D6f47B81F8A1",
+  "Contract Name": "BitcoinProtocol",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 BNB",
+  "Txns": "4",
+  "Setting": "-",
+  "Verified": "2/14/2023",
+  "Audited": "-",
+  "License": "None"
+}

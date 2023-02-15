@@ -1,0 +1,12 @@
+{
+  "Address": "0x30332FDDd0DBd5a328ED6c43f05aB38524084752",
+  "Contract Name": "BabyShibCat",
+  "Compiler": "Solidity",
+  "Version": "0.8.5",
+  "Balance": "50 wei",
+  "Txns": "293",
+  "Setting": "",
+  "Verified": "2/14/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

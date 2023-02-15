@@ -1,0 +1,12 @@
+{
+  "Address": "0xb325ce73c2b19965a166831b242ea70bef957f6c",
+  "Contract Name": "PancakeSwapFarmLPAdapterBsc",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.4",
+  "Balance": "0.000013124931430707 BNB",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "2/14/2023",
+  "Audited": "-",
+  "License": "-"
+}

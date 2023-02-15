@@ -1,0 +1,12 @@
+{
+  "Address": "0x123b3b80A8fB10c2817e11B69A9b517BbF57C976",
+  "Contract Name": "SafePayFinance",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "9",
+  "Setting": "-",
+  "Verified": "2/14/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
