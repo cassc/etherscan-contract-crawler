@@ -1,0 +1,12 @@
+{
+  "Address": "0x2862ae12e4955b9c835b238df1203827c78c135d",
+  "Contract Name": "Vyper_contract",
+  "Compiler": "Vyper",
+  "Version": "vyper:0.2.12",
+  "Balance": "0 BNB",
+  "Txns": "4",
+  "Setting": "-",
+  "Verified": "2/15/2023",
+  "Audited": "-",
+  "License": "GNU AGPLv3"
+}
