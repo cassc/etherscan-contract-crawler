@@ -1,0 +1,12 @@
+{
+  "Address": "0x5b41bb14822E35B14f03bBe32cb6c817c782878f",
+  "Contract Name": "BetBankStake",
+  "Compiler": "Solidity",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/15/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

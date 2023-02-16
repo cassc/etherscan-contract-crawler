@@ -1,0 +1,12 @@
+{
+  "Address": "0xBD3D6FCd82E110161f2ad5a27C1a1b85E9D186C8",
+  "Contract Name": "DuckStake",
+  "Compiler": "Solidity",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/15/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

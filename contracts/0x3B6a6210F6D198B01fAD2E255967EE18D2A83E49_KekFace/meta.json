@@ -1,0 +1,12 @@
+{
+  "Address": "0x3B6a6210F6D198B01fAD2E255967EE18D2A83E49",
+  "Contract Name": "KekFace",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "2/15/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
