@@ -1,0 +1,12 @@
+{
+  "Address": "0x5F8C6311B2bD5bc5Faf2136b80368C1F0A64B566",
+  "Contract Name": "gCRV",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.15",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/16/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

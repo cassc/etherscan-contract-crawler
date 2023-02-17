@@ -1,0 +1,12 @@
+{
+  "Address": "0xb6Bc9B50b4AC1397AB03d8a24d8fa529a5070ff0",
+  "Contract Name": "EnsoWallet",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "0",
+  "Setting": "",
+  "Verified": "2/16/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

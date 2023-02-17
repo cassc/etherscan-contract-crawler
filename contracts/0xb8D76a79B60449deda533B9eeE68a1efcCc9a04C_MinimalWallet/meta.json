@@ -1,0 +1,12 @@
+{
+  "Address": "0xb8D76a79B60449deda533B9eeE68a1efcCc9a04C",
+  "Contract Name": "MinimalWallet",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "0",
+  "Setting": "",
+  "Verified": "2/16/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

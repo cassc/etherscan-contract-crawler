@@ -1,0 +1,12 @@
+{
+  "Address": "0x42aE17821b15fE4B3D92E6A462121FdC2D2eFbeC",
+  "Contract Name": "BlurLoot",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0.123 ETH",
+  "Txns": "36",
+  "Setting": "",
+  "Verified": "2/16/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

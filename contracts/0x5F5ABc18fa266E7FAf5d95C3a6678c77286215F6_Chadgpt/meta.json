@@ -1,0 +1,12 @@
+{
+  "Address": "0x5F5ABc18fa266E7FAf5d95C3a6678c77286215F6",
+  "Contract Name": "Chadgpt",
+  "Compiler": "Solidity",
+  "Version": "0.8.12",
+  "Balance": "53 wei",
+  "Txns": "42",
+  "Setting": "-",
+  "Verified": "2/17/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

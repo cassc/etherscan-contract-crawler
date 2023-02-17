@@ -1,0 +1,12 @@
+{
+  "Address": "0xD6C70aAceCd816D26F5346E2aDbf5Fe4E2D486a8",
+  "Contract Name": "SilverBitcoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0.015352118386482805 ETH",
+  "Txns": "172",
+  "Setting": "-",
+  "Verified": "2/16/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}
