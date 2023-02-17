@@ -1,0 +1,12 @@
+{
+  "Address": "0x3eefd2f3af1f110a296be1dac64086818f1b068a",
+  "Contract Name": "TestDistributor",
+  "Compiler": "Solidity",
+  "Version": "0.7.5",
+  "Balance": "0 BNB",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/16/2023",
+  "Audited": "-",
+  "License": "GNU AGPLv3"
+}

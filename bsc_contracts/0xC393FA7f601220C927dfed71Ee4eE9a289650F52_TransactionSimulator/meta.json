@@ -1,0 +1,12 @@
+{
+  "Address": "0xC393FA7f601220C927dfed71Ee4eE9a289650F52",
+  "Contract Name": "TransactionSimulator",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 BNB",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/16/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}

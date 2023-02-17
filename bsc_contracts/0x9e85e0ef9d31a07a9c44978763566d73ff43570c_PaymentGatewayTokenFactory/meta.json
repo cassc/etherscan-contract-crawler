@@ -1,0 +1,12 @@
+{
+  "Address": "0x9e85e0ef9d31a07a9c44978763566d73ff43570c",
+  "Contract Name": "PaymentGatewayTokenFactory",
+  "Compiler": "Solidity",
+  "Version": "0.8.14",
+  "Balance": "0 BNB",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "2/17/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
