@@ -1,0 +1,12 @@
+{
+  "Address": "0x00ce538f93D76bA2ABCBb12b51F71420Fd0280ED",
+  "Contract Name": "MyNFTContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "15",
+  "Setting": "-",
+  "Verified": "2/17/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
