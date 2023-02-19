@@ -1,0 +1,12 @@
+{
+  "Address": "0x6D043727D5e56B71A77fb630c49D9F3032d2Cd51",
+  "Contract Name": "BEP20Token",
+  "Compiler": "Solidity",
+  "Version": "0.5.16",
+  "Balance": "0 BNB",
+  "Txns": "8",
+  "Setting": "",
+  "Verified": "2/18/2023",
+  "Audited": "-",
+  "License": "GNU GPLv2"
+}
