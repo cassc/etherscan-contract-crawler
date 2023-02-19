@@ -1,0 +1,12 @@
+{
+  "Address": "0x97D4F49eEb0E2c96d5EbAA71AB8418e563ecd9fd",
+  "Contract Name": "LiquidStakingDerivatives",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "1 wei",
+  "Txns": "135",
+  "Setting": "-",
+  "Verified": "2/19/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

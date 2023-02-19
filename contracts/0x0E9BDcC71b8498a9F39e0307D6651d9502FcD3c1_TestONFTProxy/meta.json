@@ -1,0 +1,12 @@
+{
+  "Address": "0x0E9BDcC71b8498a9F39e0307D6651d9502FcD3c1",
+  "Contract Name": "TestONFTProxy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "2/18/2023",
+  "Audit": "-",
+  "License": "-"
+}

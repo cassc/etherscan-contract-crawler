@@ -1,0 +1,12 @@
+{
+  "Address": "0x425e3D478BA76447F155656fB00552d89335AE84",
+  "Contract Name": "TokenMintERC20Token",
+  "Compiler": "Solidity",
+  "Version": "0.5.0",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/18/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

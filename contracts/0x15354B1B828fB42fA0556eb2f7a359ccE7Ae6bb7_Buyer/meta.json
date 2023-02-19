@@ -1,0 +1,12 @@
+{
+  "Address": "0x15354B1B828fB42fA0556eb2f7a359ccE7Ae6bb7",
+  "Contract Name": "Buyer",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "75",
+  "Setting": "",
+  "Verified": "2/19/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}
