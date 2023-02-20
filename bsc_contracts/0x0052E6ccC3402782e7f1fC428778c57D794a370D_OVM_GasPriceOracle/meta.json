@@ -1,0 +1,12 @@
+{
+  "Address": "0x0052E6ccC3402782e7f1fC428778c57D794a370D",
+  "Contract Name": "OVM_GasPriceOracle",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/19/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x53c210f6deb0001dff0bf62b99aaeaaccafa4c9f",
+  "Contract Name": "BabyCarbon",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "30 wei",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "2/19/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x056fd1c495bf073b2d3445a96db01855e49a0f94",
+  "Contract Name": "UsagiTokenSale",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0.0001 BNB",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "2/19/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
