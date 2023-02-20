@@ -1,0 +1,12 @@
+{
+  "Address": "0x3f071103B5D2864BD8e2B9894fe3f70f26a1b42c",
+  "Contract Name": "OrdinalBurger",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "1 wei",
+  "Txns": "33",
+  "Setting": "-",
+  "Verified": "2/20/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

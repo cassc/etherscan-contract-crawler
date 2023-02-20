@@ -1,0 +1,12 @@
+{
+  "Address": "0xCeC8A01Cb5cD7b6346b4C28AB6274872F9C73401",
+  "Contract Name": "ETHVaultImplementationV1",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "2/19/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x23c1F7652f72982f4413e6b21eF06e067e5fA3fA",
+  "Contract Name": "Aiwallet",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "18",
+  "Setting": "",
+  "Verified": "2/19/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}
