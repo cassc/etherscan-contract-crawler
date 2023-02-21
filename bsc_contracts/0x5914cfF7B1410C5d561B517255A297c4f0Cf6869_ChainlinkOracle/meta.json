@@ -1,0 +1,12 @@
+{
+  "Address": "0x5914cfF7B1410C5d561B517255A297c4f0Cf6869",
+  "Contract Name": "ChainlinkOracle",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.10",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/20/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}

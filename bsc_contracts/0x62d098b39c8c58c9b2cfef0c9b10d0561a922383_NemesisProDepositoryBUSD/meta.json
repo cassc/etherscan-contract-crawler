@@ -1,0 +1,12 @@
+{
+  "Address": "0x62d098b39c8c58c9b2cfef0c9b10d0561a922383",
+  "Contract Name": "NemesisProDepositoryBUSD",
+  "Compiler": "Solidity",
+  "Version": "0.7.5",
+  "Balance": "0 BNB",
+  "Txns": "13",
+  "Setting": "",
+  "Verified": "2/20/2023",
+  "Audited": "-",
+  "License": "GNU AGPLv3"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x1e263609781fd31afc4875624ad1040371ce8179",
+  "Contract Name": "BurnableToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 BNB",
+  "Txns": "9",
+  "Setting": "-",
+  "Verified": "2/20/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x7e1e51512384EB782B0209b11Aed30D072EA6410",
+  "Contract Name": "CoinContract",
+  "Compiler": "Solidity",
+  "Version": "0.7.3",
+  "Balance": "0 BNB",
+  "Txns": "44",
+  "Setting": "",
+  "Verified": "2/21/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
