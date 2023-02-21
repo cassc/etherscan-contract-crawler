@@ -1,0 +1,12 @@
+{
+  "Address": "0x78A83C17600aDd7447dBD6B8aB26330481075295",
+  "Contract Name": "SwapQuoter",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/20/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

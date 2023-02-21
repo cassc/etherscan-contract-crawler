@@ -1,0 +1,12 @@
+{
+  "Address": "0xE69EF8F8044DA88E59a5aD98d80C087755b1fA58",
+  "Contract Name": "ESMETUpgrader",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/20/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

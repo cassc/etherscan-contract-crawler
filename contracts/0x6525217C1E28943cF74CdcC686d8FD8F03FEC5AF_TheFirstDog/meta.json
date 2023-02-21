@@ -1,0 +1,12 @@
+{
+  "Address": "0x6525217C1E28943cF74CdcC686d8FD8F03FEC5AF",
+  "Contract Name": "TheFirstDog",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "1 wei",
+  "Txns": "108",
+  "Setting": "",
+  "Verified": "2/20/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x5bB1bEdaeAA993cDA12bfA83C7Ea5B2a7f227781",
+  "Contract Name": "CollateralPoolLogic",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/21/2023",
+  "Audit": "-",
+  "License": "-"
+}

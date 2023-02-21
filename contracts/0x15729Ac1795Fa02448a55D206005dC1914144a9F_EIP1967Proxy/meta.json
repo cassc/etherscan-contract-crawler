@@ -1,0 +1,12 @@
+{
+  "Address": "0x15729Ac1795Fa02448a55D206005dC1914144a9F",
+  "Contract Name": "EIP1967Proxy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.15",
+  "Balance": "0 ETH",
+  "Txns": "6",
+  "Setting": "",
+  "Verified": "2/20/2023",
+  "Audit": "-",
+  "License": "-"
+}
