@@ -1,0 +1,12 @@
+{
+  "Address": "0x3B889c2176dca3d5bA940487657998EF34D097b9",
+  "Contract Name": "RewardsUpgrader",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/21/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

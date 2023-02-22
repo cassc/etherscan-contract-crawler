@@ -1,0 +1,12 @@
+{
+  "Address": "0xB14502aF75C79eFc89f9EB2aF5fa2e8Ff0Fb2105",
+  "Contract Name": "CTokenNonFiatCollateral",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/22/2023",
+  "Audit": "-",
+  "License": "-"
+}

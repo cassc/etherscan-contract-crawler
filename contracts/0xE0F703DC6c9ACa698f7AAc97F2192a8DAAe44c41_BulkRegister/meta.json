@@ -1,0 +1,12 @@
+{
+  "Address": "0xE0F703DC6c9ACa698f7AAc97F2192a8DAAe44c41",
+  "Contract Name": "BulkRegister",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.4",
+  "Balance": "0.00000000000143024 ETH",
+  "Txns": "6",
+  "Setting": "",
+  "Verified": "2/21/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

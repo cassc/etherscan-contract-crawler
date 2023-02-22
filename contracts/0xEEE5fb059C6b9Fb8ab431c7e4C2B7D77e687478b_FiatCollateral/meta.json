@@ -1,0 +1,12 @@
+{
+  "Address": "0xEEE5fb059C6b9Fb8ab431c7e4C2B7D77e687478b",
+  "Contract Name": "FiatCollateral",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/22/2023",
+  "Audit": "-",
+  "License": "-"
+}

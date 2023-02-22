@@ -1,0 +1,12 @@
+{
+  "Address": "0xce7e4B3466A063F58A9D83E0AC1869ac6C35B92c",
+  "Contract Name": "TransparentUpgradeableProxy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "2/21/2023",
+  "Audit": "-",
+  "License": "-"
+}

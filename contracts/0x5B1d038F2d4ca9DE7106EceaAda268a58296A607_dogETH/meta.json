@@ -1,0 +1,12 @@
+{
+  "Address": "0x5B1d038F2d4ca9DE7106EceaAda268a58296A607",
+  "Contract Name": "dogETH",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "150",
+  "Setting": "-",
+  "Verified": "2/21/2023",
+  "Audit": "-",
+  "License": "None"
+}

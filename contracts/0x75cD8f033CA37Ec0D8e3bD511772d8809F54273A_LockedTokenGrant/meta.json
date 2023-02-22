@@ -1,0 +1,12 @@
+{
+  "Address": "0x75cD8f033CA37Ec0D8e3bD511772d8809F54273A",
+  "Contract Name": "LockedTokenGrant",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "0",
+  "Setting": "",
+  "Verified": "2/21/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

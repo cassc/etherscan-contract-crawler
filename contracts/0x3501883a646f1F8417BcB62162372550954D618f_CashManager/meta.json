@@ -1,0 +1,12 @@
+{
+  "Address": "0x3501883a646f1F8417BcB62162372550954D618f",
+  "Contract Name": "CashManager",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/21/2023",
+  "Audit": "-",
+  "License": "BSD-3-Clause"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x5a06ba1E12fdfefa968bf75d38F81F231C00B9e1",
+  "Contract Name": "GasPool",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.11",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "2/21/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

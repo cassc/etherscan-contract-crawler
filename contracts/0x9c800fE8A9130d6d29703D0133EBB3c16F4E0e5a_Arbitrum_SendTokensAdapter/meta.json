@@ -1,0 +1,12 @@
+{
+  "Address": "0x9c800fE8A9130d6d29703D0133EBB3c16F4E0e5a",
+  "Contract Name": "Arbitrum_SendTokensAdapter",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/21/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

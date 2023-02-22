@@ -1,0 +1,12 @@
+{
+  "Address": "0xdDB74ee1Ce4fa8185217E73fD0666703f58c424C",
+  "Contract Name": "CTokenSelfReferentialCollateral",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/22/2023",
+  "Audit": "-",
+  "License": "-"
+}
