@@ -1,0 +1,12 @@
+{
+  "Address": "0xD9e8796358A14b3E9CabE5e219417F1aDEF7d563",
+  "Contract Name": "LimitOrderBook",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.13",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/21/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}
