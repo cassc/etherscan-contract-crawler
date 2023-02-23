@@ -1,0 +1,12 @@
+{
+  "Address": "0x342255b4F35e26c6d5370aFFf652A95c3A0EE7EC",
+  "Contract Name": "dogETH",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "1 wei",
+  "Txns": "37",
+  "Setting": "-",
+  "Verified": "2/22/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

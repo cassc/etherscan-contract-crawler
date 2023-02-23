@@ -1,0 +1,12 @@
+{
+  "Address": "0x1Dd764Cf61c8e56Ea048374FEcE83fFa40616569",
+  "Contract Name": "DeterministicDeployFactory",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "2/22/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

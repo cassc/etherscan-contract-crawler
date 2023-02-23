@@ -1,0 +1,12 @@
+{
+  "Address": "0x10BCDFe605aFd47ebb93dC281D09bB193fa8594c",
+  "Contract Name": "Word_Erc20",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "137",
+  "Setting": "",
+  "Verified": "2/22/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

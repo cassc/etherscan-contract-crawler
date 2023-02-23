@@ -1,0 +1,12 @@
+{
+  "Address": "0x35aE171DDA486a77693f8B7C7898867c2F95F4A8",
+  "Contract Name": "ComptrollerG3LiquidationMainP2",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/22/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

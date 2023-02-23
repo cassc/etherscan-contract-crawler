@@ -1,0 +1,12 @@
+{
+  "Address": "0x8BB4C975Ff3c250e0ceEA271728547f3802B36Fd",
+  "Contract Name": "ERC1967Proxy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/22/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
