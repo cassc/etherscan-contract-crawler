@@ -1,0 +1,12 @@
+{
+  "Address": "0xd3621dfcdd13a429c1255a3da805728b2eb43a2f",
+  "Contract Name": "WithdrawMoney",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0.001449936821642637 BNB",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "2/22/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
