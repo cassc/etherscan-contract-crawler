@@ -1,0 +1,12 @@
+{
+  "Address": "0xBF0abF74012fD56255A1E8e25916869A3810F87b",
+  "Contract Name": "ExchangeWithAtomic",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.7.4",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/23/2023",
+  "Audited": "-",
+  "License": "-"
+}

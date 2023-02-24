@@ -1,0 +1,12 @@
+{
+  "Address": "0x3f2688620131b99a7a3f6f4a8e0961c52cd2a8ce",
+  "Contract Name": "MuskCatToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "49 wei",
+  "Txns": "40",
+  "Setting": "",
+  "Verified": "2/24/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}
