@@ -1,0 +1,12 @@
+{
+  "Address": "0x581a1E865285144c32ebd8205CA144156920b5fd",
+  "Contract Name": "AuraBalancerV2LpStakingAdapter",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/23/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

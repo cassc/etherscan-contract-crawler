@@ -1,0 +1,12 @@
+{
+  "Address": "0x2ef87564d34eA084104A42a0728986B82EDB6769",
+  "Contract Name": "TheBaseProtocol",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "1 wei",
+  "Txns": "51",
+  "Setting": "-",
+  "Verified": "2/23/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

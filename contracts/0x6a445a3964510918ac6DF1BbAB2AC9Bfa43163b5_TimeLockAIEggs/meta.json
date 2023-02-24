@@ -1,0 +1,12 @@
+{
+  "Address": "0x6a445a3964510918ac6DF1BbAB2AC9Bfa43163b5",
+  "Contract Name": "TimeLockAIEggs",
+  "Compiler": "Solidity",
+  "Version": "0.8.13",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/24/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

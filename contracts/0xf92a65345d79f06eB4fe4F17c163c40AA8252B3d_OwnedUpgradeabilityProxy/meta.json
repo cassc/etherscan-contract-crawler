@@ -1,0 +1,12 @@
+{
+  "Address": "0xf92a65345d79f06eB4fe4F17c163c40AA8252B3d",
+  "Contract Name": "OwnedUpgradeabilityProxy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.0",
+  "Balance": "1.17125 ETH",
+  "Txns": "97",
+  "Setting": "-",
+  "Verified": "2/23/2023",
+  "Audit": "-",
+  "License": "-"
+}

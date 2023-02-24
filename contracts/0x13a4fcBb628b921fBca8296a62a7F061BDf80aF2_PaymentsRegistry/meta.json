@@ -1,0 +1,12 @@
+{
+  "Address": "0x13a4fcBb628b921fBca8296a62a7F061BDf80aF2",
+  "Contract Name": "PaymentsRegistry",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/23/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

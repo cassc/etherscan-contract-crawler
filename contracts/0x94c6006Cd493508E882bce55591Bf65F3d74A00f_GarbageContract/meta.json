@@ -1,0 +1,12 @@
+{
+  "Address": "0x94c6006Cd493508E882bce55591Bf65F3d74A00f",
+  "Contract Name": "GarbageContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.13",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/23/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

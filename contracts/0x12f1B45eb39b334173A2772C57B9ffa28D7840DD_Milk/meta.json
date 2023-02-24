@@ -1,0 +1,12 @@
+{
+  "Address": "0x12f1B45eb39b334173A2772C57B9ffa28D7840DD",
+  "Contract Name": "Milk",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "15",
+  "Setting": "-",
+  "Verified": "2/23/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
