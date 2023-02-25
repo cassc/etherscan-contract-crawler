@@ -1,0 +1,12 @@
+{
+  "Address": "0x271D1B123932b5b469AaBc9C5b870d2A744861e6",
+  "Contract Name": "PnLFixedRate",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/24/2023",
+  "Audit": "-",
+  "License": "None"
+}

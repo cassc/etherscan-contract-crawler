@@ -1,0 +1,12 @@
+{
+  "Address": "0x16dcDb978E0c466d617af028Be814Be6528bE4Dc",
+  "Contract Name": "PaymentGateway",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/24/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x0c7Fc2fbC37a105BFDb8b241638b10460f60a367",
+  "Contract Name": "DoNotPay",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "1 wei",
+  "Txns": "79",
+  "Setting": "-",
+  "Verified": "2/24/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

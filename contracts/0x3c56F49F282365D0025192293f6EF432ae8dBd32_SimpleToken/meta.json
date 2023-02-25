@@ -1,0 +1,12 @@
+{
+  "Address": "0x3c56F49F282365D0025192293f6EF432ae8dBd32",
+  "Contract Name": "SimpleToken",
+  "Compiler": "Solidity(Multi)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "52",
+  "Setting": "",
+  "Verified": "2/24/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

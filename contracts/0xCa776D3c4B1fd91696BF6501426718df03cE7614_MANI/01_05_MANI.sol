@@ -1,0 +1,77 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+/// @title: Mani Punks
+/// @author: manifold.xyz
+
+import "./manifold/ERC721Creator.sol";
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                        //
+//                                                                                                                        //
+//                                                                                                                        //
+//    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////    //
+//    //                                                                                                            //    //
+//    //                                                                                                            //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNXXXXXXXXXXXXXXXXXXXXXNNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNKOxooooooooooooooooooooooxOKNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNKkl;''''''''''''''''''''',;lkKNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNKOxoc;'......................';coxOKNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNKkl;''..........................'';lxKNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMWNKOxoc;'..............................';coxOKNWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMWN0xl;''...........'''''''''''''''''......'';lkXWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMWNKOxoc;'.........',;;;:;;;;;;;;;;;;::;;,'.....,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMWKkl;,'..........',:clooooooooooooooooll:;''...,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMWKd:'.........',;:cloddddddddddddddddddolc:;,'',cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMWKd:'........',:clooooooddddddddddddddoooolc:,',cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMWKd:'........',:cllllllooodddddddooooolllllc:,',cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMWN0d:'........',,;:::::clooddddddddoolc::::::;,',cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMWWX0Odc;'.....',,,,'.'',;:clooddddddddol:,''';;;;,',cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMWKkl:,''.....';:c:,....,:cloooodddodddoc;....,:c:;',cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........';cll:,..';clooooddddodddol:'..,:cl:;,,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........';cooolcccloooododdddddddoolcccllolc;,,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........';clodddddoodooodddddddddddooddddolc;,,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........';cloddddddddoooddodddoooddddddddooc;,,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........';coodddddddoddooolccccllooddodddooc;,,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........';cooddddooodddooc;,'.',cooddddddooc;,,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........';cooddddoooddddoc,'...,coddddddddoc;,,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........';cloddddoodddddolcc:::clodddddddooc;,,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........';cooddddddoooolllllllllllloooooolc:,',cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........';codddddddoolc;,,,,,,,,,,;:loolc:;,'',cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'........',:cloooodddol:,'...'''..',:cllc;'....,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'............';clodddoolc::::::::::cloooc;'....,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'..........  ..;looollllooooooooooooollc:,'....,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'..........   .;clc;,,,:lddddddddddoc;,'.......,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'..........   .;cl:,...,:lloollloll:,..  ......,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'..........   .;cll:,''''''''''''''............,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'..........   .;codooc;'..          ..........';lkXWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0d:'..........   .;codddol:,..        ........',:ldOKNWMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMN0dc,''''''''..   .;coddddoolc;...   ..'''''''';lx0NWWMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMWX0xdoooooddoc,.  .;codddddddo:'.. ..:loddoooooxOKNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMWWNNXXXNNNNXOl'. .;codddddddo:'.. .:x0XNNNXXXNNNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKd,. .;codddodddo:'.. .ckNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //    //
+//    //                                                                                                            //    //
+//    //                                                                                                            //    //
+//    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////    //
+//                                                                                                                        //
+//                                                                                                                        //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+contract MANI is ERC721Creator {
+    constructor() ERC721Creator("Mani Punks", "MANI") {}
+}

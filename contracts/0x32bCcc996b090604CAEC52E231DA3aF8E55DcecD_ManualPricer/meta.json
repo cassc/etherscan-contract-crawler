@@ -1,0 +1,12 @@
+{
+  "Address": "0x32bCcc996b090604CAEC52E231DA3aF8E55DcecD",
+  "Contract Name": "ManualPricer",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/24/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

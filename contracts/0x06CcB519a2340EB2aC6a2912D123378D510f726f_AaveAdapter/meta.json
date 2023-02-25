@@ -1,0 +1,12 @@
+{
+  "Address": "0x06CcB519a2340EB2aC6a2912D123378D510f726f",
+  "Contract Name": "AaveAdapter",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/24/2023",
+  "Audit": "-",
+  "License": "-"
+}

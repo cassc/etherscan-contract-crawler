@@ -1,0 +1,12 @@
+{
+  "Address": "0xFdA6fA3e3849B65AFB3F9552fF681f29737B7edc",
+  "Contract Name": "ArbSwap",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0.1 ETH",
+  "Txns": "4",
+  "Setting": "-",
+  "Verified": "2/24/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

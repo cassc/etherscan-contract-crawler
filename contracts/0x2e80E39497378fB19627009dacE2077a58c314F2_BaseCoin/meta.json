@@ -1,0 +1,12 @@
+{
+  "Address": "0x2e80E39497378fB19627009dacE2077a58c314F2",
+  "Contract Name": "BaseCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "65",
+  "Setting": "",
+  "Verified": "2/24/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
