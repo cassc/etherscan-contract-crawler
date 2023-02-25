@@ -1,0 +1,12 @@
+{
+  "Address": "0xa0E11a01C53a2Ec7f282bDBDcc3aB51a3C2Fb9C4",
+  "Contract Name": "USDEX",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "2/24/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

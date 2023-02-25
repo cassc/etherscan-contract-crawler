@@ -1,0 +1,12 @@
+{
+  "Address": "0x66C9d1B6125a7760Ea58C27F6D7aEB9C41BdC876",
+  "Contract Name": "BalancerBoostedAaveUSD",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "2/24/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
