@@ -1,0 +1,12 @@
+{
+  "Address": "0x21C870B2e39356487a72cEeA0844E212B66ae31E",
+  "Contract Name": "BotTestContract",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "7",
+  "Setting": "",
+  "Verified": "2/25/2023",
+  "Audit": "-",
+  "License": "-"
+}

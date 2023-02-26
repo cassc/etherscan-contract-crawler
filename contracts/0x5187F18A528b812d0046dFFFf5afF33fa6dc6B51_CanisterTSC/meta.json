@@ -1,0 +1,12 @@
+{
+  "Address": "0x5187F18A528b812d0046dFFFf5afF33fa6dc6B51",
+  "Contract Name": "CanisterTSC",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "2/25/2023",
+  "Audit": "-",
+  "License": "-"
+}

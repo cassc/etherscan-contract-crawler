@@ -1,0 +1,12 @@
+{
+  "Address": "0x955e3421d2B1aC2B6AC2A2a8909e357c2076AfAF",
+  "Contract Name": "Floopies",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0.0165 ETH",
+  "Txns": "18",
+  "Setting": "",
+  "Verified": "2/25/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0xd1AF8331741A6F988C272b0B98c2E84a8F11CA4d",
+  "Contract Name": "MEOWContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0.003052472944307793 ETH",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "2/25/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
