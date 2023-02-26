@@ -1,0 +1,12 @@
+{
+  "Address": "0x0D308E2f285F8fd310DB7e45cE470de11cf36935",
+  "Contract Name": "FutureEnergy",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "9 wei",
+  "Txns": "145",
+  "Setting": "",
+  "Verified": "2/25/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
