@@ -1,0 +1,12 @@
+{
+  "Address": "0xdce423f5c0ccfe2b39cc44212316fa11b1b76f94",
+  "Contract Name": "FTDex",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 BNB",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "2/26/2023",
+  "Audited": "-",
+  "License": "Apache-2.0"
+}
