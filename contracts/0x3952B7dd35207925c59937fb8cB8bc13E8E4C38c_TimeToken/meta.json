@@ -1,0 +1,12 @@
+{
+  "Address": "0x3952B7dd35207925c59937fb8cB8bc13E8E4C38c",
+  "Contract Name": "TimeToken",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.13",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/26/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

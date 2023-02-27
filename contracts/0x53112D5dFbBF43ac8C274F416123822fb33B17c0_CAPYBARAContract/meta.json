@@ -1,0 +1,12 @@
+{
+  "Address": "0x53112D5dFbBF43ac8C274F416123822fb33B17c0",
+  "Contract Name": "CAPYBARAContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "2/26/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
