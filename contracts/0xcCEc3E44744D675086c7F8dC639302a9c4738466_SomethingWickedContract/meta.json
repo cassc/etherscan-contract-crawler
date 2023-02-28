@@ -1,0 +1,12 @@
+{
+  "Address": "0xcCEc3E44744D675086c7F8dC639302a9c4738466",
+  "Contract Name": "SomethingWickedContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0.06 ETH",
+  "Txns": "150",
+  "Setting": "",
+  "Verified": "2/27/2023",
+  "Audit": "-",
+  "License": "None"
+}

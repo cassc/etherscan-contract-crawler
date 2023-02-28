@@ -1,0 +1,12 @@
+{
+  "Address": "0x70Aaeb234a17b2FC93c7E3726f0b6d1e0C7939aD",
+  "Contract Name": "ShadowMarket",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "31",
+  "Setting": "-",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0xcE2f30343B478591b56768161bAc66239C5ad4aA",
+  "Contract Name": "LenderManager",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/27/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

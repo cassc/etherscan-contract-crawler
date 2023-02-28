@@ -1,0 +1,12 @@
+{
+  "Address": "0x30bd06c933189e22E58C6315e5133469f4e14D48",
+  "Contract Name": "MinimalBeaconProxyFactory",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/27/2023",
+  "Audit": "-",
+  "License": "-"
+}

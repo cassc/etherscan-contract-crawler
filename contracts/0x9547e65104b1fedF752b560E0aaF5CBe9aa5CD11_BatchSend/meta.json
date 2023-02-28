@@ -1,0 +1,12 @@
+{
+  "Address": "0x9547e65104b1fedF752b560E0aaF5CBe9aa5CD11",
+  "Contract Name": "BatchSend",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "2/27/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

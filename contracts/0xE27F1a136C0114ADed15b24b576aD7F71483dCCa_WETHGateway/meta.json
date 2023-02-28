@@ -1,0 +1,12 @@
+{
+  "Address": "0xE27F1a136C0114ADed15b24b576aD7F71483dCCa",
+  "Contract Name": "WETHGateway",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "50",
+  "Setting": "",
+  "Verified": "2/27/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

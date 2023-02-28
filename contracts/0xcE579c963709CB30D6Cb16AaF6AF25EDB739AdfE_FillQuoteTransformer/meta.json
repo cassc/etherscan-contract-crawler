@@ -1,0 +1,12 @@
+{
+  "Address": "0xcE579c963709CB30D6Cb16AaF6AF25EDB739AdfE",
+  "Contract Name": "FillQuoteTransformer",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "0",
+  "Setting": "",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

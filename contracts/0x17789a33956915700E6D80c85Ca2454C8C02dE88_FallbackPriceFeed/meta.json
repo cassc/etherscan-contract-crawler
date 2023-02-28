@@ -1,0 +1,12 @@
+{
+  "Address": "0x17789a33956915700E6D80c85Ca2454C8C02dE88",
+  "Contract Name": "FallbackPriceFeed",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/27/2023",
+  "Audit": "-",
+  "License": "-"
+}
