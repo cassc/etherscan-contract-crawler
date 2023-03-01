@@ -1,0 +1,12 @@
+{
+  "Address": "0x5EF9f363039DC0c9520c1BD086EdB24EDCf4Fb87",
+  "Contract Name": "AggregateWallet",
+  "Compiler": "Solidity",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "32",
+  "Setting": "-",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "None"
+}

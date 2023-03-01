@@ -1,0 +1,12 @@
+{
+  "Address": "0x7Fa3344c88694a822e39970A00C7bfd52687C4AB",
+  "Contract Name": "ProxyERC1155Link",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.10",
+  "Balance": "0.0001 ETH",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x50B6187bcF0A7cc956a4ca921Aa09A11aEc3fC45",
+  "Contract Name": "Ethereum",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

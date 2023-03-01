@@ -1,0 +1,12 @@
+{
+  "Address": "0x448FcB413f8B1A0CA5c74D1841d5575f63a61acB",
+  "Contract Name": "InterestRateModel",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "BSL 1.1"
+}

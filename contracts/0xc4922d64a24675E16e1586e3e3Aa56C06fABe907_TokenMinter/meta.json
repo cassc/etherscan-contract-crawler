@@ -1,0 +1,12 @@
+{
+  "Address": "0xc4922d64a24675E16e1586e3e3Aa56C06fABe907",
+  "Contract Name": "TokenMinter",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "0 ETH",
+  "Txns": "6",
+  "Setting": "",
+  "Verified": "3/1/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

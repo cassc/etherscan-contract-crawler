@@ -1,0 +1,12 @@
+{
+  "Address": "0x77e11453a99a7770b04f7921FfccD3eE9761ba6c",
+  "Contract Name": "InitializableAdminUpgradeabilityProxy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "-"
+}

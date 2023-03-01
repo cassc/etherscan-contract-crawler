@@ -1,0 +1,12 @@
+{
+  "Address": "0x339A7c4e51E385Ee22084C77456dedf58D742396",
+  "Contract Name": "WalletBalanceProvider",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "-"
+}

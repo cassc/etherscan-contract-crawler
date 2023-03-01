@@ -1,0 +1,12 @@
+{
+  "Address": "0x1dBC2810A486Adb70B0C696fF4c88F5171b53AF5",
+  "Contract Name": "UniswapV3LiquidityLocker",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

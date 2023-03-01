@@ -1,0 +1,12 @@
+{
+  "Address": "0xDE6B67d4a7FdC6ED6d68F0CB1f0DaCF66C3f8241",
+  "Contract Name": "ERC1155SelfMinter",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "187",
+  "Setting": "",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "-"
+}

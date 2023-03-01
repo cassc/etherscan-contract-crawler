@@ -1,0 +1,12 @@
+{
+  "Address": "0x7Dd03b5B872c1eCdf098696D6371B687044598Cc",
+  "Contract Name": "MerkleClaimer",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0.1 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "-"
+}

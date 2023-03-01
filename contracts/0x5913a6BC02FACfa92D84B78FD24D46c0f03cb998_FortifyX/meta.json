@@ -1,0 +1,12 @@
+{
+  "Address": "0x5913a6BC02FACfa92D84B78FD24D46c0f03cb998",
+  "Contract Name": "FortifyX",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0.000349581955659968 ETH",
+  "Txns": "101",
+  "Setting": "",
+  "Verified": "2/28/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
