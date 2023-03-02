@@ -1,0 +1,12 @@
+{
+  "Address": "0xb608E834c2b776675B2C95E312B4A15A4cDC24E0",
+  "Contract Name": "AiWallet",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "3/1/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
