@@ -1,0 +1,12 @@
+{
+  "Address": "0xa2FbbF17E5A30afE02F76d9B6553b4F19c3f66C8",
+  "Contract Name": "FixedProxy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "0",
+  "Setting": "",
+  "Verified": "3/1/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

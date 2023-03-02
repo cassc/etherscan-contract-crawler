@@ -1,0 +1,12 @@
+{
+  "Address": "0x26Cd328f2bdFe13A99b7e2FC19BbdCB4d8B54D69",
+  "Contract Name": "AaveV2ATokenListOwner",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/1/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

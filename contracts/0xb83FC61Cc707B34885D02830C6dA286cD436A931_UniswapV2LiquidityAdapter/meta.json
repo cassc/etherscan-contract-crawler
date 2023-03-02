@@ -1,0 +1,12 @@
+{
+  "Address": "0xb83FC61Cc707B34885D02830C6dA286cD436A931",
+  "Contract Name": "UniswapV2LiquidityAdapter",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/1/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

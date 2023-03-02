@@ -1,0 +1,12 @@
+{
+  "Address": "0x8A2f9260C7ae4B43380e42bd90f9B7C1B59c0369",
+  "Contract Name": "CurveLPOracle",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/1/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

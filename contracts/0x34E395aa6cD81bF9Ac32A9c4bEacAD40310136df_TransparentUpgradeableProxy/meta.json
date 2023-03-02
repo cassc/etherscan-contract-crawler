@@ -1,0 +1,12 @@
+{
+  "Address": "0x34E395aa6cD81bF9Ac32A9c4bEacAD40310136df",
+  "Contract Name": "TransparentUpgradeableProxy",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "7",
+  "Setting": "",
+  "Verified": "3/1/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x0Cd4971F277b54874342f6Afe6659E1cfA6506d9",
+  "Contract Name": "PaymentSplitter",
+  "Compiler": "Solidity",
+  "Version": "0.8.13",
+  "Balance": "0.002 ETH",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "3/2/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x858eFFf6E05Fe58B30F5f4C34788a47655656b0A",
+  "Contract Name": "DoNotPay",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "6",
+  "Setting": "-",
+  "Verified": "3/1/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

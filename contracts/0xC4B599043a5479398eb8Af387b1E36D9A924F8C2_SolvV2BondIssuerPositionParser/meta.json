@@ -1,0 +1,12 @@
+{
+  "Address": "0xC4B599043a5479398eb8Af387b1E36D9A924F8C2",
+  "Contract Name": "SolvV2BondIssuerPositionParser",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/1/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}
