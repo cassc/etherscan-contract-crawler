@@ -1,0 +1,12 @@
+{
+  "Address": "0xf47F67366dbB658D63E9A3DBAB39A5cb07Fa2A9F",
+  "Contract Name": "BalancerFlashLoanHelper",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/2/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

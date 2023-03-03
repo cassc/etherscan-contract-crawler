@@ -1,0 +1,12 @@
+{
+  "Address": "0x678884C778D077A1Ee107EE10B2d65358f19c96a",
+  "Contract Name": "Honeypot",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "3",
+  "Setting": "-",
+  "Verified": "3/2/2023",
+  "Audit": "-",
+  "License": "None"
+}

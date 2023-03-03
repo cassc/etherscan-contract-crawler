@@ -1,0 +1,12 @@
+{
+  "Address": "0x6a823ad97223ce160bC0C4090a093A6808Cc3F10",
+  "Contract Name": "GasMother",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "6",
+  "Setting": "",
+  "Verified": "3/2/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

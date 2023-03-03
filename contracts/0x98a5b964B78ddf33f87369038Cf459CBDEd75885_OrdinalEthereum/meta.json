@@ -1,0 +1,12 @@
+{
+  "Address": "0x98a5b964B78ddf33f87369038Cf459CBDEd75885",
+  "Contract Name": "OrdinalEthereum",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0 ETH",
+  "Txns": "85",
+  "Setting": "-",
+  "Verified": "3/2/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

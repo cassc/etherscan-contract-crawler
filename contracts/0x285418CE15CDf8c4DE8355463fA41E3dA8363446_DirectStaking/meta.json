@@ -1,0 +1,12 @@
+{
+  "Address": "0x285418CE15CDf8c4DE8355463fA41E3dA8363446",
+  "Contract Name": "DirectStaking",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/2/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

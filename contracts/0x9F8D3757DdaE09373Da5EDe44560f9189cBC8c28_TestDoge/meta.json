@@ -1,0 +1,12 @@
+{
+  "Address": "0x9F8D3757DdaE09373Da5EDe44560f9189cBC8c28",
+  "Contract Name": "TestDoge",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "3/3/2023",
+  "Audit": "-",
+  "License": "-"
+}

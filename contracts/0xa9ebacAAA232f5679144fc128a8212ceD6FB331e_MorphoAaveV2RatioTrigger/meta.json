@@ -1,0 +1,12 @@
+{
+  "Address": "0xa9ebacAAA232f5679144fc128a8212ceD6FB331e",
+  "Contract Name": "MorphoAaveV2RatioTrigger",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/2/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
