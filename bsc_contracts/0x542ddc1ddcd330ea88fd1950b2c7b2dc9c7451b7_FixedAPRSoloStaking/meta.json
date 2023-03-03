@@ -1,0 +1,12 @@
+{
+  "Address": "0x542ddc1ddcd330ea88fd1950b2c7b2dc9c7451b7",
+  "Contract Name": "FixedAPRSoloStaking",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 BNB",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "3/2/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

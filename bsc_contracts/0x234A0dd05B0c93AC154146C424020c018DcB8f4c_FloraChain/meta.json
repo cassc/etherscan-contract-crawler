@@ -1,0 +1,12 @@
+{
+  "Address": "0x234A0dd05B0c93AC154146C424020c018DcB8f4c",
+  "Contract Name": "FloraChain",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "3/2/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

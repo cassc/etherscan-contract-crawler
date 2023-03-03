@@ -1,0 +1,12 @@
+{
+  "Address": "0x56a39d51bbce20df48c368ed118a8c10cddd003a",
+  "Contract Name": "ShibaLeader",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "1 wei",
+  "Txns": "55",
+  "Setting": "-",
+  "Verified": "3/2/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}
