@@ -1,0 +1,12 @@
+{
+  "Address": "0x8277c01380cf9e40c1438bad0fed20435313e724",
+  "Contract Name": "MintableBot",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0.01 BNB",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "3/3/2023",
+  "Audited": "-",
+  "License": "-"
+}

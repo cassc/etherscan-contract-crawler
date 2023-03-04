@@ -1,0 +1,12 @@
+{
+  "Address": "0x1Be80C6F35E28F6a4a4956f7A211cBA13a6B1BA1",
+  "Contract Name": "TokenContract",
+  "Compiler": "Solidity",
+  "Version": "0.7.3",
+  "Balance": "0 BNB",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "3/3/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
