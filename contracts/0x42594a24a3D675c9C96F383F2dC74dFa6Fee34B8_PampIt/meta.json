@@ -1,0 +1,12 @@
+{
+  "Address": "0x42594a24a3D675c9C96F383F2dC74dFa6Fee34B8",
+  "Contract Name": "PampIt",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "3/4/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

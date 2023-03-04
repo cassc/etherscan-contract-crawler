@@ -1,0 +1,12 @@
+{
+  "Address": "0xce1b20A1c93e78a9f83112a00C0C9aD5acc3Aaf7",
+  "Contract Name": "TokenProxy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "3/3/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

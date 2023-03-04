@@ -1,0 +1,12 @@
+{
+  "Address": "0x246ecfcb12f4BE8f6b2EC398E5F1DcFE80e630a4",
+  "Contract Name": "MultiSender",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "3/3/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

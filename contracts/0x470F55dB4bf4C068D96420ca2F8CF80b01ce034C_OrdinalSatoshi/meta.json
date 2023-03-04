@@ -1,0 +1,12 @@
+{
+  "Address": "0x470F55dB4bf4C068D96420ca2F8CF80b01ce034C",
+  "Contract Name": "OrdinalSatoshi",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "84",
+  "Setting": "-",
+  "Verified": "3/3/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

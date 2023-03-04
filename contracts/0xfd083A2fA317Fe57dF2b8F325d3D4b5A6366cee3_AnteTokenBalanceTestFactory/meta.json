@@ -1,0 +1,12 @@
+{
+  "Address": "0xfd083A2fA317Fe57dF2b8F325d3D4b5A6366cee3",
+  "Contract Name": "AnteTokenBalanceTestFactory",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/3/2023",
+  "Audit": "-",
+  "License": "-"
+}

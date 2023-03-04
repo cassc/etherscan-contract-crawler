@@ -1,0 +1,12 @@
+{
+  "Address": "0xCb7c67bDde9F7aF0667E8d82bb87F1432Bd1d902",
+  "Contract Name": "GovernanceProxy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "3/3/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

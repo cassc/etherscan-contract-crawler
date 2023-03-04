@@ -1,0 +1,12 @@
+{
+  "Address": "0x7C556e33A4C46e1378f9a29952240fb9A6C8eB48",
+  "Contract Name": "ShimeInuErc20",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "11",
+  "Setting": "",
+  "Verified": "3/4/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

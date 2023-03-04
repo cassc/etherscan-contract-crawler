@@ -1,0 +1,12 @@
+{
+  "Address": "0x05f8Ec36e3f4b758343501c8E46A5fE95cC55032",
+  "Contract Name": "KeeperWrapper",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.15",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/3/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

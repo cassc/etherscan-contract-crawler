@@ -1,0 +1,12 @@
+{
+  "Address": "0x7BDbd5675bAd2653cBA9bc0E09564Dd8D7b53957",
+  "Contract Name": "BridgeV1",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/3/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0xFffCFaEBB5F237EB4c64387cE4CB3990e11C2934",
+  "Contract Name": "CommonHealthCheck",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/3/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

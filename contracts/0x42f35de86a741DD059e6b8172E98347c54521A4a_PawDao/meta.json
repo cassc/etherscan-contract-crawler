@@ -1,0 +1,12 @@
+{
+  "Address": "0x42f35de86a741DD059e6b8172E98347c54521A4a",
+  "Contract Name": "PawDao",
+  "Compiler": "Solidity",
+  "Version": "0.5.10",
+  "Balance": "0 ETH",
+  "Txns": "134",
+  "Setting": "-",
+  "Verified": "3/3/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
