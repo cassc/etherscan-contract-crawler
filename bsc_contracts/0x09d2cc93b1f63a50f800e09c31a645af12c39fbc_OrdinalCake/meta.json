@@ -1,0 +1,12 @@
+{
+  "Address": "0x09d2cc93b1f63a50f800e09c31a645af12c39fbc",
+  "Contract Name": "OrdinalCake",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "5 wei",
+  "Txns": "126",
+  "Setting": "",
+  "Verified": "3/4/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
