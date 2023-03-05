@@ -1,0 +1,12 @@
+{
+  "Address": "0x04E9e9b8453f49a28297e217728f5edb1aB602B9",
+  "Contract Name": "Ashi",
+  "Compiler": "Solidity",
+  "Version": "0.8.5",
+  "Balance": "0.5 ETH",
+  "Txns": "218",
+  "Setting": "-",
+  "Verified": "3/4/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

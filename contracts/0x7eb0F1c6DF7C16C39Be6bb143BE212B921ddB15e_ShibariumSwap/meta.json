@@ -1,0 +1,12 @@
+{
+  "Address": "0x7eb0F1c6DF7C16C39Be6bb143BE212B921ddB15e",
+  "Contract Name": "ShibariumSwap",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

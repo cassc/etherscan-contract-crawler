@@ -1,0 +1,12 @@
+{
+  "Address": "0x120488048DF6b234fd3696FB728bC4B808fCED7f",
+  "Contract Name": "LiquidPaw",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "360",
+  "Setting": "-",
+  "Verified": "3/4/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

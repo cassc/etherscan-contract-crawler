@@ -1,0 +1,12 @@
+{
+  "Address": "0x0F384682ccbc84B736BeF58F007DAE77F3E4FdA6",
+  "Contract Name": "DefaultReserveInterestRateStrategy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x6dE69C0C14d80Fa965054E134f94AA9ed594c24f",
+  "Contract Name": "ShibariumScanner",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "66",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

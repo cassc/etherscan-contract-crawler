@@ -1,0 +1,12 @@
+{
+  "Address": "0x280aB588371DDA834f44D15Dd8a08F52122271E7",
+  "Contract Name": "SquidDex",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 ETH",
+  "Txns": "8",
+  "Setting": "",
+  "Verified": "3/4/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

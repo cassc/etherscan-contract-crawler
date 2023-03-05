@@ -1,0 +1,12 @@
+{
+  "Address": "0xFa3fCf6F1809D24f2c2547Cb231dc728709ba8F8",
+  "Contract Name": "ParentEscrow",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "3/4/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

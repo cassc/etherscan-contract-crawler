@@ -1,0 +1,12 @@
+{
+  "Address": "0x9D568C6De7F55828D45424770A1B3db0448C843A",
+  "Contract Name": "ShibariumETH",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0 ETH",
+  "Txns": "26",
+  "Setting": "-",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

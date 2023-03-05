@@ -1,0 +1,12 @@
+{
+  "Address": "0x29D7CF0E6b71420e23B3273B3F830E7DB914434a",
+  "Contract Name": "Eagles",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0.016 ETH",
+  "Txns": "400",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

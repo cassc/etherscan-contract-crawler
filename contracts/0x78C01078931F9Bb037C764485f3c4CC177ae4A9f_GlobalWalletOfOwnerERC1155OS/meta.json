@@ -1,0 +1,12 @@
+{
+  "Address": "0x78C01078931F9Bb037C764485f3c4CC177ae4A9f",
+  "Contract Name": "GlobalWalletOfOwnerERC1155OS",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "3/4/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

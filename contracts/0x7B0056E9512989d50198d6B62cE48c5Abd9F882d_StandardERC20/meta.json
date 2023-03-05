@@ -1,0 +1,12 @@
+{
+  "Address": "0x7B0056E9512989d50198d6B62cE48c5Abd9F882d",
+  "Contract Name": "StandardERC20",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "12",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

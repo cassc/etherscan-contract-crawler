@@ -1,0 +1,12 @@
+{
+  "Address": "0x519EC69f1CD1aEC2C1245146cdC1F7F6Eafa6c1e",
+  "Contract Name": "TheRealCats",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0.006 ETH",
+  "Txns": "100",
+  "Setting": "",
+  "Verified": "3/4/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
