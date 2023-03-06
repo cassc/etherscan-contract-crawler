@@ -1,0 +1,12 @@
+{
+  "Address": "0x792F381e6f69C529178098d5438A82990D7F45d4",
+  "Contract Name": "OrosignV1",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

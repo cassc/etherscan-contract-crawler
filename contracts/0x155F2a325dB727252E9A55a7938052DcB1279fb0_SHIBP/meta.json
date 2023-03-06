@@ -1,0 +1,12 @@
+{
+  "Address": "0x155F2a325dB727252E9A55a7938052DcB1279fb0",
+  "Contract Name": "SHIBP",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "93",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

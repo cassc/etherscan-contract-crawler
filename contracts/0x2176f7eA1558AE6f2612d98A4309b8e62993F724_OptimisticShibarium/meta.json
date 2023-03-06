@@ -1,0 +1,12 @@
+{
+  "Address": "0x2176f7eA1558AE6f2612d98A4309b8e62993F724",
+  "Contract Name": "OptimisticShibarium",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "-"
+}

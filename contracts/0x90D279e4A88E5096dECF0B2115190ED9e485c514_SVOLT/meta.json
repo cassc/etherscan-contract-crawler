@@ -1,0 +1,12 @@
+{
+  "Address": "0x90D279e4A88E5096dECF0B2115190ED9e485c514",
+  "Contract Name": "SVOLT",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "1 wei",
+  "Txns": "115",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

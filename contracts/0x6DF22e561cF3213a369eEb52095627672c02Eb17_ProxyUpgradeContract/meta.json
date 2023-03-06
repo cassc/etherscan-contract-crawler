@@ -1,0 +1,12 @@
+{
+  "Address": "0x6DF22e561cF3213a369eEb52095627672c02Eb17",
+  "Contract Name": "ProxyUpgradeContract",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

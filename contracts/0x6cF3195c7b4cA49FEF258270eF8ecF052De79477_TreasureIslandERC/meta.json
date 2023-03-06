@@ -1,0 +1,12 @@
+{
+  "Address": "0x6cF3195c7b4cA49FEF258270eF8ecF052De79477",
+  "Contract Name": "TreasureIslandERC",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "2 wei",
+  "Txns": "83",
+  "Setting": "-",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

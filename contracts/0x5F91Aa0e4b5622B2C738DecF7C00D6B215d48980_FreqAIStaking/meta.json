@@ -1,0 +1,12 @@
+{
+  "Address": "0x5F91Aa0e4b5622B2C738DecF7C00D6B215d48980",
+  "Contract Name": "FreqAIStaking",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0.01 ETH",
+  "Txns": "6",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

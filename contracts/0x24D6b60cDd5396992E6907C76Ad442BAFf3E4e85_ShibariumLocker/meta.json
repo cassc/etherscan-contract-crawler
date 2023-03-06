@@ -1,0 +1,12 @@
+{
+  "Address": "0x24D6b60cDd5396992E6907C76Ad442BAFf3E4e85",
+  "Contract Name": "ShibariumLocker",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "None"
+}

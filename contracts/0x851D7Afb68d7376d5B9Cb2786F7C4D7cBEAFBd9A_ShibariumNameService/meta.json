@@ -1,0 +1,12 @@
+{
+  "Address": "0x851D7Afb68d7376d5B9Cb2786F7C4D7cBEAFBd9A",
+  "Contract Name": "ShibariumNameService",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "24",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

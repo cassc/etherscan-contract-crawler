@@ -1,0 +1,12 @@
+{
+  "Address": "0x885a58B151Cfa0A1Af467bd246022DE6EBcd2626",
+  "Contract Name": "UniswapV3PriceOracle",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/5/2023",
+  "Audit": "-",
+  "License": "None"
+}
