@@ -1,0 +1,12 @@
+{
+  "Address": "0x9cD13e55e399e65AAA4db4ba9D89076EC73a19E1",
+  "Contract Name": "BUSDBuffet",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "8",
+  "Setting": "-",
+  "Verified": "3/5/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

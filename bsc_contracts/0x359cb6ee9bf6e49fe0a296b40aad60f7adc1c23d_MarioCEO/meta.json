@@ -1,0 +1,12 @@
+{
+  "Address": "0x359cb6ee9bf6e49fe0a296b40aad60f7adc1c23d",
+  "Contract Name": "MarioCEO",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "1 wei",
+  "Txns": "64",
+  "Setting": "-",
+  "Verified": "3/6/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

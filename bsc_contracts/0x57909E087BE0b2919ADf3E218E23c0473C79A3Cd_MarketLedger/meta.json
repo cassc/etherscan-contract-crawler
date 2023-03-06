@@ -1,0 +1,12 @@
+{
+  "Address": "0x57909E087BE0b2919ADf3E218E23c0473C79A3Cd",
+  "Contract Name": "MarketLedger",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "9",
+  "Setting": "-",
+  "Verified": "3/5/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

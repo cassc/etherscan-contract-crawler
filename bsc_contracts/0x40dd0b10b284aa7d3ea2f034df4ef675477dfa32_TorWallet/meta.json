@@ -1,0 +1,12 @@
+{
+  "Address": "0x40dd0b10b284aa7d3ea2f034df4ef675477dfa32",
+  "Contract Name": "TorWallet",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 BNB",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "3/6/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
