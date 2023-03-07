@@ -1,0 +1,12 @@
+{
+  "Address": "0x503c36c9171212b4bfcb2b01cffc05a882ba6b4a",
+  "Contract Name": "BasedShiba",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "5 wei",
+  "Txns": "113",
+  "Setting": "-",
+  "Verified": "3/6/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
