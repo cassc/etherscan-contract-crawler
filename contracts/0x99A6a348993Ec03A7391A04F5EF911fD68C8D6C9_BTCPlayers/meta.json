@@ -1,0 +1,12 @@
+{
+  "Address": "0x99A6a348993Ec03A7391A04F5EF911fD68C8D6C9",
+  "Contract Name": "BTCPlayers",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0.141 ETH",
+  "Txns": "46",
+  "Setting": "",
+  "Verified": "3/6/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

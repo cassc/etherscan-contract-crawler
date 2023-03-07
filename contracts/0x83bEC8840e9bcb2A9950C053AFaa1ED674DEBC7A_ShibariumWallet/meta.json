@@ -1,0 +1,12 @@
+{
+  "Address": "0x83bEC8840e9bcb2A9950C053AFaa1ED674DEBC7A",
+  "Contract Name": "ShibariumWallet",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "138",
+  "Setting": "",
+  "Verified": "3/6/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

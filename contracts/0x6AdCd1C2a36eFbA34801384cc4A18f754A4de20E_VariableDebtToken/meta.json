@@ -1,0 +1,12 @@
+{
+  "Address": "0x6AdCd1C2a36eFbA34801384cc4A18f754A4de20E",
+  "Contract Name": "VariableDebtToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "3/6/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0xC749Fa7f80F92c0c0585a2F4192736F3506C7c8C",
+  "Contract Name": "PawFunds",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "1 wei",
+  "Txns": "16",
+  "Setting": "",
+  "Verified": "3/6/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

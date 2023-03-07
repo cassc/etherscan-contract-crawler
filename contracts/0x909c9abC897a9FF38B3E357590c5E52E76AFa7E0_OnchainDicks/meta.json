@@ -1,0 +1,12 @@
+{
+  "Address": "0x909c9abC897a9FF38B3E357590c5E52E76AFa7E0",
+  "Contract Name": "OnchainDicks",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.18",
+  "Balance": "0.003 ETH",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "3/6/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x05bC5038DaD935f5f18aEB185A206C23A0DF994a",
+  "Contract Name": "HushMixer",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0.23 ETH",
+  "Txns": "121",
+  "Setting": "-",
+  "Verified": "3/6/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

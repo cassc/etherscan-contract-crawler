@@ -1,0 +1,12 @@
+{
+  "Address": "0xd01Dcc5417B40f05e87759c38834Fb0511F40922",
+  "Contract Name": "TransactionBatcherMEV",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "3",
+  "Setting": "-",
+  "Verified": "3/7/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

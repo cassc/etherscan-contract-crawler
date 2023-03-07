@@ -1,0 +1,12 @@
+{
+  "Address": "0xE8baA48589aBB99592A166Ad87BbEA15a4327930",
+  "Contract Name": "AnteUSDTBalanceTest",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "3/7/2023",
+  "Audit": "-",
+  "License": "-"
+}

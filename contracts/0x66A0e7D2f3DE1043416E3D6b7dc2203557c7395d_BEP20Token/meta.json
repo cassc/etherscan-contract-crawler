@@ -1,0 +1,12 @@
+{
+  "Address": "0x66A0e7D2f3DE1043416E3D6b7dc2203557c7395d",
+  "Contract Name": "BEP20Token",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "3/6/2023",
+  "Audit": "-",
+  "License": "None"
+}

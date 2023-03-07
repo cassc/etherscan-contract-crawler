@@ -1,0 +1,12 @@
+{
+  "Address": "0x05763b092B45E6519c4F734b7EF118049c5173E7",
+  "Contract Name": "Geggs",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "8",
+  "Setting": "-",
+  "Verified": "3/6/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

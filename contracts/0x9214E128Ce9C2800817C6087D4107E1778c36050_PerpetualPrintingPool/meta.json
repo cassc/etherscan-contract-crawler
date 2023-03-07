@@ -1,0 +1,12 @@
+{
+  "Address": "0x9214E128Ce9C2800817C6087D4107E1778c36050",
+  "Contract Name": "PerpetualPrintingPool",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "3/6/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x3B747f3476AF6A4139c267cA7b89B86695E57BF5",
+  "Contract Name": "BankOfShibarium",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "34",
+  "Setting": "-",
+  "Verified": "3/6/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

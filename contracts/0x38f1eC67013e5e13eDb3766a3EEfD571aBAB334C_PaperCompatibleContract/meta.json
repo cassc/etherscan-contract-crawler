@@ -1,0 +1,12 @@
+{
+  "Address": "0x38f1eC67013e5e13eDb3766a3EEfD571aBAB334C",
+  "Contract Name": "PaperCompatibleContract",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "3/7/2023",
+  "Audit": "-",
+  "License": "-"
+}
