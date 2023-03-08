@@ -1,0 +1,12 @@
+{
+  "Address": "0xe25c522a3ad61b0d28f60ddc497004d0383d1bff",
+  "Contract Name": "BitCoinHalving",
+  "Compiler": "Solidity",
+  "Version": "0.8.13",
+  "Balance": "0 BNB",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "3/8/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

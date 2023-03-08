@@ -1,0 +1,12 @@
+{
+  "Address": "0xbfda57fed81cf35cfb059bd82f608b21c4b6551b",
+  "Contract Name": "MyToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0 BNB",
+  "Txns": "3",
+  "Setting": "-",
+  "Verified": "3/8/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

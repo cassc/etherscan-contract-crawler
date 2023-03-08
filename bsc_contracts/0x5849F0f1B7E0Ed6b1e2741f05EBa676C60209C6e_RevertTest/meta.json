@@ -1,0 +1,12 @@
+{
+  "Address": "0x5849F0f1B7E0Ed6b1e2741f05EBa676C60209C6e",
+  "Contract Name": "RevertTest",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/7/2023",
+  "Audited": "-",
+  "License": "GNU GPLv3"
+}

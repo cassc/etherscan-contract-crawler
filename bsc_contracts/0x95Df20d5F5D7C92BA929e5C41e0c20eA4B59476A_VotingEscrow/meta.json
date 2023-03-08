@@ -1,0 +1,12 @@
+{
+  "Address": "0x95Df20d5F5D7C92BA929e5C41e0c20eA4B59476A",
+  "Contract Name": "VotingEscrow",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.4",
+  "Balance": "0 BNB",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "3/7/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
