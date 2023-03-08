@@ -1,0 +1,12 @@
+{
+  "Address": "0xCB3fa9C7A72A8848e2BeB66C95E119f897E200cc",
+  "Contract Name": "PinkPoopContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "23",
+  "Setting": "",
+  "Verified": "3/7/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

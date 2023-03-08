@@ -1,0 +1,12 @@
+{
+  "Address": "0x906040dD72121555C253bb0f0954c4D424f360A2",
+  "Contract Name": "Shibarium_Perpetual",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "90",
+  "Setting": "",
+  "Verified": "3/7/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

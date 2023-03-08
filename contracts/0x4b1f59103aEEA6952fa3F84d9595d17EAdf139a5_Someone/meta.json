@@ -1,0 +1,12 @@
+{
+  "Address": "0x4b1f59103aEEA6952fa3F84d9595d17EAdf139a5",
+  "Contract Name": "Someone",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.18",
+  "Balance": "0.01 ETH",
+  "Txns": "8",
+  "Setting": "",
+  "Verified": "3/8/2023",
+  "Audit": "-",
+  "License": "-"
+}

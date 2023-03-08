@@ -1,0 +1,12 @@
+{
+  "Address": "0x37434dcb2DC049c0068d4b8F95497311F44c5d9e",
+  "Contract Name": "LimitOrderSubProxy",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/7/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x58CA1BC9A592B2384Be3a975c94857FBda242ccb",
+  "Contract Name": "PulsechainNameService",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "18",
+  "Setting": "",
+  "Verified": "3/8/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

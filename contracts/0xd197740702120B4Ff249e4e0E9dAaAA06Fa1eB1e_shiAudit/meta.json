@@ -1,0 +1,12 @@
+{
+  "Address": "0xd197740702120B4Ff249e4e0E9dAaAA06Fa1eB1e",
+  "Contract Name": "shiAudit",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "98",
+  "Setting": "",
+  "Verified": "3/7/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}
