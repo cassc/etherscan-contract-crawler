@@ -1,0 +1,12 @@
+{
+  "Address": "0x84087656ed202f13c058922402679a21456211cc",
+  "Contract Name": "BNBMiner",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "1 wei",
+  "Txns": "23",
+  "Setting": "",
+  "Verified": "3/8/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

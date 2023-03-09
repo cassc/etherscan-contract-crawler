@@ -1,0 +1,12 @@
+{
+  "Address": "0x80ffc3329062d80d90309f3a15556ce0c2c18edc",
+  "Contract Name": "CashMachine",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 BNB",
+  "Txns": "16",
+  "Setting": "-",
+  "Verified": "3/9/2023",
+  "Audited": "-",
+  "License": "None"
+}

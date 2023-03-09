@@ -1,0 +1,12 @@
+{
+  "Address": "0x995621f0a0c8c214944ba1ee022e3fe941e1214c",
+  "Contract Name": "XRPZilla",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "18 wei",
+  "Txns": "48",
+  "Setting": "-",
+  "Verified": "3/8/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
