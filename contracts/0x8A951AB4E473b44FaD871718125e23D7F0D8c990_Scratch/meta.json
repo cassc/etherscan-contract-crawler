@@ -1,0 +1,12 @@
+{
+  "Address": "0x8A951AB4E473b44FaD871718125e23D7F0D8c990",
+  "Contract Name": "Scratch",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "1 wei",
+  "Txns": "214",
+  "Setting": "-",
+  "Verified": "3/8/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x0108C40a6D63F8018DaE495745ce9FcF1e5ce1CF",
+  "Contract Name": "IdentityOracle",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.15",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "3/8/2023",
+  "Audit": "-",
+  "License": "-"
+}
