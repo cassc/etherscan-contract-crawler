@@ -1,0 +1,12 @@
+{
+  "Address": "0x64623301a8e3B679d3b9B862579eb62f4594DA9d",
+  "Contract Name": "ShibariumMiner",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0.4368001 ETH",
+  "Txns": "13",
+  "Setting": "",
+  "Verified": "3/9/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

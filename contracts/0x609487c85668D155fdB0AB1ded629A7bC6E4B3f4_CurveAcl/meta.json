@@ -1,0 +1,12 @@
+{
+  "Address": "0x609487c85668D155fdB0AB1ded629A7bC6E4B3f4",
+  "Contract Name": "CurveAcl",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/10/2023",
+  "Audit": "-",
+  "License": "GNU LGPLv3"
+}

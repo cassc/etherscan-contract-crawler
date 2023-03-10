@@ -1,0 +1,12 @@
+{
+  "Address": "0x6A76157A757f877A2Db866c0CB30A3330eDb655E",
+  "Contract Name": "Minter",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "9",
+  "Setting": "",
+  "Verified": "3/9/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
