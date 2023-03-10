@@ -1,0 +1,12 @@
+{
+  "Address": "0x183D2a36c77BBA0BCcA529c64d86BDca187698ca",
+  "Contract Name": "SimpleBEP20",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/10/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

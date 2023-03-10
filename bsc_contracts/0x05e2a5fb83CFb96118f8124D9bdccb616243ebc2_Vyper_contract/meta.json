@@ -1,0 +1,12 @@
+{
+  "Address": "0x05e2a5fb83CFb96118f8124D9bdccb616243ebc2",
+  "Contract Name": "Vyper_contract",
+  "Compiler": "Vyper",
+  "Version": "vyper:0.3.7",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/10/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

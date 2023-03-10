@@ -1,0 +1,12 @@
+{
+  "Address": "0x5c6ce28da31b87c4c81488354f67065216d1c234",
+  "Contract Name": "compoundutest",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 BNB",
+  "Txns": "5",
+  "Setting": "-",
+  "Verified": "3/9/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
