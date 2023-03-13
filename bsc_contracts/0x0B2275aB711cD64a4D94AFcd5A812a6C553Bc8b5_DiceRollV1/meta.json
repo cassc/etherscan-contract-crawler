@@ -1,0 +1,12 @@
+{
+  "Address": "0x0B2275aB711cD64a4D94AFcd5A812a6C553Bc8b5",
+  "Contract Name": "DiceRollV1",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0.01 BNB",
+  "Txns": "15",
+  "Setting": "",
+  "Verified": "3/13/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
