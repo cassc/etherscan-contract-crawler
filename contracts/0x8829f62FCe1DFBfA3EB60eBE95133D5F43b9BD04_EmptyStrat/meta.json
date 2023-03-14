@@ -1,0 +1,12 @@
+{
+  "Address": "0x8829f62FCe1DFBfA3EB60eBE95133D5F43b9BD04",
+  "Contract Name": "EmptyStrat",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/13/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

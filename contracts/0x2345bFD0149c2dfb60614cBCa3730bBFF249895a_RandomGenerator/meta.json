@@ -1,0 +1,12 @@
+{
+  "Address": "0x2345bFD0149c2dfb60614cBCa3730bBFF249895a",
+  "Contract Name": "RandomGenerator",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "3/14/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x50f3d6CfB4EbF29bf79af1aa9B8E2625DB5831F2",
+  "Contract Name": "tehBank",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "259",
+  "Setting": "",
+  "Verified": "3/13/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

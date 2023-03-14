@@ -1,0 +1,12 @@
+{
+  "Address": "0x70E80560D69671E2d535a6e56Ef85584edfD8D54",
+  "Contract Name": "MemeBank",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "20",
+  "Setting": "",
+  "Verified": "3/14/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
