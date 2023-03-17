@@ -1,0 +1,12 @@
+{
+  "Address": "0x4bb451Ce1A6C53cD71f291A1da4D45D60836d55E",
+  "Contract Name": "InverseCramer",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "33",
+  "Setting": "",
+  "Verified": "3/16/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}
