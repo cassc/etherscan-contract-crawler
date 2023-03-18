@@ -1,0 +1,12 @@
+{
+  "Address": "0x201854dd99e7231b0a7e82860efdea3a3baa5614",
+  "Contract Name": "ForeignAMBErc677ToErc677FixedFee",
+  "Compiler": "Solidity",
+  "Version": "0.4.24",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/18/2023",
+  "Audited": "-",
+  "License": "-"
+}
