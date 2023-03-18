@@ -1,0 +1,12 @@
+{
+  "Address": "0x838344a0418D1eEc3eae2D3c55718bb9B82F4Df3",
+  "Contract Name": "LiquidLock",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "1 wei",
+  "Txns": "17",
+  "Setting": "",
+  "Verified": "3/17/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

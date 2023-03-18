@@ -1,0 +1,12 @@
+{
+  "Address": "0x21e9Ba0aB3dD279818FbbAE15d19867d4F77C491",
+  "Contract Name": "LiquidLock",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "3/17/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

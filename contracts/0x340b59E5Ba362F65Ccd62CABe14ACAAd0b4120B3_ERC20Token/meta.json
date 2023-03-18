@@ -1,0 +1,12 @@
+{
+  "Address": "0x340b59E5Ba362F65Ccd62CABe14ACAAd0b4120B3",
+  "Contract Name": "ERC20Token",
+  "Compiler": "Solidity",
+  "Version": "0.7.0",
+  "Balance": "0 ETH",
+  "Txns": "48",
+  "Setting": "",
+  "Verified": "3/17/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
