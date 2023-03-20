@@ -1,0 +1,12 @@
+{
+  "Address": "0x52b03dd0769c0ae6a8e4f69e8142c22448005cc4",
+  "Contract Name": "BEP20Token",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 BNB",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "3/19/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
