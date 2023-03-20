@@ -1,0 +1,12 @@
+{
+  "Address": "0xDA8AeC3C5e61398DC72885a554BB21dd7F538B4D",
+  "Contract Name": "Escrow",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/20/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
