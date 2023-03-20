@@ -1,0 +1,12 @@
+{
+  "Address": "0x583beefA7e21F950aD4444832E65d3B4100e5fd5",
+  "Contract Name": "GoldEthereum",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "30",
+  "Setting": "",
+  "Verified": "3/19/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

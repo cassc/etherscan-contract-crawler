@@ -1,0 +1,12 @@
+{
+  "Address": "0xd76A7C01B97ce9d77fb486a10Bb306DcdAca5BEC",
+  "Contract Name": "Tacocat",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "42",
+  "Setting": "",
+  "Verified": "3/19/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

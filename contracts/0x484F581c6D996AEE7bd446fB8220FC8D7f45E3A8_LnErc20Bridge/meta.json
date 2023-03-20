@@ -1,0 +1,12 @@
+{
+  "Address": "0x484F581c6D996AEE7bd446fB8220FC8D7f45E3A8",
+  "Contract Name": "LnErc20Bridge",
+  "Compiler": "Solidity(Multi)",
+  "Version": "0.7.6",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/19/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

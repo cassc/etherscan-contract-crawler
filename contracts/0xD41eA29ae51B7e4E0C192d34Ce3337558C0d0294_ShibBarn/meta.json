@@ -1,0 +1,12 @@
+{
+  "Address": "0xD41eA29ae51B7e4E0C192d34Ce3337558C0d0294",
+  "Contract Name": "ShibBarn",
+  "Compiler": "Solidity",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "20",
+  "Setting": "",
+  "Verified": "3/19/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

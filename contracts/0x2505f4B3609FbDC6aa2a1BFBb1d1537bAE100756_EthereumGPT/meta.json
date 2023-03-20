@@ -1,0 +1,12 @@
+{
+  "Address": "0x2505f4B3609FbDC6aa2a1BFBb1d1537bAE100756",
+  "Contract Name": "EthereumGPT",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0 ETH",
+  "Txns": "15",
+  "Setting": "",
+  "Verified": "3/19/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}
