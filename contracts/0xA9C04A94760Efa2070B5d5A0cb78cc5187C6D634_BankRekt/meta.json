@@ -1,0 +1,12 @@
+{
+  "Address": "0xA9C04A94760Efa2070B5d5A0cb78cc5187C6D634",
+  "Contract Name": "BankRekt",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "256",
+  "Setting": "-",
+  "Verified": "3/20/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

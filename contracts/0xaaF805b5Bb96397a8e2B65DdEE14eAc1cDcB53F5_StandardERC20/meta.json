@@ -1,0 +1,12 @@
+{
+  "Address": "0xaaF805b5Bb96397a8e2B65DdEE14eAc1cDcB53F5",
+  "Contract Name": "StandardERC20",
+  "Compiler": "Solidity",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "6",
+  "Setting": "-",
+  "Verified": "3/20/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

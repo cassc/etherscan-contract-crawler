@@ -1,0 +1,12 @@
+{
+  "Address": "0x8D3de98Db6074fe49FAD1EA65F23A110D8B54Dd7",
+  "Contract Name": "BankOfShiba",
+  "Compiler": "Solidity",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "20",
+  "Setting": "",
+  "Verified": "3/21/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
