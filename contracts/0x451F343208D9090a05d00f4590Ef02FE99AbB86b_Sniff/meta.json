@@ -1,0 +1,12 @@
+{
+  "Address": "0x451F343208D9090a05d00f4590Ef02FE99AbB86b",
+  "Contract Name": "Sniff",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "123",
+  "Setting": "",
+  "Verified": "3/21/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

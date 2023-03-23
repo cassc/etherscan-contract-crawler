@@ -1,0 +1,12 @@
+{
+  "Address": "0x843EcfdB484fAeE8fD9F355Ea4CBD0ff242F8F81",
+  "Contract Name": "MultiSigBridge",
+  "Compiler": "Solidity",
+  "Version": "0.5.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/22/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
