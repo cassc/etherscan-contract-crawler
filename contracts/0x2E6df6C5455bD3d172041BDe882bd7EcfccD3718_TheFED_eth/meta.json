@@ -1,0 +1,12 @@
+{
+  "Address": "0x2E6df6C5455bD3d172041BDe882bd7EcfccD3718",
+  "Contract Name": "TheFED_eth",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "27",
+  "Setting": "",
+  "Verified": "3/23/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

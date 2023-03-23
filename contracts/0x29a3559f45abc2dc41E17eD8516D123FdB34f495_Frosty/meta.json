@@ -1,0 +1,12 @@
+{
+  "Address": "0x29a3559f45abc2dc41E17eD8516D123FdB34f495",
+  "Contract Name": "Frosty",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "3/22/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

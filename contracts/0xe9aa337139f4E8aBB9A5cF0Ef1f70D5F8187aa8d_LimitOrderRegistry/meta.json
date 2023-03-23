@@ -1,0 +1,12 @@
+{
+  "Address": "0xe9aa337139f4E8aBB9A5cF0Ef1f70D5F8187aa8d",
+  "Contract Name": "LimitOrderRegistry",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "3/23/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

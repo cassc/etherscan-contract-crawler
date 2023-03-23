@@ -1,0 +1,12 @@
+{
+  "Address": "0x5eF0309C6753950ad96ec518C1635D07783fff4b",
+  "Contract Name": "SEC",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "-",
+  "Verified": "3/22/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

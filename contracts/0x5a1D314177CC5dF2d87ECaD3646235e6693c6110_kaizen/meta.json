@@ -1,0 +1,12 @@
+{
+  "Address": "0x5a1D314177CC5dF2d87ECaD3646235e6693c6110",
+  "Contract Name": "kaizen",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "328",
+  "Setting": "",
+  "Verified": "3/22/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

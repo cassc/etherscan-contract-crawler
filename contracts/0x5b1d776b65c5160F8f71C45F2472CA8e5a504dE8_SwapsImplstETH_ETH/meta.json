@@ -1,0 +1,12 @@
+{
+  "Address": "0x5b1d776b65c5160F8f71C45F2472CA8e5a504dE8",
+  "Contract Name": "SwapsImplstETH_ETH",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.5.17",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "3/22/2023",
+  "Audit": "-",
+  "License": "None"
+}

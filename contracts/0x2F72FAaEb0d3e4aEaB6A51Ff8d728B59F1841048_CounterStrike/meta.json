@@ -1,0 +1,12 @@
+{
+  "Address": "0x2F72FAaEb0d3e4aEaB6A51Ff8d728B59F1841048",
+  "Contract Name": "CounterStrike",
+  "Compiler": "Solidity",
+  "Version": "0.8.13",
+  "Balance": "0.012 ETH",
+  "Txns": "205",
+  "Setting": "",
+  "Verified": "3/22/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

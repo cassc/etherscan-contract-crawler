@@ -1,0 +1,12 @@
+{
+  "Address": "0x06FBC64f0A7c2F9647BFb08DEe01d0e27c427058",
+  "Contract Name": "TelegramWallet",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0 ETH",
+  "Txns": "184",
+  "Setting": "",
+  "Verified": "3/22/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

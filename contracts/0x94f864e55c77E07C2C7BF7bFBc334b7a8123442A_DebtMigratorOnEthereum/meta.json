@@ -1,0 +1,12 @@
+{
+  "Address": "0x94f864e55c77E07C2C7BF7bFBc334b7a8123442A",
+  "Contract Name": "DebtMigratorOnEthereum",
+  "Compiler": "Solidity",
+  "Version": "0.5.16",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "3/22/2023",
+  "Audit": "-",
+  "License": "-"
+}

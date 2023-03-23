@@ -1,0 +1,12 @@
+{
+  "Address": "0xC399A1ebdB291677e0ABf62fd7a18e4cFa422f5F",
+  "Contract Name": "BridgeRemoveAllOutboxesAction",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "3/22/2023",
+  "Audit": "-",
+  "License": "-"
+}
