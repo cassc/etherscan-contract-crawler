@@ -12,8 +12,10 @@ except:
     print('undetected_chromedriver not installed, crawling from polygonscan will not work')
     pass
 
+proxies = {}  #{'http': "socks5://127.0.0.1:1080", 'https': "socks5://127.0.0.1:1080"}
+
 REQ_HEADER = {
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36',
+    'user-agent': 'Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36',
 }
 
 VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
@@ -32,7 +34,7 @@ def address_from_tr(td: Any) -> str:
 def parse_page(page: Optional[int]=None, retry=3, retry_delay=5) -> Optional[List[Dict[str, str]]]:
     url = VERIFIED_CONTRACT_URL if page is None else f'{VERIFIED_CONTRACT_URL}/{page}'
     print(f'Crawling {url}')
-    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
+    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False, proxies=proxies)
     if resp.status_code != 200:
         print(f'No results found on page: {page}, http status: {resp.status_code}')
         return None
@@ -129,7 +131,7 @@ def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_f
     address = contract['Address']
     contract_name = contract['Contract Name']
     url = CONTRACT_SOURCE_URL.format(address)
-    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
+    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False, proxies=proxies)
 
     def maybe_retry(e=None):
         if retry > 0:
@@ -175,13 +177,13 @@ def download_url_poly(url, retry=3, retry_delay=5, throw_if_fail=False):
     for key, value in cookie.items():
         cookie[key] = str(value)
 
-    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=True, cookies=cookie)
+    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=True, cookies=cookie, proxies=proxies)
     soup = BeautifulSoup(resp.content, 'lxml')
     parse_source_soup(soup, address)
 
 def download_url(url, retry=3, retry_delay=5, throw_if_fail=False):
     address = url.split('/')[-1].split('#')[0]
-    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False)
+    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False, proxies=proxies)
 
     if resp.status_code != 200:
         if retry > 0:
