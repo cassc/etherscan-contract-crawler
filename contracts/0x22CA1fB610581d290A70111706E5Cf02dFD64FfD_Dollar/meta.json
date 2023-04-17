@@ -1,0 +1,12 @@
+{
+  "Address": "0x22CA1fB610581d290A70111706E5Cf02dFD64FfD",
+  "Contract Name": "Dollar",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/16/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

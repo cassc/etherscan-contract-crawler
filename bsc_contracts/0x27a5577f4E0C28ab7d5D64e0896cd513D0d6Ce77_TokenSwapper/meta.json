@@ -1,0 +1,12 @@
+{
+  "Address": "0x27a5577f4E0C28ab7d5D64e0896cd513D0d6Ce77",
+  "Contract Name": "TokenSwapper",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0.0025 BNB",
+  "Txns": "4",
+  "Setting": "-",
+  "Verified": "4/16/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

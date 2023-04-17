@@ -1,0 +1,12 @@
+{
+  "Address": "0xf9be64c3555d2b4311c471562115795bb3020874",
+  "Contract Name": "Safe_Bitcoin",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "1 wei",
+  "Txns": "20",
+  "Setting": "-",
+  "Verified": "4/16/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

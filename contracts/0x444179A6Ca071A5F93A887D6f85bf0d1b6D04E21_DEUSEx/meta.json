@@ -1,0 +1,12 @@
+{
+  "Address": "0x444179A6Ca071A5F93A887D6f85bf0d1b6D04E21",
+  "Contract Name": "DEUSEx",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0.001 ETH",
+  "Txns": "25",
+  "Setting": "",
+  "Verified": "4/15/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

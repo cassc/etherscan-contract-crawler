@@ -1,0 +1,12 @@
+{
+  "Address": "0x58bcA53ebba1AAf25F0EDCd8DaD6421872fe20B2",
+  "Contract Name": "MultiplexFeature",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/16/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

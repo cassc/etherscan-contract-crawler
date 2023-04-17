@@ -1,0 +1,12 @@
+{
+  "Address": "0xF2997945B1ec0764A2E6E2492C39DA062573895D",
+  "Contract Name": "DividendTracker",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0.245457709155795617 ETH",
+  "Txns": "19",
+  "Setting": "",
+  "Verified": "4/16/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

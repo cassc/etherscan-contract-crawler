@@ -1,0 +1,12 @@
+{
+  "Address": "0x8335116B6804B4572d4784885d422ee78fDC3D09",
+  "Contract Name": "WrapTokenPorxy",
+  "Compiler": "Solidity(Multi)",
+  "Version": "0.8.14",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "4/16/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
