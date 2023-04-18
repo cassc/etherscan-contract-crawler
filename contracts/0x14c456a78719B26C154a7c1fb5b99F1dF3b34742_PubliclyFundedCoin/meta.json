@@ -1,0 +1,12 @@
+{
+  "Address": "0x14c456a78719B26C154a7c1fb5b99F1dF3b34742",
+  "Contract Name": "PubliclyFundedCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/18/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

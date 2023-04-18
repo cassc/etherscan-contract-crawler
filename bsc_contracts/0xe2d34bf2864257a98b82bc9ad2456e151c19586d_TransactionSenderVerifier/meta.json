@@ -1,0 +1,12 @@
+{
+  "Address": "0xe2d34bf2864257a98b82bc9ad2456e151c19586d",
+  "Contract Name": "TransactionSenderVerifier",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/17/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}

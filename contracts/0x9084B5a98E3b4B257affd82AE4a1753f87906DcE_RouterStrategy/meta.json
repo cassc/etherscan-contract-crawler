@@ -1,0 +1,12 @@
+{
+  "Address": "0x9084B5a98E3b4B257affd82AE4a1753f87906DcE",
+  "Contract Name": "RouterStrategy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "6",
+  "Setting": "",
+  "Verified": "4/17/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

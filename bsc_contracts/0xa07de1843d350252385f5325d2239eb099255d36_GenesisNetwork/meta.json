@@ -1,0 +1,12 @@
+{
+  "Address": "0xa07de1843d350252385f5325d2239eb099255d36",
+  "Contract Name": "GenesisNetwork",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 BNB",
+  "Txns": "92",
+  "Setting": "-",
+  "Verified": "4/17/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

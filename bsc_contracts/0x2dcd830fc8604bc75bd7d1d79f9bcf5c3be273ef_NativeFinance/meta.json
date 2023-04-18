@@ -1,0 +1,12 @@
+{
+  "Address": "0x2dcd830fc8604bc75bd7d1d79f9bcf5c3be273ef",
+  "Contract Name": "NativeFinance",
+  "Compiler": "Solidity",
+  "Version": "0.8.4",
+  "Balance": "0 BNB",
+  "Txns": "12",
+  "Setting": "-",
+  "Verified": "4/17/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

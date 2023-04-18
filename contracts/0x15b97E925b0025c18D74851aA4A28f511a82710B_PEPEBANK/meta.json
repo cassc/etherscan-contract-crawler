@@ -1,0 +1,12 @@
+{
+  "Address": "0x15b97E925b0025c18D74851aA4A28f511a82710B",
+  "Contract Name": "PEPEBANK",
+  "Compiler": "Solidity",
+  "Version": "0.8.4",
+  "Balance": "1 wei",
+  "Txns": "110",
+  "Setting": "",
+  "Verified": "4/17/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

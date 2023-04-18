@@ -1,0 +1,12 @@
+{
+  "Address": "0x622000EC503EAa1D0F32D3d0458956b994909F70",
+  "Contract Name": "PepeBonksToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0.15 ETH",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "4/17/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
