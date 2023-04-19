@@ -1,0 +1,12 @@
+{
+  "Address": "0x1bcb75f03FcfD176962Ae789E01b3dF526F9F365",
+  "Contract Name": "MultiSigWalletFactory",
+  "Compiler": "Solidity(Multi)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "4/19/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

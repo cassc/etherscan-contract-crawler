@@ -1,0 +1,12 @@
+{
+  "Address": "0x9101A56D4017Ea0Ed8e336f5600c3F28a38A7440",
+  "Contract Name": "FeeCollector",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.7",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/18/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}

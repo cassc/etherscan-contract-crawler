@@ -1,0 +1,12 @@
+{
+  "Address": "0x213359F821C8EA3A5ae0a7808193f0203f812E74",
+  "Contract Name": "zkBridge",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "4/19/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

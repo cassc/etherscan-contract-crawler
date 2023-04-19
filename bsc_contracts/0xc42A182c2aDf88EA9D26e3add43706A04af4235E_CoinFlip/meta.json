@@ -1,0 +1,12 @@
+{
+  "Address": "0xc42A182c2aDf88EA9D26e3add43706A04af4235E",
+  "Contract Name": "CoinFlip",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0.03 BNB",
+  "Txns": "7",
+  "Setting": "-",
+  "Verified": "4/18/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

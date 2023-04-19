@@ -1,0 +1,12 @@
+{
+  "Address": "0x6ea1ec41d5358985eacfffdb94a52b6a236c7cc8",
+  "Contract Name": "CallbackFakeToken",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "4/19/2023",
+  "Audited": "-",
+  "License": "-"
+}

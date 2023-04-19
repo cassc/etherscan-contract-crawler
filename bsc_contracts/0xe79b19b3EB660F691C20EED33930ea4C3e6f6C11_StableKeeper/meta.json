@@ -1,0 +1,12 @@
+{
+  "Address": "0xe79b19b3EB660F691C20EED33930ea4C3e6f6C11",
+  "Contract Name": "StableKeeper",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.18",
+  "Balance": "0.2 BNB",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "4/18/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}

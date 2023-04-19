@@ -1,0 +1,12 @@
+{
+  "Address": "0x7e704825B55Ba9bE27483BeD912E44cc5a0162bc",
+  "Contract Name": "MIMOracle",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/18/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

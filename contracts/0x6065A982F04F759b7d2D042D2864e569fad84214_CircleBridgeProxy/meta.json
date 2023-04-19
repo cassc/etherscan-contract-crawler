@@ -1,0 +1,12 @@
+{
+  "Address": "0x6065A982F04F759b7d2D042D2864e569fad84214",
+  "Contract Name": "CircleBridgeProxy",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "4/19/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

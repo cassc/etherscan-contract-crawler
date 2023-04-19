@@ -1,0 +1,12 @@
+{
+  "Address": "0x9a7af1228E3eDB47F202871843f873c488BBEe7A",
+  "Contract Name": "BillionApe",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "1 wei",
+  "Txns": "8",
+  "Setting": "",
+  "Verified": "4/19/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}
