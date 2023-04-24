@@ -1,0 +1,12 @@
+{
+  "Address": "0x66873693E8b125dbea46274173B0d6DcD1933CCa",
+  "Contract Name": "PoolBidVerifier",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/24/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

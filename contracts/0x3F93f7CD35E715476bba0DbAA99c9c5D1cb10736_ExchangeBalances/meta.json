@@ -1,0 +1,12 @@
+{
+  "Address": "0x3F93f7CD35E715476bba0DbAA99c9c5D1cb10736",
+  "Contract Name": "ExchangeBalances",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.7.0",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/21/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

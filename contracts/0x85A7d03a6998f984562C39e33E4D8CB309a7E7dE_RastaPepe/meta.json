@@ -1,0 +1,12 @@
+{
+  "Address": "0x85A7d03a6998f984562C39e33E4D8CB309a7E7dE",
+  "Contract Name": "RastaPepe",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "60",
+  "Setting": "",
+  "Verified": "4/20/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x6B937A5920726e70c5bF1d4d4E18EEeEd46FaE83",
+  "Contract Name": "LoopringIOExchangeOwner",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.7.0",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "4/21/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

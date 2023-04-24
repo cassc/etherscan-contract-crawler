@@ -1,0 +1,12 @@
+{
+  "Address": "0x5441f80065f85AcAD7C7a254E93322f38896518F",
+  "Contract Name": "HelloBEP20",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/20/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x615B953baD4Cc5E1232976Cd0205Fa53D279b3De",
+  "Contract Name": "ExchangeBlocks",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.7.0",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/21/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

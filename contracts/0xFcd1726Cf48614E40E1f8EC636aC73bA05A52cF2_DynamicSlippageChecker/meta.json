@@ -1,0 +1,12 @@
+{
+  "Address": "0xFcd1726Cf48614E40E1f8EC636aC73bA05A52cF2",
+  "Contract Name": "DynamicSlippageChecker",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/21/2023",
+  "Audit": "-",
+  "License": "GNU LGPLv3"
+}

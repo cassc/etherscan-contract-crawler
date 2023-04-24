@@ -1,0 +1,12 @@
+{
+  "Address": "0xE3CdcF66aed92b432E0Bd127bD4e79A02F678DbB",
+  "Contract Name": "smallContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 BNB",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "4/23/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

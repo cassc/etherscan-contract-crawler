@@ -1,0 +1,12 @@
+{
+  "Address": "0xf11ec32c09473b86f66e692f6782d265adcbf90b",
+  "Contract Name": "FakeToken",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "4/20/2023",
+  "Audited": "-",
+  "License": "-"
+}
