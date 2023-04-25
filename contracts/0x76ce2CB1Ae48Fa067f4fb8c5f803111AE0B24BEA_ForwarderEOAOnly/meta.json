@@ -1,0 +1,12 @@
+{
+  "Address": "0x76ce2CB1Ae48Fa067f4fb8c5f803111AE0B24BEA",
+  "Contract Name": "ForwarderEOAOnly",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "4/24/2023",
+  "Audit": "-",
+  "License": "-"
+}

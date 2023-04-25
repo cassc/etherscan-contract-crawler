@@ -1,0 +1,12 @@
+{
+  "Address": "0x82d76a32A10A6D61C2473B0Dcf4ed15627320B42",
+  "Contract Name": "MyFinance",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0 BNB",
+  "Txns": "7",
+  "Setting": "",
+  "Verified": "4/24/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
