@@ -1,0 +1,12 @@
+{
+  "Address": "0xD87B7Da8943e2730Eb4777Bdb704DD2dc17A8AA9",
+  "Contract Name": "RugContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "13",
+  "Setting": "",
+  "Verified": "4/25/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

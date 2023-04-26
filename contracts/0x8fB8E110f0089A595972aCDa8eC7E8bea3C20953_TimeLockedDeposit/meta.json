@@ -1,0 +1,12 @@
+{
+  "Address": "0x8fB8E110f0089A595972aCDa8eC7E8bea3C20953",
+  "Contract Name": "TimeLockedDeposit",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "4/26/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
