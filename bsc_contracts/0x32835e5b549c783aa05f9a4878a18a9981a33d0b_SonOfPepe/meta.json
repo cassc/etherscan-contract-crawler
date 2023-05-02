@@ -1,0 +1,12 @@
+{
+  "Address": "0x32835e5b549c783aa05f9a4878a18a9981a33d0b",
+  "Contract Name": "SonOfPepe",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "41 wei",
+  "Txns": "271",
+  "Setting": "-",
+  "Verified": "5/1/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

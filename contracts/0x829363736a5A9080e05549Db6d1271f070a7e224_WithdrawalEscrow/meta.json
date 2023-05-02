@@ -1,0 +1,12 @@
+{
+  "Address": "0x829363736a5A9080e05549Db6d1271f070a7e224",
+  "Contract Name": "WithdrawalEscrow",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "4/28/2023",
+  "Audit": "-",
+  "License": "-"
+}

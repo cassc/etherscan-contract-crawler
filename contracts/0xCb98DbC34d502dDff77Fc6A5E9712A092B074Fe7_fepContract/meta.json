@@ -1,0 +1,12 @@
+{
+  "Address": "0xCb98DbC34d502dDff77Fc6A5E9712A092B074Fe7",
+  "Contract Name": "fepContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "4/27/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

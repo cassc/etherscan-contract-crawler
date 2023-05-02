@@ -1,0 +1,12 @@
+{
+  "Address": "0x1F0E0ab28840000c787F8646A8c478E3512657f1",
+  "Contract Name": "MetaZeusGenesis",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "30",
+  "Setting": "",
+  "Verified": "5/1/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

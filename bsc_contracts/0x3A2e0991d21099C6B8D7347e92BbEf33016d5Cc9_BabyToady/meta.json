@@ -1,0 +1,12 @@
+{
+  "Address": "0x3A2e0991d21099C6B8D7347e92BbEf33016d5Cc9",
+  "Contract Name": "BabyToady",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "44 wei",
+  "Txns": "144",
+  "Setting": "-",
+  "Verified": "5/2/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

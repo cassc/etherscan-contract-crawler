@@ -1,0 +1,12 @@
+{
+  "Address": "0x7dB0550572C23f7C84d7bA26A38dF9229e2CF47b",
+  "Contract Name": "MemeTokenStaking",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "-",
+  "Verified": "5/1/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

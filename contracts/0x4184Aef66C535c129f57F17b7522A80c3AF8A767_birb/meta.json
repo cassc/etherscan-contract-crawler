@@ -1,0 +1,12 @@
+{
+  "Address": "0x4184Aef66C535c129f57F17b7522A80c3AF8A767",
+  "Contract Name": "birb",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "20",
+  "Setting": "",
+  "Verified": "4/27/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

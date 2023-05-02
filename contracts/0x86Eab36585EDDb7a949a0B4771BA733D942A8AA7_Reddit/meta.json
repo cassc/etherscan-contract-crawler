@@ -1,0 +1,12 @@
+{
+  "Address": "0x86Eab36585EDDb7a949a0B4771BA733D942A8AA7",
+  "Contract Name": "Reddit",
+  "Compiler": "Solidity",
+  "Version": "0.8.13",
+  "Balance": "1 wei",
+  "Txns": "484",
+  "Setting": "-",
+  "Verified": "5/1/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x6D427FDCbd1ED72328CCBB2dda2961A54EE37bB0",
+  "Contract Name": "DripCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "30",
+  "Setting": "",
+  "Verified": "4/27/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
