@@ -1,0 +1,12 @@
+{
+  "Address": "0x5c32487d5285Fe8427C3028020f58731F8470322",
+  "Contract Name": "ALPHA",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "1 wei",
+  "Txns": "20",
+  "Setting": "-",
+  "Verified": "5/3/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x0dF2f6613335a1541C186B5d5CDF37a8b7CC98f0",
+  "Contract Name": "ThinkCoin",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "60",
+  "Setting": "",
+  "Verified": "5/2/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

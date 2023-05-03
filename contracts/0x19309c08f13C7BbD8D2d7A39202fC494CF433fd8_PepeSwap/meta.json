@@ -1,0 +1,12 @@
+{
+  "Address": "0x19309c08f13C7BbD8D2d7A39202fC494CF433fd8",
+  "Contract Name": "PepeSwap",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "5/3/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

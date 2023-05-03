@@ -1,0 +1,12 @@
+{
+  "Address": "0xa55AA5557EC22E85804729Bc6935029BB84cf16A",
+  "Contract Name": "SwapCreator",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0.02 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "5/2/2023",
+  "Audit": "-",
+  "License": "GNU LGPLv3"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x5F49f46075b528c35D4beCb7Ca7E45774A59DA5f",
+  "Contract Name": "Frog",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "19 wei",
+  "Txns": "52",
+  "Setting": "-",
+  "Verified": "5/3/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

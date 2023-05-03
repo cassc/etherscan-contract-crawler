@@ -1,0 +1,12 @@
+{
+  "Address": "0x80d32caa44f99609f542291d1949F6A2a19BD301",
+  "Contract Name": "PrivateSaleContract",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0.0001 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "5/2/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

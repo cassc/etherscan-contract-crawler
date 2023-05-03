@@ -1,0 +1,12 @@
+{
+  "Address": "0x57cda351482A05D36480C11B29a0063d45E0Ff2e",
+  "Contract Name": "Flork",
+  "Compiler": "Solidity",
+  "Version": "0.8.12",
+  "Balance": "149 wei",
+  "Txns": "93",
+  "Setting": "",
+  "Verified": "5/3/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

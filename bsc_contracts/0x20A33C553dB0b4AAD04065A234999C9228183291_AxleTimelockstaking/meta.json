@@ -1,0 +1,12 @@
+{
+  "Address": "0x20A33C553dB0b4AAD04065A234999C9228183291",
+  "Contract Name": "AxleTimelockstaking",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 BNB",
+  "Txns": "45",
+  "Setting": "-",
+  "Verified": "5/3/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

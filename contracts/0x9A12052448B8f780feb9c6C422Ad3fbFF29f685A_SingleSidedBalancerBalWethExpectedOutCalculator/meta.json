@@ -1,0 +1,12 @@
+{
+  "Address": "0x9A12052448B8f780feb9c6C422Ad3fbFF29f685A",
+  "Contract Name": "SingleSidedBalancerBalWethExpectedOutCalculator",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/3/2023",
+  "Audit": "-",
+  "License": "GNU LGPLv3"
+}
