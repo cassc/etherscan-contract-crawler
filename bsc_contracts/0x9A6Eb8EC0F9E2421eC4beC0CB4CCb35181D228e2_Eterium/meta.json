@@ -1,0 +1,12 @@
+{
+  "Address": "0x9A6Eb8EC0F9E2421eC4beC0CB4CCb35181D228e2",
+  "Contract Name": "Eterium",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "12 wei",
+  "Txns": "18",
+  "Setting": "-",
+  "Verified": "5/3/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

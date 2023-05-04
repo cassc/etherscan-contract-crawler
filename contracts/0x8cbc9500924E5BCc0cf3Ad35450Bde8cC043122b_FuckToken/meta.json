@@ -1,0 +1,12 @@
+{
+  "Address": "0x8cbc9500924E5BCc0cf3Ad35450Bde8cC043122b",
+  "Contract Name": "FuckToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "5/4/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

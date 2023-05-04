@@ -1,0 +1,12 @@
+{
+  "Address": "0x92B3f567546d607C920C33bD2ba87B2242Bad2fE",
+  "Contract Name": "HelloWorld",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "5/3/2023",
+  "Audited": "-",
+  "License": "GNU LGPLv3"
+}

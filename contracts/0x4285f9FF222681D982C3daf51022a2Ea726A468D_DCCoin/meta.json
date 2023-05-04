@@ -1,0 +1,12 @@
+{
+  "Address": "0x4285f9FF222681D982C3daf51022a2Ea726A468D",
+  "Contract Name": "DCCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.13",
+  "Balance": "0 ETH",
+  "Txns": "55",
+  "Setting": "-",
+  "Verified": "5/4/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

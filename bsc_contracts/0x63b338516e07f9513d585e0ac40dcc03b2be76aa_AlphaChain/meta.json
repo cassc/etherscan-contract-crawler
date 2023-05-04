@@ -1,0 +1,12 @@
+{
+  "Address": "0x63b338516e07f9513d585e0ac40dcc03b2be76aa",
+  "Contract Name": "AlphaChain",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "27 wei",
+  "Txns": "12",
+  "Setting": "-",
+  "Verified": "5/4/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

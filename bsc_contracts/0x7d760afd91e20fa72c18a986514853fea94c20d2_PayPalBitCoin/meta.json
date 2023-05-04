@@ -1,0 +1,12 @@
+{
+  "Address": "0x7d760afd91e20fa72c18a986514853fea94c20d2",
+  "Contract Name": "PayPalBitCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.13",
+  "Balance": "0 BNB",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "5/3/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

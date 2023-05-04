@@ -1,0 +1,12 @@
+{
+  "Address": "0x40921E08FcA322bae6B8fbeADE7Ca8e6Cb505934",
+  "Contract Name": "DickCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "25",
+  "Setting": "",
+  "Verified": "5/3/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

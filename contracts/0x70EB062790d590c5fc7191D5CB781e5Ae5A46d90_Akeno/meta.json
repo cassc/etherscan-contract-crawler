@@ -1,0 +1,12 @@
+{
+  "Address": "0x70EB062790d590c5fc7191D5CB781e5Ae5A46d90",
+  "Contract Name": "Akeno",
+  "Compiler": "Solidity",
+  "Version": "0.8.12",
+  "Balance": "444 wei",
+  "Txns": "28",
+  "Setting": "",
+  "Verified": "5/3/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

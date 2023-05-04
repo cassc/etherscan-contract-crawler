@@ -1,0 +1,12 @@
+{
+  "Address": "0x30008a62055b52feafdfacb1cc8384c6e5d12ecc",
+  "Contract Name": "PepeClub",
+  "Compiler": "Solidity",
+  "Version": "0.8.4",
+  "Balance": "4 wei",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "5/3/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}

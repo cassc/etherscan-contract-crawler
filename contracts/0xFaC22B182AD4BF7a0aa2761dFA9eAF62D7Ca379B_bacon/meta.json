@@ -1,0 +1,12 @@
+{
+  "Address": "0xFaC22B182AD4BF7a0aa2761dFA9eAF62D7Ca379B",
+  "Contract Name": "bacon",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "-",
+  "Verified": "5/4/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

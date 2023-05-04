@@ -1,0 +1,12 @@
+{
+  "Address": "0x7e76bd143af40fc7938c039825eedbf87e3fc070",
+  "Contract Name": "BitChain",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 BNB",
+  "Txns": "5",
+  "Setting": "-",
+  "Verified": "5/4/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}

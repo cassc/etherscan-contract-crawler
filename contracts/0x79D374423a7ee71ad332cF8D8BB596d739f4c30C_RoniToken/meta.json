@@ -1,0 +1,12 @@
+{
+  "Address": "0x79D374423a7ee71ad332cF8D8BB596d739f4c30C",
+  "Contract Name": "RoniToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0 ETH",
+  "Txns": "20",
+  "Setting": "",
+  "Verified": "5/4/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
