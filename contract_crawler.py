@@ -6,11 +6,11 @@ from bs4 import BeautifulSoup
 import requests
 from datetime import datetime
 import time
-try:
-    import undetected_chromedriver as uc
-except:
-    print('undetected_chromedriver not installed, crawling from polygonscan will not work')
-    pass
+
+import undetected_chromedriver as uc
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 
 proxies = {}  #{'http': "socks5://127.0.0.1:1080", 'https': "socks5://127.0.0.1:1080"}
 
@@ -29,17 +29,27 @@ INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
 session = {}
 
 def get_session_from_chromedriver(url):
-    driver = uc.Chrome()
+    options = uc.ChromeOptions()
+    # options.add_argument('--headless')
+
+    driver = uc.Chrome(options=options)
+
+    user_agent = driver.execute_script("return navigator.userAgent;")
+
     driver.get(url)
+    element_present = EC.presence_of_element_located((By.CSS_SELECTOR, '#ContentPlaceHolder1_pageRecords > nav > ul'))
+    WebDriverWait(driver, 10).until(element_present)
+    cookies = driver.get_cookies()
+
+    print(cookies)
 
     session = requests.Session()
-    user_agent = driver.execute_script("return navigator.userAgent;")
     session.headers.update({'User-Agent': user_agent})
 
-    if len(driver.get_cookies()):
+    if len(cookies) < 1:
         raise Exception('Should have some cookies here')
 
-    for cookie in driver.get_cookies():
+    for cookie in cookies:
         session.cookies.set(cookie['name'], cookie['value'])
 
     print(f'Cookies loaded from {url} {session.cookies}')
