@@ -1,0 +1,12 @@
+{
+  "Address": "0xBAD0bC0c01bd10575f6a071AABe52621C3571004",
+  "Contract Name": "Bad",
+  "Compiler": "Solidity(Multi)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/4/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

@@ -6,14 +6,13 @@ from bs4 import BeautifulSoup
 import requests
 from datetime import datetime
 import time
-try:
-    import undetected_chromedriver as uc
-except:
-    print('undetected_chromedriver not installed, crawling from polygonscan will not work')
-    pass
 
-proxies = {'http': "socks5://127.0.0.1:1080",
-           'https': "socks5://127.0.0.1:1080"}
+import undetected_chromedriver as uc
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+
+proxies = {}  #{'http': "socks5://127.0.0.1:1080", 'https': "socks5://127.0.0.1:1080"}
 
 REQ_HEADER = {
     'user-agent': 'Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36',
@@ -27,6 +26,62 @@ INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
                     'Optimization Enabled': 'optimizations',
                     'Other Settings:': 'settings'}
 
+session = {}
+
+class any_of_elements_present:
+    def __init__(self, *locators):
+        self.locators = locators
+
+    def __call__(self, driver):
+        for locator in self.locators:
+            try:
+                element = EC.presence_of_element_located(locator)(driver)
+                if element:
+                    return element
+            except:
+                pass
+        return False
+
+def get_session_from_chromedriver(url):
+    options = uc.ChromeOptions()
+    # options.add_argument('--headless')
+
+    driver = uc.Chrome(options=options)
+
+    user_agent = driver.execute_script("return navigator.userAgent;")
+
+    selectors = [
+        '#ctl00 > div.d-md-flex.justify-content-between.my-3 > ul',
+        '#ContentPlaceHolder1_pageRecords > nav > ul',
+    ]
+
+    selectors = [(By.CSS_SELECTOR, s) for s in selectors]
+
+    driver.get(url)
+    WebDriverWait(driver, 10).until(any_of_elements_present(*selectors))
+    cookies = driver.get_cookies()
+
+    print(cookies)
+
+    session = requests.Session()
+    session.headers.update({'User-Agent': user_agent})
+
+    if len(cookies) < 1:
+        raise Exception('Should have some cookies here')
+
+    for cookie in cookies:
+        session.cookies.set(cookie['name'], cookie['value'])
+
+    print(f'Cookies loaded from {url} {session.cookies}')
+    return session
+
+def load_session(url):
+    global session
+    if not session:
+        session = get_session_from_chromedriver(url)
+    return session
+
+
 def address_from_tr(td: Any) -> str:
     a = td.select_one('a.js-clipboard')
     return a.attrs.get('data-clipboard-text') if (a and a.attrs) else None
@@ -35,7 +90,7 @@ def address_from_tr(td: Any) -> str:
 def parse_page(page: Optional[int]=None, retry=3, retry_delay=5) -> Optional[List[Dict[str, str]]]:
     url = VERIFIED_CONTRACT_URL if page is None else f'{VERIFIED_CONTRACT_URL}/{page}'
     print(f'Crawling {url}')
-    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False, proxies=proxies)
+    resp = session.get(url, allow_redirects=False)
     if resp.status_code != 200:
         print(f'No results found on page: {page}, http status: {resp.status_code}')
         return None
@@ -132,7 +187,7 @@ def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_f
     address = contract['Address']
     contract_name = contract['Contract Name']
     url = CONTRACT_SOURCE_URL.format(address)
-    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False, proxies=proxies)
+    resp = session.get(url, allow_redirects=False)
 
     def maybe_retry(e=None):
         if retry > 0:
@@ -166,25 +221,16 @@ def fetch_all():
 
 def download_url_poly(url, retry=3, retry_delay=5, throw_if_fail=False):
     address = url.split('/')[-1].split('#')[0]
-    driver = uc.Chrome()
-    driver.get(url)
 
-    # fullscreen_btn = driver.find_elements(By.XPATH, '//a[@class="btn btn-xss btn-secondary togglefullscreen"]')
-    # for btn in fullscreen_btn:
-    #     btn.click()
-    #     time.sleep(0.05)
+    session = get_session_from_chromedriver(url)
 
-    cookie = driver.get_cookies()[0]
-    for key, value in cookie.items():
-        cookie[key] = str(value)
-
-    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=True, cookies=cookie, proxies=proxies)
+    resp = session.get(url)
     soup = BeautifulSoup(resp.content, 'lxml')
     parse_source_soup(soup, address)
 
 def download_url(url, retry=3, retry_delay=5, throw_if_fail=False):
     address = url.split('/')[-1].split('#')[0]
-    resp = requests.get(url, headers=REQ_HEADER, allow_redirects=False, proxies=proxies)
+    resp = session.get(url, allow_redirects=False)
 
     if resp.status_code != 200:
         if retry > 0:
@@ -199,7 +245,6 @@ def download_url(url, retry=3, retry_delay=5, throw_if_fail=False):
     soup = BeautifulSoup(resp.content, 'lxml')
     parse_source_soup(soup, address)
 
-
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument("--web", default="etherscan",type=str, help="Choose website, etherscan(default) or bscscan")
@@ -211,6 +256,7 @@ if __name__ == '__main__':
     ROOT_DIR = f'{OUTPUT_DIR}/contracts'
 
     web = args.web
+
     if web == 'etherscan':
         VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
         CONTRACT_SOURCE_URL   = 'https://etherscan.io/address/{}#code'
@@ -238,6 +284,9 @@ if __name__ == '__main__':
     print(CONTRACT_SOURCE_URL)
     print(ROOT_DIR)
     url = args.url
+
+    load_session(VERIFIED_CONTRACT_URL)
+
     if url:
         fn(url)
     else:

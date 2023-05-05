@@ -1,0 +1,12 @@
+{
+  "Address": "0xA35Ab132970dD5AF6a10C6E7e7AB62D5770c260a",
+  "Contract Name": "token",
+  "Compiler": "Solidity",
+  "Version": "0.8.12",
+  "Balance": "16 wei",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "5/5/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
