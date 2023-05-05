@@ -28,6 +28,20 @@ INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
 
 session = {}
 
+class any_of_elements_present:
+    def __init__(self, *locators):
+        self.locators = locators
+
+    def __call__(self, driver):
+        for locator in self.locators:
+            try:
+                element = EC.presence_of_element_located(locator)(driver)
+                if element:
+                    return element
+            except:
+                pass
+        return False
+
 def get_session_from_chromedriver(url):
     options = uc.ChromeOptions()
     # options.add_argument('--headless')
@@ -36,9 +50,15 @@ def get_session_from_chromedriver(url):
 
     user_agent = driver.execute_script("return navigator.userAgent;")
 
+    selectors = [
+        '#ctl00 > div.d-md-flex.justify-content-between.my-3 > ul',
+        '#ContentPlaceHolder1_pageRecords > nav > ul',
+    ]
+
+    selectors = [(By.CSS_SELECTOR, s) for s in selectors]
+
     driver.get(url)
-    element_present = EC.presence_of_element_located((By.CSS_SELECTOR, '#ContentPlaceHolder1_pageRecords > nav > ul'))
-    WebDriverWait(driver, 10).until(element_present)
+    WebDriverWait(driver, 10).until(any_of_elements_present(*selectors))
     cookies = driver.get_cookies()
 
     print(cookies)
