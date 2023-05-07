@@ -1,0 +1,12 @@
+{
+  "Address": "0xb0b108dfc61e4ffa315a3f3e147d63ad81837bb5",
+  "Contract Name": "SpecialToken",
+  "Compiler": "Solidity(Multi)",
+  "Version": "0.8.4",
+  "Balance": "0 BNB",
+  "Txns": "4",
+  "Setting": "-",
+  "Verified": "5/7/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

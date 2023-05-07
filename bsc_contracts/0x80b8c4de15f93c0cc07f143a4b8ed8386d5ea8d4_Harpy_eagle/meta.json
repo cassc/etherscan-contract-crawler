@@ -1,0 +1,12 @@
+{
+  "Address": "0x80b8c4de15f93c0cc07f143a4b8ed8386d5ea8d4",
+  "Contract Name": "Harpy_eagle",
+  "Compiler": "Solidity",
+  "Version": "0.7.6",
+  "Balance": "1 wei",
+  "Txns": "5",
+  "Setting": "-",
+  "Verified": "5/7/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}
