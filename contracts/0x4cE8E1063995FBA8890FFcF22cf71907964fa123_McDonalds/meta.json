@@ -1,0 +1,12 @@
+{
+  "Address": "0x4cE8E1063995FBA8890FFcF22cf71907964fa123",
+  "Contract Name": "McDonalds",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "64",
+  "Setting": "",
+  "Verified": "5/7/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

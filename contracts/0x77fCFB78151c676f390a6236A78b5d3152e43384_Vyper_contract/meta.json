@@ -1,0 +1,12 @@
+{
+  "Address": "0x77fCFB78151c676f390a6236A78b5d3152e43384",
+  "Contract Name": "Vyper_contract",
+  "Compiler": "Vyper",
+  "Version": "vyper:0.3.7",
+  "Balance": "0 ETH",
+  "Txns": "0",
+  "Setting": "",
+  "Verified": "5/6/2023",
+  "Audit": "-",
+  "License": "None"
+}

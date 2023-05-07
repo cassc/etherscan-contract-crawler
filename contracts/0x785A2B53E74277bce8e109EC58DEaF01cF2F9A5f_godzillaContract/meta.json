@@ -1,0 +1,12 @@
+{
+  "Address": "0x785A2B53E74277bce8e109EC58DEaF01cF2F9A5f",
+  "Contract Name": "godzillaContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "24",
+  "Setting": "",
+  "Verified": "5/7/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

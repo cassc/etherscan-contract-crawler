@@ -1,0 +1,12 @@
+{
+  "Address": "0x460984E0097F968a884BE243A6BAa96ebE5d9282",
+  "Contract Name": "BOB",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "100",
+  "Setting": "",
+  "Verified": "5/7/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
