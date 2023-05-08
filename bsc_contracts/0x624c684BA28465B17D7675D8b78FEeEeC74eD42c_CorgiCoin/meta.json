@@ -1,0 +1,12 @@
+{
+  "Address": "0x624c684BA28465B17D7675D8b78FEeEeC74eD42c",
+  "Contract Name": "CorgiCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "5/8/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

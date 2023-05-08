@@ -1,0 +1,12 @@
+{
+  "Address": "0xf419b6e938bb6e8d6c5c71c00f7ab913692e8504",
+  "Contract Name": "Attacker",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0.1 BNB",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "5/8/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}
