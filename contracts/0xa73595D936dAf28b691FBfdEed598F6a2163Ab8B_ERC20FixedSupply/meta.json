@@ -1,0 +1,12 @@
+{
+  "Address": "0xa73595D936dAf28b691FBfdEed598F6a2163Ab8B",
+  "Contract Name": "ERC20FixedSupply",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "22",
+  "Setting": "-",
+  "Verified": "5/7/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

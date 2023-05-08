@@ -1,0 +1,12 @@
+{
+  "Address": "0x27C6295aAf7985C05f0ca8058B8D9b47211f2841",
+  "Contract Name": "SnowToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0.036922540534802603 ETH",
+  "Txns": "80",
+  "Setting": "",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
