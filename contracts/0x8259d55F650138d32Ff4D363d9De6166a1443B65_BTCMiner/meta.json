@@ -1,0 +1,12 @@
+{
+  "Address": "0x8259d55F650138d32Ff4D363d9De6166a1443B65",
+  "Contract Name": "BTCMiner",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.7.6",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x75E82DE02E3E512f3B0e28862A42055d59DDc1e0",
+  "Contract Name": "EToken",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

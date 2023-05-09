@@ -1,0 +1,12 @@
+{
+  "Address": "0x4b87Ca21f4bDbd3cB8e1e1FC8D4BA5c4fED98a45",
+  "Contract Name": "Frog",
+  "Compiler": "Solidity(Multi)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "-",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

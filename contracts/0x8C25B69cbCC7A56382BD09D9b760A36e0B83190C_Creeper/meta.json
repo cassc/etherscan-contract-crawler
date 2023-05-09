@@ -1,0 +1,12 @@
+{
+  "Address": "0x8C25B69cbCC7A56382BD09D9b760A36e0B83190C",
+  "Contract Name": "Creeper",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "169",
+  "Setting": "",
+  "Verified": "5/9/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0xe0d65baccB1C3b69449467ef6be4e467131E9C4b",
+  "Contract Name": "StandardTokenWithAntibot",
+  "Compiler": "Solidity",
+  "Version": "0.8.13",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

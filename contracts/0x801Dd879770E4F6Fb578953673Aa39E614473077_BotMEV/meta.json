@@ -1,0 +1,12 @@
+{
+  "Address": "0x801Dd879770E4F6Fb578953673Aa39E614473077",
+  "Contract Name": "BotMEV",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "-",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

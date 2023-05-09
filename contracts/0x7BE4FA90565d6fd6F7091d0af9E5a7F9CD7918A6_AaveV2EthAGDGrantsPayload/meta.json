@@ -1,0 +1,12 @@
+{
+  "Address": "0x7BE4FA90565d6fd6F7091d0af9E5a7F9CD7918A6",
+  "Contract Name": "AaveV2EthAGDGrantsPayload",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "-"
+}

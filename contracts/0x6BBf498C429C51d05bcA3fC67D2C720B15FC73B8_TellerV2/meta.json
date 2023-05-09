@@ -1,0 +1,12 @@
+{
+  "Address": "0x6BBf498C429C51d05bcA3fC67D2C720B15FC73B8",
+  "Contract Name": "TellerV2",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

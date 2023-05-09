@@ -1,0 +1,12 @@
+{
+  "Address": "0x5165bF096D8A9e2A642DdC6Bcc2f85D4F497a54e",
+  "Contract Name": "SquidCoin",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "1 wei",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "-"
+}

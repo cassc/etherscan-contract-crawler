@@ -1,0 +1,12 @@
+{
+  "Address": "0x3490BC0b137B4DEc68f5A2767baE55cD486834AA",
+  "Contract Name": "SuperBasedContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0 ETH",
+  "Txns": "11",
+  "Setting": "",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

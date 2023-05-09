@@ -1,0 +1,12 @@
+{
+  "Address": "0x6baf0a089359D83e2723db306D530c1487dC809E",
+  "Contract Name": "ClaimReward",
+  "Compiler": "Solidity",
+  "Version": "0.4.26",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

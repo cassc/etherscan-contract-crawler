@@ -1,0 +1,12 @@
+{
+  "Address": "0xF702D32360Bb92CFD92eb8fB118f8088b0e296eD",
+  "Contract Name": "WHALE",
+  "Compiler": "Solidity",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "64",
+  "Setting": "-",
+  "Verified": "5/8/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}
