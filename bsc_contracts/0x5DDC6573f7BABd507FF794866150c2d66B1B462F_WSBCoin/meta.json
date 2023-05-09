@@ -1,0 +1,12 @@
+{
+  "Address": "0x5DDC6573f7BABd507FF794866150c2d66B1B462F",
+  "Contract Name": "WSBCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "12",
+  "Setting": "-",
+  "Verified": "5/8/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

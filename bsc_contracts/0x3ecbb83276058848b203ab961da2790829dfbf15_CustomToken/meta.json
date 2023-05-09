@@ -1,0 +1,12 @@
+{
+  "Address": "0x3ecbb83276058848b203ab961da2790829dfbf15",
+  "Contract Name": "CustomToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0 BNB",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "5/9/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
