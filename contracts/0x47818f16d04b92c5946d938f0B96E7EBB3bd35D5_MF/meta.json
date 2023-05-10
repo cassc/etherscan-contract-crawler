@@ -1,0 +1,12 @@
+{
+  "Address": "0x47818f16d04b92c5946d938f0B96E7EBB3bd35D5",
+  "Contract Name": "MF",
+  "Compiler": "Solidity",
+  "Version": "0.8.12",
+  "Balance": "0.000000000000001112 ETH",
+  "Txns": "36",
+  "Setting": "",
+  "Verified": "5/10/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

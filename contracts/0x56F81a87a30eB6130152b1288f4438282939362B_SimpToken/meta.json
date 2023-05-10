@@ -1,0 +1,12 @@
+{
+  "Address": "0x56F81a87a30eB6130152b1288f4438282939362B",
+  "Contract Name": "SimpToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0 ETH",
+  "Txns": "36",
+  "Setting": "",
+  "Verified": "5/10/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

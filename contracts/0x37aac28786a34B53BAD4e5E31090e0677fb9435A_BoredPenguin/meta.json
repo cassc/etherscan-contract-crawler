@@ -1,0 +1,12 @@
+{
+  "Address": "0x37aac28786a34B53BAD4e5E31090e0677fb9435A",
+  "Contract Name": "BoredPenguin",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "62",
+  "Setting": "",
+  "Verified": "5/9/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

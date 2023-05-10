@@ -1,0 +1,12 @@
+{
+  "Address": "0x123655f70E1ae8d9DE41A0e878A550A9f5AA967A",
+  "Contract Name": "KEPLER",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "36",
+  "Setting": "",
+  "Verified": "5/9/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0xe9aC83CA8d149Aa510fBDE622c7cb2D3e9F98dE8",
+  "Contract Name": "HELLO",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "24",
+  "Setting": "-",
+  "Verified": "5/9/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

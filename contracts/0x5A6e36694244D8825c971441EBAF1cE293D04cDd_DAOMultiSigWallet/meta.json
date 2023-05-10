@@ -1,0 +1,12 @@
+{
+  "Address": "0x5A6e36694244D8825c971441EBAF1cE293D04cDd",
+  "Contract Name": "DAOMultiSigWallet",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/9/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
