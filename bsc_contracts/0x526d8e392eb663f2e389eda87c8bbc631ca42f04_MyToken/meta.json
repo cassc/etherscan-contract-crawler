@@ -1,0 +1,12 @@
+{
+  "Address": "0x526d8e392eb663f2e389eda87c8bbc631ca42f04",
+  "Contract Name": "MyToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0 BNB",
+  "Txns": "6",
+  "Setting": "",
+  "Verified": "5/9/2023",
+  "Audited": "-",
+  "License": "GNU GPLv2"
+}

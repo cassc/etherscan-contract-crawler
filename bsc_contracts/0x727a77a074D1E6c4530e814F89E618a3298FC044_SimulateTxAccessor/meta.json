@@ -1,0 +1,12 @@
+{
+  "Address": "0x727a77a074D1E6c4530e814F89E618a3298FC044",
+  "Contract Name": "SimulateTxAccessor",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.7.6",
+  "Balance": "0 BNB",
+  "Txns": "0",
+  "Setting": "-",
+  "Verified": "5/10/2023",
+  "Audited": "-",
+  "License": "GNU LGPLv3"
+}

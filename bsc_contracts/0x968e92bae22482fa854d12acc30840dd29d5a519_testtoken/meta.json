@@ -1,0 +1,12 @@
+{
+  "Address": "0x968e92bae22482fa854d12acc30840dd29d5a519",
+  "Contract Name": "testtoken",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 BNB",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "5/9/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
