@@ -1,0 +1,12 @@
+{
+  "Address": "0xcb22987b4f6562CE187a801BEae9e3E202120A40",
+  "Contract Name": "Staking",
+  "Compiler": "Solidity",
+  "Version": "0.7.5",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "5/10/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

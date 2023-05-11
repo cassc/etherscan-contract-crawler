@@ -1,0 +1,12 @@
+{
+  "Address": "0x51Eb775200af14C5E141adb5DF9aF4Bf22de375a",
+  "Contract Name": "Snooge",
+  "Compiler": "Solidity",
+  "Version": "0.8.12",
+  "Balance": "0.300000000000000001 ETH",
+  "Txns": "247",
+  "Setting": "-",
+  "Verified": "5/10/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

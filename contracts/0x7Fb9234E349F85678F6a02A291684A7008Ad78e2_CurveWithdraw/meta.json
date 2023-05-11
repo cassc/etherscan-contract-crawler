@@ -1,0 +1,12 @@
+{
+  "Address": "0x7Fb9234E349F85678F6a02A291684A7008Ad78e2",
+  "Contract Name": "CurveWithdraw",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/10/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

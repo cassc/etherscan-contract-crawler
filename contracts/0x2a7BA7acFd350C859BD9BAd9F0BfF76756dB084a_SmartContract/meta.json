@@ -1,0 +1,12 @@
+{
+  "Address": "0x2a7BA7acFd350C859BD9BAd9F0BfF76756dB084a",
+  "Contract Name": "SmartContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.13",
+  "Balance": "0 ETH",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "5/10/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

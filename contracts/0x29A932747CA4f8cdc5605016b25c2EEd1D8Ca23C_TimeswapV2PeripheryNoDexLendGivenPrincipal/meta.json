@@ -1,0 +1,12 @@
+{
+  "Address": "0x29A932747CA4f8cdc5605016b25c2EEd1D8Ca23C",
+  "Contract Name": "TimeswapV2PeripheryNoDexLendGivenPrincipal",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.8",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/10/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x0daCE06c2fdeb1B75f3AfBF847D491538A323D1f",
+  "Contract Name": "Address",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "10 wei",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "5/10/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

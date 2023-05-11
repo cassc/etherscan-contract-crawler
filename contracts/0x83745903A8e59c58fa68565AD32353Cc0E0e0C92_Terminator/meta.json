@@ -1,0 +1,12 @@
+{
+  "Address": "0x83745903A8e59c58fa68565AD32353Cc0E0e0C92",
+  "Contract Name": "Terminator",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 ETH",
+  "Txns": "20",
+  "Setting": "",
+  "Verified": "5/11/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
