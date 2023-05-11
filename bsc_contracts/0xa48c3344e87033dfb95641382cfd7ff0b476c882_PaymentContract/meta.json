@@ -1,0 +1,12 @@
+{
+  "Address": "0xa48c3344e87033dfb95641382cfd7ff0b476c882",
+  "Contract Name": "PaymentContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 BNB",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/11/2023",
+  "Audited": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x60592e485e2aa2a29adbfac342e6f8c595cb5c4c",
+  "Contract Name": "YourTokenName",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0.05 BNB",
+  "Txns": "30",
+  "Setting": "-",
+  "Verified": "5/10/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}
