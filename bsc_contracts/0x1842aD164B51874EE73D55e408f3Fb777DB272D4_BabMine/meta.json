@@ -1,0 +1,12 @@
+{
+  "Address": "0x1842aD164B51874EE73D55e408f3Fb777DB272D4",
+  "Contract Name": "BabMine",
+  "Compiler": "Solidity",
+  "Version": "0.8.10",
+  "Balance": "0.00001 BNB",
+  "Txns": "13",
+  "Setting": "-",
+  "Verified": "5/13/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
