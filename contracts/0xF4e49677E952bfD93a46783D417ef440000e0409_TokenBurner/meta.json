@@ -1,0 +1,12 @@
+{
+  "Address": "0xF4e49677E952bfD93a46783D417ef440000e0409",
+  "Contract Name": "TokenBurner",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.7",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "5/13/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x6557765796c3b86A721B527006765D056eC038b9",
+  "Contract Name": "LiquidationEngine",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.7",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "5/13/2023",
+  "Audit": "-",
+  "License": "-"
+}

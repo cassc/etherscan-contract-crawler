@@ -1,0 +1,12 @@
+{
+  "Address": "0x56238a073344EBccE259166921F0f59187D866dc",
+  "Contract Name": "ElCaminoETH",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "36",
+  "Setting": "",
+  "Verified": "5/12/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

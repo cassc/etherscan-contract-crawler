@@ -1,0 +1,12 @@
+{
+  "Address": "0x93720f43ae08C34720bBFeC416a232136601dd36",
+  "Contract Name": "BugPepe",
+  "Compiler": "Solidity",
+  "Version": "0.8.8",
+  "Balance": "0 ETH",
+  "Txns": "30",
+  "Setting": "-",
+  "Verified": "5/13/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

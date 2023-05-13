@@ -1,0 +1,12 @@
+{
+  "Address": "0xf8C57D6Eb44D1b2ED5d9773cc2ad5C0026A507D8",
+  "Contract Name": "kitty",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/13/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

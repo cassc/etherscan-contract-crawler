@@ -1,0 +1,12 @@
+{
+  "Address": "0x7db44910cA28D349143de1bdD15d0AB4De1b277a",
+  "Contract Name": "PauseExecutor",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.7",
+  "Balance": "0 ETH",
+  "Txns": "12",
+  "Setting": "-",
+  "Verified": "5/13/2023",
+  "Audit": "-",
+  "License": "-"
+}
