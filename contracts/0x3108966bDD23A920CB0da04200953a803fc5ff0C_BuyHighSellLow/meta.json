@@ -1,0 +1,12 @@
+{
+  "Address": "0x3108966bDD23A920CB0da04200953a803fc5ff0C",
+  "Contract Name": "BuyHighSellLow",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "166",
+  "Setting": "",
+  "Verified": "5/14/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

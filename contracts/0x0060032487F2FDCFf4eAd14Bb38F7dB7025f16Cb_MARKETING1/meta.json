@@ -1,0 +1,12 @@
+{
+  "Address": "0x0060032487F2FDCFf4eAd14Bb38F7dB7025f16Cb",
+  "Contract Name": "MARKETING1",
+  "Compiler": "Solidity",
+  "Version": "0.8.20",
+  "Balance": "68 wei",
+  "Txns": "250",
+  "Setting": "-",
+  "Verified": "5/14/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

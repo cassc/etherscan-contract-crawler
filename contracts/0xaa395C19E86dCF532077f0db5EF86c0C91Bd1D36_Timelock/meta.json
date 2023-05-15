@@ -1,0 +1,12 @@
+{
+  "Address": "0xaa395C19E86dCF532077f0db5EF86c0C91Bd1D36",
+  "Contract Name": "Timelock",
+  "Compiler": "Solidity",
+  "Version": "0.6.4",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/14/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

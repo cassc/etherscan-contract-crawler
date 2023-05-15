@@ -1,0 +1,12 @@
+{
+  "Address": "0x8472A9A7632b173c8Cf3a86D3afec50c35548e76",
+  "Contract Name": "crvUSD Controller",
+  "Compiler": "Vyper",
+  "Version": "vyper:0.3.7",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "5/14/2023",
+  "Audit": "-",
+  "License": "None"
+}

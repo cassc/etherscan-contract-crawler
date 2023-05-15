@@ -1,0 +1,12 @@
+{
+  "Address": "0x5AD45D11605904a7d0e6c09B9cD502F5e2e6088E",
+  "Contract Name": "SnakeCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0 ETH",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "5/14/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
