@@ -1,0 +1,12 @@
+{
+  "Address": "0x43FfcEB6aa5c48C0EFA7B91EF20B4aEa6A3f8702",
+  "Contract Name": "GingeCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0.1 ETH",
+  "Txns": "299",
+  "Setting": "",
+  "Verified": "5/15/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

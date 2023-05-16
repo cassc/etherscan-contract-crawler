@@ -1,0 +1,12 @@
+{
+  "Address": "0x5D2F20D2058eC16F2C6f42a148b150F6c08AE070",
+  "Contract Name": "StrategyConvexFraxFactoryClonable",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.15",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/16/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

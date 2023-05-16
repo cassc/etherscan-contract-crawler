@@ -1,0 +1,12 @@
+{
+  "Address": "0x148943944661E5c0362EA342D380eb983C1CD75a",
+  "Contract Name": "CoffeeTokenEth",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "61",
+  "Setting": "",
+  "Verified": "5/15/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

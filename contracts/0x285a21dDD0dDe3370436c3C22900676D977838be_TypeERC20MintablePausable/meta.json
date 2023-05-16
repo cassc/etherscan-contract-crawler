@@ -1,0 +1,12 @@
+{
+  "Address": "0x285a21dDD0dDe3370436c3C22900676D977838be",
+  "Contract Name": "TypeERC20MintablePausable",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.4",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "5/16/2023",
+  "Audit": "-",
+  "License": "-"
+}

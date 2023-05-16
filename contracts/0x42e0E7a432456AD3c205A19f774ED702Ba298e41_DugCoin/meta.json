@@ -1,0 +1,12 @@
+{
+  "Address": "0x42e0E7a432456AD3c205A19f774ED702Ba298e41",
+  "Contract Name": "DugCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.12",
+  "Balance": "102 wei",
+  "Txns": "21",
+  "Setting": "",
+  "Verified": "5/15/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

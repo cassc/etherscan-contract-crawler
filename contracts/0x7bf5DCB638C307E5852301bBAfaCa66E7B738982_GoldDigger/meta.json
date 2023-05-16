@@ -1,0 +1,12 @@
+{
+  "Address": "0x7bf5DCB638C307E5852301bBAfaCa66E7B738982",
+  "Contract Name": "GoldDigger",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "5/16/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

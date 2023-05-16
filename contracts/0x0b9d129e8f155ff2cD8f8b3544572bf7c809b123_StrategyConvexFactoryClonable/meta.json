@@ -1,0 +1,12 @@
+{
+  "Address": "0x0b9d129e8f155ff2cD8f8b3544572bf7c809b123",
+  "Contract Name": "StrategyConvexFactoryClonable",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.15",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/16/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}
