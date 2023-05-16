@@ -1,0 +1,12 @@
+{
+  "Address": "0x73294ba3be57c3903bc77f003f5f0fddb1e37f03",
+  "Contract Name": "neochain",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 BNB",
+  "Txns": "16",
+  "Setting": "-",
+  "Verified": "5/15/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
