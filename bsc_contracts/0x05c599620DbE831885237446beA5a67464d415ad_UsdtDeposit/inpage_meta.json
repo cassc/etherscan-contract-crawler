@@ -1,1 +1,1 @@
-{"contract_name": "UsdtDeposit", "version": "v0.8.1+commit.df193b15", "settings": "default evmVersion"}
+{"contract_name": "UsdtDeposit", "version": "v0.8.1+commit.df193b15", "settings": "default evmVersion", "balance": "0 BNB", "num_txs": 10}

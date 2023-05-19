@@ -1,1 +1,1 @@
-{"contract_name": "MockERC20", "version": "v0.8.9+commit.e5eed63a", "settings": "default evmVersion, MIT license"}
+{"contract_name": "MockERC20", "version": "v0.8.9+commit.e5eed63a", "settings": "default evmVersion, MIT license", "balance": "0 BNB", "num_txs": 21}

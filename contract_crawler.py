@@ -1,11 +1,15 @@
+# python contract_crawler.py --web bscscan --session-url https://bscscan.com/address/0x2D530a3b07F2a9Cc3B9043356Af293aEE09ED103#code
+
 import argparse
 import os
 import json
 from typing import Optional, Dict, List, Any
+from typing_extensions import override
 from bs4 import BeautifulSoup
 import requests
 from datetime import datetime
 import time
+import re
 
 import undetected_chromedriver as uc
 from selenium.webdriver.support.ui import WebDriverWait
@@ -44,21 +48,28 @@ class any_of_elements_present:
 
 def get_session_from_chromedriver(url):
     options = uc.ChromeOptions()
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-gpu')
+    # options.add_argument('--headless=new')
+
     # options.add_argument('--headless')
 
-    driver = uc.Chrome(options=options)
+    # driver = uc.Chrome(options=options)
+    driver = uc.Chrome(options=options, browser_executable_path='/usr/bin/brave', enable_cdp_events=True, version_main=112)
 
     user_agent = driver.execute_script("return navigator.userAgent;")
 
     selectors = [
         '#ctl00 > div.d-md-flex.justify-content-between.my-3 > ul',
         '#ContentPlaceHolder1_pageRecords > nav > ul',
+        '#searchFilterInvoker',
+        '#ContentPlaceHolder1_li_transactions'
     ]
 
     selectors = [(By.CSS_SELECTOR, s) for s in selectors]
 
     driver.get(url)
-    WebDriverWait(driver, 10).until(any_of_elements_present(*selectors))
+    WebDriverWait(driver, 30).until(any_of_elements_present(*selectors))
     cookies = driver.get_cookies()
 
     print(cookies)
@@ -108,13 +119,32 @@ def parse_page(page: Optional[int]=None, retry=3, retry_delay=5) -> Optional[Lis
         else:
             raise e
 
+def parse_for_balance(soup):
+    return soup.select_one('#ContentPlaceHolder1_divSummary > div.row.mb-4 > div.col-md-6.mb-3.mb-md-0 > div > div.card-body > div:nth-child(1) > div.col-md-8').text.strip()
+
+def parse_for_num_txs(soup):
+    s = soup.select_one('#transactions > div.d-md-flex.align-items-center > p').text.strip()
+    match = re.search(r'a total of ([\d,]+)', s)
+
+    if match:
+        num_str = match.group(1)
+        num_str = num_str.replace(',', '')
+        return int(num_str)
+    else:
+        return None
+
 # Parse meta data from source code page
 def parse_for_inpage_meta(soup):
     rows = [t.text.strip().split('\n', maxsplit=1) for t in soup.select('#ContentPlaceHolder1_contractCodeDiv .row div')]
     # rows = [t.text.strip().split('\n+', maxsplit=1) for t in soup.select('#ContentPlaceHolder1_contractCodeDiv .row div')]
     rows = [[t[0].strip(), t[1].strip()] for t in rows if len(t) == 2]
     rows = [(INPAGE_META_TEXT[t[0]], t[1]) for t in rows if t[0] in INPAGE_META_TEXT]
-    return dict(rows)
+    balance = parse_for_balance(soup)
+    num_txs = parse_for_num_txs(soup)
+    data = dict(rows)
+    data['balance'] = balance
+    data['num_txs'] = num_txs
+    return data
 
 def parse_for_contract_name(soup):
     meta = parse_for_inpage_meta(soup)
@@ -136,10 +166,9 @@ def parse_source_soup(soup, address=None, contract_name=None):
         num = f'{n:0>2}_{total:0>2}'
         return f'{num}_{name_text.strip()}'
 
-    def write_source_file(source_file_name, source_code):
+    def write_source_file(source_file_name, source_code, overwrite=False):
         f = f'{parent}/{source_file_name}'
-        if os.path.exists(f):
-            print(f'File exists, ignore {f}')
+        if (not overwrite) and os.path.exists(f):
             return
         print(f'Saving {f}')
         with open(f, 'w') as f:
@@ -153,7 +182,7 @@ def parse_source_soup(soup, address=None, contract_name=None):
         sources = [source.text for source in soup.select('pre.editor')]
 
     inpage_meta = parse_for_inpage_meta(soup)
-    write_source_file(f'inpage_meta.json', json.dumps(inpage_meta))
+    write_source_file(f'inpage_meta.json', json.dumps(inpage_meta), True)
 
     if not files:
         if not sources:
@@ -250,6 +279,7 @@ if __name__ == '__main__':
     ap.add_argument("--web", default="etherscan",type=str, help="Choose website, etherscan(default) or bscscan")
     ap.add_argument("--url", type=str, help="URL of contract to download")
     ap.add_argument("--output-dir", type=str, help="URL of contract to download", default="./")
+    ap.add_argument("--session-url", type=str, help="URL to load the first session from")
     args = ap.parse_args()
     OUTPUT_DIR = args.output_dir
     OUTPUT_DIR = OUTPUT_DIR[:-1] if OUTPUT_DIR.endswith('/') else OUTPUT_DIR
@@ -285,11 +315,38 @@ if __name__ == '__main__':
     print(ROOT_DIR)
     url = args.url
 
-    load_session(VERIFIED_CONTRACT_URL)
+    load_session(args.session_url or VERIFIED_CONTRACT_URL)
 
-    if url:
-        fn(url)
-    else:
-        fetch_all()
+    # if url:
+    #     fn(url)
+    # else:
+    #     fetch_all()
+
+    for contract in os.listdir('bsc_contracts'):
+        if "_" not in contract:
+            continue
+
+        f_meta_json = f'bsc_contracts/{contract}/inpage_meta.json'
+        f_row_meta_json = f'bsc_contracts/{contract}/meta.json'
+
+        if not os.path.exists(f_row_meta_json):
+            print(f'Ignoring {contract}, reason missing meta.json')
+            continue
+
+        meta_json = {}
+        if os.path.exists(f_meta_json):
+            with open(f_meta_json, "r") as f:
+                meta_json = json.load(f)
+        if 'num_txs' in meta_json:
+            continue
+
+        address = contract.split("_")[0]
+
+        if len(address) < 40:
+            continue
+
+        print(f'Updating meta for {contract}')
+        url = CONTRACT_SOURCE_URL.format(address)
+        download_url(url)
 
     print("all jobs done")
