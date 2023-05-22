@@ -1,0 +1,12 @@
+{
+  "Address": "0x8359E8506C051b05C4508E71b9910E44E44D971A",
+  "Contract Name": "Lotus",
+  "Compiler": "Solidity(Multi)",
+  "Version": "0.8.12",
+  "Balance": "0 ETH",
+  "Txns": "33",
+  "Setting": "-",
+  "Verified": "5/21/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

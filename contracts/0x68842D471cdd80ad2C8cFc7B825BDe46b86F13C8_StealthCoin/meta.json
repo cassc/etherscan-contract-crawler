@@ -1,0 +1,12 @@
+{
+  "Address": "0x68842D471cdd80ad2C8cFc7B825BDe46b86F13C8",
+  "Contract Name": "StealthCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.20",
+  "Balance": "0 ETH",
+  "Txns": "70",
+  "Setting": "-",
+  "Verified": "5/21/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

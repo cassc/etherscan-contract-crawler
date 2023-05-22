@@ -120,10 +120,20 @@ def parse_page(page: Optional[int]=None, retry=3, retry_delay=5) -> Optional[Lis
             raise e
 
 def parse_for_balance(soup):
-    return soup.select_one('#ContentPlaceHolder1_divSummary > div.row.mb-4 > div.col-md-6.mb-3.mb-md-0 > div > div.card-body > div:nth-child(1) > div.col-md-8').text.strip()
+    bsc_selector = '#ContentPlaceHolder1_divSummary > div.row.mb-4 > div.col-md-6.mb-3.mb-md-0 > div > div.card-body > div:nth-child(1) > div.col-md-8'
+    eth_selector= '#ContentPlaceHolder1_divSummary > div.row.g-3.mb-4 > div:nth-child(1) > div > div > div:nth-child(2) > div > div'
+    found = soup.select_one(eth_selector) or soup.select_one(bsc_selector)
+    return found.text.strip() if found else None
 
 def parse_for_num_txs(soup):
-    s = soup.select_one('#transactions > div.d-md-flex.align-items-center > p').text.strip()
+    bsc_selector = '#transactions > div.d-md-flex.align-items-center > p'
+    eth_selector = '#ContentPlaceHolder1_divTxDataInfo > div > p'
+   
+    found = soup.select_one(eth_selector) or soup.select_one(bsc_selector)
+    if not found:
+        return None
+
+    s = found.text.strip()
     match = re.search(r'a total of ([\d,]+)', s)
 
     if match:
@@ -142,8 +152,13 @@ def parse_for_inpage_meta(soup):
     balance = parse_for_balance(soup)
     num_txs = parse_for_num_txs(soup)
     data = dict(rows)
-    data['balance'] = balance
-    data['num_txs'] = num_txs
+
+    if balance:
+        data['balance'] = balance
+    
+    if num_txs:
+        data['num_txs'] = num_txs
+
     return data
 
 def parse_for_contract_name(soup):
@@ -216,6 +231,7 @@ def download_source(contract: Dict[str, str], retry=3, retry_delay=5, throw_if_f
     address = contract['Address']
     contract_name = contract['Contract Name']
     url = CONTRACT_SOURCE_URL.format(address)
+    print(f"downloading {url}")
     resp = session.get(url, allow_redirects=False)
 
     def maybe_retry(e=None):

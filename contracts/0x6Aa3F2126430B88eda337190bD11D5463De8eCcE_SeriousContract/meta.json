@@ -1,0 +1,12 @@
+{
+  "Address": "0x6Aa3F2126430B88eda337190bD11D5463De8eCcE",
+  "Contract Name": "SeriousContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/21/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

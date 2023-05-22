@@ -1,0 +1,12 @@
+{
+  "Address": "0x8116d9E12931E2e7751Ece6B11b2874DE8EF7a98",
+  "Contract Name": "BitcoinPizza",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "8",
+  "Setting": "",
+  "Verified": "5/21/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}
