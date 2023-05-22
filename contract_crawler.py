@@ -317,36 +317,10 @@ if __name__ == '__main__':
 
     load_session(args.session_url or VERIFIED_CONTRACT_URL)
 
-    # if url:
-    #     fn(url)
-    # else:
-    #     fetch_all()
+    if url:
+        fn(url)
+    else:
+        fetch_all()
 
-    for contract in os.listdir('bsc_contracts'):
-        if "_" not in contract:
-            continue
-
-        f_meta_json = f'bsc_contracts/{contract}/inpage_meta.json'
-        f_row_meta_json = f'bsc_contracts/{contract}/meta.json'
-
-        if not os.path.exists(f_row_meta_json):
-            print(f'Ignoring {contract}, reason missing meta.json')
-            continue
-
-        meta_json = {}
-        if os.path.exists(f_meta_json):
-            with open(f_meta_json, "r") as f:
-                meta_json = json.load(f)
-        if 'num_txs' in meta_json:
-            continue
-
-        address = contract.split("_")[0]
-
-        if len(address) < 40:
-            continue
-
-        print(f'Updating meta for {contract}')
-        url = CONTRACT_SOURCE_URL.format(address)
-        download_url(url)
 
     print("all jobs done")

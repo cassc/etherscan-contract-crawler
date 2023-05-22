@@ -1,0 +1,12 @@
+{
+  "Address": "0xf546141d682181106c221813d34bbfdf38ca1073",
+  "Contract Name": "RefundCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.19",
+  "Balance": "0 BNB",
+  "Txns": "32",
+  "Setting": "",
+  "Verified": "5/21/2023",
+  "Audited": "-",
+  "License": "Apache-2.0"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x17Ddb3Eb62DCc6B8FF4390DF73BD6ee2f9b6484b",
+  "Contract Name": "DeadCoin",
+  "Compiler": "Solidity(Multi)",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "51",
+  "Setting": "",
+  "Verified": "5/22/2023",
+  "Audit": "-",
+  "License": "None"
+}

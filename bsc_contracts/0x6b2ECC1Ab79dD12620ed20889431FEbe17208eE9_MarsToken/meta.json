@@ -1,0 +1,12 @@
+{
+  "Address": "0x6b2ECC1Ab79dD12620ed20889431FEbe17208eE9",
+  "Contract Name": "MarsToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0 BNB",
+  "Txns": "10",
+  "Setting": "-",
+  "Verified": "5/22/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
