@@ -1,0 +1,12 @@
+{
+  "Address": "0x030240Be47eDA0f28974F96F89d071a4Ff70189C",
+  "Contract Name": "FistCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.15",
+  "Balance": "0.09617783460385317 ETH",
+  "Txns": "33",
+  "Setting": "",
+  "Verified": "5/23/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x4b73a13a4223e3237Fd633A7d517618A11B1d4C6",
+  "Contract Name": "Hell",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "105",
+  "Setting": "",
+  "Verified": "5/24/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}
