@@ -1,0 +1,12 @@
+{
+  "Address": "0xe31Afb282c45AEdD4EebBE56FF722973C40177f2",
+  "Contract Name": "pumpitup",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "5 wei",
+  "Txns": "25",
+  "Setting": "-",
+  "Verified": "5/23/2023",
+  "Audited": "-",
+  "License": "Unlicense"
+}

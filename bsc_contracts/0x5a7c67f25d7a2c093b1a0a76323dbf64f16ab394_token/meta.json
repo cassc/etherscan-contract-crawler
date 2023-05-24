@@ -1,0 +1,12 @@
+{
+  "Address": "0x5a7c67f25d7a2c093b1a0a76323dbf64f16ab394",
+  "Contract Name": "token",
+  "Compiler": "Solidity",
+  "Version": "0.6.12",
+  "Balance": "0 BNB",
+  "Txns": "25",
+  "Setting": "",
+  "Verified": "5/24/2023",
+  "Audited": "-",
+  "License": "Apache-2.0"
+}

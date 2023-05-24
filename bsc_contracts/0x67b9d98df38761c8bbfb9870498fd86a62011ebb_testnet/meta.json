@@ -1,0 +1,12 @@
+{
+  "Address": "0x67b9d98df38761c8bbfb9870498fd86a62011ebb",
+  "Contract Name": "testnet",
+  "Compiler": "Solidity",
+  "Version": "0.8.0",
+  "Balance": "0 BNB",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "5/23/2023",
+  "Audited": "-",
+  "License": "MIT"
+}
