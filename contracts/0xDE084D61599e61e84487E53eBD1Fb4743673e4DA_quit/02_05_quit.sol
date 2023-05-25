@@ -1,0 +1,76 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+/// @title: exist to submit
+/// @author: manifold.xyz
+
+import "./manifold/ERC1155Creator.sol";
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                            //
+//                                                                                                            //
+//    ▄███▄      ▄  ▄█    ▄▄▄▄▄      ▄▄▄▄▀        ▄▄▄▄▀ ████▄        ▄▄▄▄▄   ▄   ███   █▀▄▀█ ▄█    ▄▄▄▄▀      //
+//    █▀   ▀ ▀▄   █ ██   █     ▀▄ ▀▀▀ █        ▀▀▀ █    █   █       █     ▀▄  █  █  █  █ █ █ ██ ▀▀▀ █         //
+//    ██▄▄     █ ▀  ██ ▄  ▀▀▀▀▄       █            █    █   █     ▄  ▀▀▀▀▄ █   █ █ ▀ ▄ █ ▄ █ ██     █         //
+//    █▄   ▄▀ ▄ █   ▐█  ▀▄▄▄▄▀       █            █     ▀████      ▀▄▄▄▄▀  █   █ █  ▄▀ █   █ ▐█    █          //
+//    ▀███▀  █   ▀▄  ▐              ▀            ▀                         █▄ ▄█ ███      █   ▐   ▀           //
+//            ▀                                                             ▀▀▀          ▀                    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNWMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMWXKWMMMMMMMWXOkXMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNMMMMMMMMMMMMMN0OKWMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMWdcKMMMMMMMWk;cKMMMMMMMMMMMMMMMMMMMMMMMMMMMXxOWMMMMMMMMMMMMMk:kMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMW0xKMMMMMMMMKkONMMMMMMMMMMMMMMMMWNWMMMMMMMMNxOMMMMMMMMMMMMMMOdKMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMWWMMXXMMMMMMMMMWXNMMMMMMMMMMMMMMMNdoKMMMMMMMMWXNMMMMMMMMMMMMMMKONMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMN00NMN0NMMMMWNWMMXXMMMMMMMMMMMMMMMXdxNMMMMMMMMNXWMMMMMMMMMMMMMWK0NMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMNd:0MW0XMMMMNkkNMWWMWWMMMMMMMMMMMMMXKWMMMMMMMMNXWMNXNWMMMMMMMMWKOXMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMWKkKWWXXMMMMNdoXMMMWXOxKMNK0KXNWWNNK0kkKNMMMMMWNWWOdONMMMMMMMMMNXNMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMNKXMNKWMMMMWWNXNN0O0O0kdkxdodkKOkolxkxOXXOONWWMNolKWMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMXKMNKNMMMMMMNklOO:lOkoddlccc:dxxl;coO0dllcokOKNNNMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMNXWWKNMMMMWNX0o;coc:,,clcc;::lc;,',',::,oxolloxNMMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNWMNKKkccdoc::,,c:,,;:,..',,..;:;;:;:odcoxo0WMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNOllo::occl:;::::,.,,,..,'',,;cl;,:::;:dxkNMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMWNWMMMMMW0ooccc:::,';cc:,;;',,.,odldkOOOOkdddl:,oOONMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMW0oOWMMWN0l,ld;cd:,::,;,,:;'',;cxOkxxOO000OOOOOd;;::dKNMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMK:cXMMWXxc:co:lxc,;cc;'.,l;.;lx00kxkkOO0K00OxxkxlclcckWMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMN0KWMWXx::clcc:,:cl:',;''';oxk0kxkkkOOO00OOkkkxkxllcOMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMKOXMMNO:';,,loolclc,;;'.;ldxk0kxOOOkkkkOOOOOOOOkdxKNMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMNKNWXkoc;';c:l:cdl:;',::codxO000KKK000Okk00OO00OkKWMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMWXxlkO;:o;,,;ol,,;,cxxodO000000OkkO0kxkkxxOOOOONMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKdlc,,:,:o;;lodc',oxodkOOO0d,...;dkddxdoccclkXMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMNdcc'.lxOkdo:,cc,'lOkdxkxxOkl;:::lOkodxd;..,lkNMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMNx;.:d,,xKk:;;;:,.,d0kxxxxkOkkO00000Okxodl;cllOWMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMNk;'':ddc:k0xdkxl',x0kxxxkkkOOOOOO00Okooxxlcoc:kWMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMNx,':c,':cxOO0Oxo;;ldxxdxOOO00OOOOOOkdodOkclkocxXMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMXd;lOOdll:ldoldddxc:dOkxkO000000KOxkkdclkOxdkdcdKMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMM0;.cK0oxOdddlccdkkOOkkO00000OOOOkxxkkkddxxOO0klxXMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMWKkock00NXkkxoooddkK0OOOOO0K0O0kxxxkxdoolloO00xlOWMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMXkkOoo0NWOlodlcodld0K0kxxk00OOOxddO00OkOOkdllxkkXMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMWN0o;lXWOclxlckOlokxOOxdk00dolodxxdolcolccccdOKNMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKkK0ocokol000kloOOO0OxxddxxkOkxxOOkxdddddkKWMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW0x0OclKWNKKKOc,dO00OkxxxddxkOkxxOOOOkddddONMMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWMNNWMWK0KXx,'oO0x:d0OOkoodxkxkkkOOdoox0WMMMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNKKWNX0;.d00xcoodO0x:o00OOkkOkl:oONMMMMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNWWWNWWWNkoO0OO0Oxdlxxlx0KK0OO0kc;dKXNWMMMMMMMMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNXNMMMMWWWWMWNX0000OdcdOolodkxk00Od,....,;codk0NMMMMMMMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWMMMMMMWWMWNNWMMWNXXKkoxdlolco:lKNNX;          .':cldONMMMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMMMMMMMWKkONMMMMMMMMWWWWNXNWMNXXXXKKxk0O0KkOWNXk'                 ;0MMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMMMMWKkdl:,l0XNWWWWWWWWWWWWWWWWMWWXXNWWXK000kxKMX0l                   cNMMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMMMMN0o,.     'OWWWMWWWWWWWWWNNWWWWMMMWWMMMNkddl;oKXKk,                  .xWMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMM0c'.         ,0MWWMMMMMMMMWNKKXNWMMMMMWWKd:,,;;;cx0XK:                  .OMMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMX;             ,KMWWMMMMMMMMMWNXXNWWWWNNNKl;;;;;;;:xNWKc                  :XMMMMMMMMM    //
+//    MMMMMMMMMMMMMMM0'              cNMWWMMWWWWWWWWNWWNNNNWMMNo,;;;;;;oXWNWK;                 .xMMMMMMMMM    //
+//    MMMMMMMMMMMMMMMK,              .xWMXXWMMMMMWMMWNWMWWWMMMNd;;;;;;;cOWNNWx.                 ,KMMMMMMMM    //
+//    MMMMMMMMMMMMMMMN:               '0MWKNMMMMMMMWWWNWWWWWMMKl;;;;;;;;:xXNN0,                  :XMMMMMMM    //
+//    MMMMMMMMMMMMMMMX;                ;KMMMMWWWMMMXXWWNNWWNWWx;;;;;;;;;;;oKNXc                   oWMMMMMM    //
+//    MMMMMMMMMMMMMMMK,                 ;KMMMMNXWMMWXNMWNNWWNXo;;;;,;;;;;;;oKNk'                  ,KMMMMMM    //
+//    MMMMMMMMMMMMMMMO.                  cNMMMWXXMMMNNWMMNNWW0l,,;;,,;;;;;;;dXXo.                 .OMMMMMM    //
+//    MMMMMMMMMMMMMMMO.                  .OMMMMXXWMMWNNMMXOXWk:,',;,,;;;,;;;:OW0,                 .xMMMMMM    //
+//                                                                                                            //
+//                                                                                                            //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+contract quit is ERC1155Creator {
+    constructor() ERC1155Creator("exist to submit", "quit") {}
+}

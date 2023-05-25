@@ -2,6 +2,7 @@
 
 import argparse
 import os
+import fnmatch
 import json
 from typing import Optional, Dict, List, Any
 from typing_extensions import override
@@ -30,6 +31,9 @@ INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
                     'Optimization Enabled': 'optimizations',
                     'Other Settings:': 'settings'}
 
+def starts_with_digit(s):
+    return bool(re.match(r'^\d', s))
+
 session = {}
 
 class any_of_elements_present:
@@ -45,6 +49,21 @@ class any_of_elements_present:
             except:
                 pass
         return False
+
+def catch_all_exceptions(handler):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            try:
+                return func(*args, **kwargs)
+            except Exception as e:
+                return handler(e)
+        return wrapper
+    return decorator
+
+def exception_silent_handler(e):
+    # print(f"Caught an exception: {str(e)}")
+    return None
+
 
 def get_session_from_chromedriver(url):
     options = uc.ChromeOptions()
@@ -128,7 +147,7 @@ def parse_for_balance(soup):
 def parse_for_num_txs(soup):
     bsc_selector = '#transactions > div.d-md-flex.align-items-center > p'
     eth_selector = '#ContentPlaceHolder1_divTxDataInfo > div > p'
-   
+
     found = soup.select_one(eth_selector) or soup.select_one(bsc_selector)
     if not found:
         return None
@@ -155,7 +174,7 @@ def parse_for_inpage_meta(soup):
 
     if balance:
         data['balance'] = balance
-    
+
     if num_txs:
         data['num_txs'] = num_txs
 
@@ -164,6 +183,34 @@ def parse_for_inpage_meta(soup):
 def parse_for_contract_name(soup):
     meta = parse_for_inpage_meta(soup)
     return meta['contract_name']
+
+def select_file_names(soup) -> list:
+    @catch_all_exceptions(exception_silent_handler)
+    def parse_for_file_name(text):
+        num_text, name_text = text.strip().split(':')
+        _, n, _, total = num_text.split()
+        num = f'{n:0>2}_{total:0>2}'
+        return f'{num}_{name_text.strip()}'
+
+    selectors  =  ['.d-flex > .text-secondary', '.d-flex > .text-muted', '#dividcode > div > span']
+    file_spans = []
+    files = []
+    for selector in selectors:
+        file_spans = soup.select(selector)
+        files = [parse_for_file_name(name.text) for name in file_spans]
+        files = [f for f in files if f]
+        if len(files) > 0:
+            break
+    return files
+
+def select_sources(soup) -> list:
+    selectors = ['.js-sourcecopyarea', 'div.ace_scroller > div', 'pre.editor']
+    sources = []
+    for selector in selectors:
+        sources = [e.text for e in soup.select(selector) if e.text and not starts_with_digit(e.text)]
+        if len(sources) > 0:
+            break
+    return sources
 
 def parse_source_soup(soup, address=None, contract_name=None):
     address = address or soup.select('title')[0].text.split(r'|')[1].strip().split()[-1]
@@ -175,11 +222,6 @@ def parse_source_soup(soup, address=None, contract_name=None):
     parent = f'{ROOT_DIR}/{address}_{contract_name}'
     os.makedirs(parent, exist_ok=True)
 
-    def parse_for_file_name(text):
-        num_text, name_text = text.strip().split(':')
-        _, n, _, total = num_text.split()
-        num = f'{n:0>2}_{total:0>2}'
-        return f'{num}_{name_text.strip()}'
 
     def write_source_file(source_file_name, source_code, overwrite=False):
         f = f'{parent}/{source_file_name}'
@@ -189,23 +231,25 @@ def parse_source_soup(soup, address=None, contract_name=None):
         with open(f, 'w') as f:
             f.write(source_code)
 
-    file_spans = [name for name in soup.select('.d-flex > .text-secondary') if '.sol' in name.text] or [name for name in soup.select('.d-flex > .text-muted') if '.sol' in name.text]
-    files =  [parse_for_file_name(name.text) for name in file_spans]
-    sources = [source.text for source in soup.select('.js-sourcecopyarea')]
+    files = select_file_names(soup)
+    sources = select_sources(soup)
 
-    if len(sources) != len(files): # some bscscan contracts have different DOM structure
-        sources = [source.text for source in soup.select('pre.editor')]
+
+    if len(sources) < 1:
+        raise Exception(f'No source code found for {address} {contract_name}')
 
     inpage_meta = parse_for_inpage_meta(soup)
     write_source_file(f'inpage_meta.json', json.dumps(inpage_meta), True)
 
-    if not files:
-        if not sources:
-            raise Exception(f'No source code found for {address} {contract_name}')
-        if len(sources) > 1:
-            raise Exception(f'Multiple source with no file name? {address} {contract_name}')
+    if len(sources) > 1 and len(files) == 0:
+        raise Exception(f'Multiple source with no file name? {address} {contract_name}')
+
+    if len(sources) == 1 and len(files) == 0:
         write_source_file(f'{contract_name}.sol', sources[0])
         return
+
+    # if len(sources) != len(files): the extra source appearing in the sources might just be `settings`
+    #     raise Exception(f'Number of files does not match number of source text: {address} {contract_name}')
 
     for source_file_name, source_code in zip(files, sources):
         write_source_file(source_file_name, source_code)
@@ -288,7 +332,25 @@ def download_url(url, retry=3, retry_delay=5, throw_if_fail=False):
             return
 
     soup = BeautifulSoup(resp.content, 'lxml')
-    parse_source_soup(soup, address)
+    try:
+        parse_source_soup(soup, address)
+    except Exception as e:
+        with open('example.html', 'wb') as f:
+            f.write(resp.content)
+        raise e
+
+def load_addresses_from_csv(csv_path: str, csv_col_index: int = 0):
+    import csv
+    with open(csv_path, 'r') as f:
+        reader = csv.reader(f)
+        return [row[csv_col_index] for row in reader]
+
+def build_existing_contracts(root: str):
+    return [f.split('_')[0].lower() for f in os.listdir(root) if os.path.isdir(os.path.join(root, f))]
+
+def is_valid_ethereum_address(address):
+    pattern = "^0x[a-fA-F0-9]{40}$"
+    return bool(re.match(pattern, address))
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
@@ -296,12 +358,20 @@ if __name__ == '__main__':
     ap.add_argument("--url", type=str, help="URL of contract to download")
     ap.add_argument("--output-dir", type=str, help="URL of contract to download", default="./")
     ap.add_argument("--session-url", type=str, help="URL to load the first session from")
+    ap.add_argument("--csv", type=str, help="Load address from csv file")
+    ap.add_argument("--csv-col-index", type=int, help="Column index of address in csv file", default=-1)
+
     args = ap.parse_args()
     OUTPUT_DIR = args.output_dir
     OUTPUT_DIR = OUTPUT_DIR[:-1] if OUTPUT_DIR.endswith('/') else OUTPUT_DIR
     ROOT_DIR = f'{OUTPUT_DIR}/contracts'
 
     web = args.web
+
+    addresses = []
+    if args.csv:
+        addresses = load_addresses_from_csv(args.csv, args.csv_col_index)
+        print(f'Found {len(addresses)} addresses in {args.csv}')
 
     if web == 'etherscan':
         VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
@@ -335,8 +405,37 @@ if __name__ == '__main__':
 
     if url:
         fn(url)
+    elif args.csv:
+        existing = build_existing_contracts(ROOT_DIR)
+        processed = set()
+        if os.path.exists('processed.txt'):
+            with open('processed.txt', 'r') as f:
+                lines = [line.lower() for line in f.read().split('\n')]
+                processed = set(processed)
+
+        ignored = processed.union(existing)
+        f_processed = open('processed.txt', 'w')
+        for address in addresses:
+            if not is_valid_ethereum_address(address):
+                print(f'Invalid address {address}')
+                continue
+
+            if address.lower() not in ignored:
+                url = CONTRACT_SOURCE_URL.format(address)
+                print(f'Processing {url}')
+                try:
+                    fn(url)
+                except KeyError as e:
+                    if 'contract_name' in str(e):
+                        print(f'Probably no code found for {address}')
+                    else:
+                        raise e
+                finally:
+                    f_processed.write(f'{address}\n')
+                    f_processed.flush()
+            else:
+                 print(f'Skipping {address}, already exists')
     else:
         fetch_all()
-
 
     print("all jobs done")
