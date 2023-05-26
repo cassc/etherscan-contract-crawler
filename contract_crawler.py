@@ -335,7 +335,7 @@ def download_url(url, retry=3, retry_delay=5, throw_if_fail=False):
     try:
         parse_source_soup(soup, address)
     except Exception as e:
-        with open('example.html', 'wb') as f:
+        with open('.example.html', 'wb') as f:
             f.write(resp.content)
         raise e
 
@@ -408,13 +408,13 @@ if __name__ == '__main__':
     elif args.csv:
         existing = build_existing_contracts(ROOT_DIR)
         processed = set()
-        if os.path.exists('processed.txt'):
-            with open('processed.txt', 'r') as f:
+        if os.path.exists('.processed.txt'):
+            with open('.processed.txt', 'r') as f:
                 lines = [line.lower() for line in f.read().split('\n')]
                 processed = set(processed)
 
         ignored = processed.union(existing)
-        f_processed = open('processed.txt', 'w')
+        f_processed = open('.processed.txt', 'w')
         for address in addresses:
             if not is_valid_ethereum_address(address):
                 print(f'Invalid address {address}')
