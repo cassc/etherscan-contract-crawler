@@ -1,0 +1,12 @@
+{
+  "Address": "0xc8a173600eb9EFd1Cfa73583431Beab95Aaa72f8",
+  "Contract Name": "PriceOracleManagerV1",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.4",
+  "Balance": "0 ETH",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "5/26/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x3C85abCF2494e951F398ED5646b3e70115E6B368",
+  "Contract Name": "GenerationalWallet",
+  "Compiler": "Solidity",
+  "Version": "0.8.16",
+  "Balance": "0 ETH",
+  "Txns": "5",
+  "Setting": "",
+  "Verified": "5/25/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

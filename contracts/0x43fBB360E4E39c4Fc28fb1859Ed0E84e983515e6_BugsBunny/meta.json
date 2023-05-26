@@ -1,0 +1,12 @@
+{
+  "Address": "0x43fBB360E4E39c4Fc28fb1859Ed0E84e983515e6",
+  "Contract Name": "BugsBunny",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "138",
+  "Setting": "-",
+  "Verified": "5/25/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

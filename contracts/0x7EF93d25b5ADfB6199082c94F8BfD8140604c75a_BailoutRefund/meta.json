@@ -1,0 +1,12 @@
+{
+  "Address": "0x7EF93d25b5ADfB6199082c94F8BfD8140604c75a",
+  "Contract Name": "BailoutRefund",
+  "Compiler": "Solidity",
+  "Version": "0.8.20",
+  "Balance": "0 ETH",
+  "Txns": "69",
+  "Setting": "",
+  "Verified": "5/25/2023",
+  "Audit": "-",
+  "License": "None"
+}

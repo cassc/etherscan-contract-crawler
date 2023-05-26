@@ -1,0 +1,12 @@
+{
+  "Address": "0x71F202C796875e0e0E60d62ead326D529b2c1170",
+  "Contract Name": "OnlyOneToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "5/25/2023",
+  "Audit": "-",
+  "License": "None"
+}

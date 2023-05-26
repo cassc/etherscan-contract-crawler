@@ -1,0 +1,12 @@
+{
+  "Address": "0x53e42d7b919C72678996C3F3486F93E75946A47C",
+  "Contract Name": "EVM_NFT_Wildcard_Resolver",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "6",
+  "Setting": "",
+  "Verified": "5/25/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

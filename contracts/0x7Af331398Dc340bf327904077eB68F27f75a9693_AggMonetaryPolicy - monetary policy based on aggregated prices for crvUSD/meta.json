@@ -1,0 +1,12 @@
+{
+  "Address": "0x7Af331398Dc340bf327904077eB68F27f75a9693",
+  "Contract Name": "AggMonetaryPolicy - monetary policy based on aggregated prices for crvUSD",
+  "Compiler": "Vyper",
+  "Version": "vyper:0.3.7",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/25/2023",
+  "Audit": "-",
+  "License": "None"
+}

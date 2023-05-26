@@ -1,0 +1,12 @@
+{
+  "Address": "0x7bD2ad5Ea6a5BA70a040DCeA4EB64FBB981160b2",
+  "Contract Name": "HeyERC20",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "15",
+  "Setting": "",
+  "Verified": "5/25/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

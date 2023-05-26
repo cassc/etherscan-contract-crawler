@@ -1,0 +1,12 @@
+{
+  "Address": "0xDaBb7093EACDEBfBff08f82EE2e9525e2Ba6B3b2",
+  "Contract Name": "PaymentModuleV1",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.4",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "5/26/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

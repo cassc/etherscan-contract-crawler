@@ -1,0 +1,12 @@
+{
+  "Address": "0x85BABcF9E354e91E92581146f5C0dCd331b18dB4",
+  "Contract Name": "PricingModuleV1",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.4",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "5/26/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
