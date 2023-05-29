@@ -1,1 +1,1 @@
-{"contract_name": "PaymentAcceptor", "version": "v0.8.17+commit.8df45f5f", "settings": "default evmVersion"}
+{"contract_name": "PaymentAcceptor", "version": "v0.8.17+commit.8df45f5f", "settings": "default evmVersion", "balance": "0.0301 ETH", "num_txs": 75}
