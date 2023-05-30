@@ -1,0 +1,370 @@
+/**
+    IMPORTANT NOTICE:
+    This smart contract was written and deployed by the software engineers at 
+    https://highstack.co in a contractor capacity.
+
+    At the time of deployment, Highstack was not involved with this project in any 
+    capacity beyond writing the code and deploying this contract. All marketing, 
+    community outreach, distribution, tokenomics and project/token management/planning 
+    is handled by other parties. 
+    
+    Highstack is not responsible for any malicious use or losses arising from using 
+    or interacting with this smart contract.
+
+    THIS CONTRACT IS PROVIDED ON AN “AS IS” BASIS. USE THIS SOFTWARE AT YOUR OWN RISK.
+    THERE IS NO WARRANTY, EXPRESSED OR IMPLIED, THAT DESCRIBED FUNCTIONALITY WILL 
+    FUNCTION AS EXPECTED OR INTENDED. PRODUCT MAY CEASE TO EXIST. NOT AN INVESTMENT, 
+    SECURITY OR A SWAP. TOKENS HAVE NO RIGHTS, USES, PURPOSE, ATTRIBUTES, 
+    FUNCTIONALITIES OR FEATURES, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY
+    USES, PURPOSE OR ATTRIBUTES. TOKENS MAY HAVE NO VALUE. PRODUCT MAY CONTAIN BUGS AND
+    SERIOUS BREACHES IN THE SECURITY THAT MAY RESULT IN LOSS OF YOUR ASSETS OR THEIR 
+    IMPLIED VALUE. ALL THE CRYPTOCURRENCY TRANSFERRED TO THIS SMART CONTRACT MAY BE LOST.
+    THE CONTRACT DEVLOPERS ARE NOT RESPONSIBLE FOR ANY MONETARY LOSS, PROFIT LOSS OR ANY
+    OTHER LOSSES DUE TO USE OF DESCRIBED PRODUCT. CHANGES COULD BE MADE BEFORE AND AFTER
+    THE RELEASE OF THE PRODUCT. NO PRIOR NOTICE MAY BE GIVEN. ALL TRANSACTION ON THE 
+    BLOCKCHAIN ARE FINAL, NO REFUND, COMPENSATION OR REIMBURSEMENT POSSIBLE. YOU MAY 
+    LOOSE ALL THE CRYPTOCURRENCY USED TO INTERACT WITH THIS CONTRACT. IT IS YOUR 
+    RESPONSIBILITY TO REVIEW THE PROJECT, TEAM, TERMS & CONDITIONS BEFORE USING THE 
+    PRODUCT.
+
+**/
+
+// SPDX-License-Identifier: UNLICENSED
+
+pragma solidity ^0.8.4;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "../lib/IUniswapV2Pair.sol";
+import "../lib/IUniswapV2Factory.sol";
+import "../lib/IUniswapV2Router.sol";
+
+contract KENJA is ERC20, Ownable {
+    using SafeMath for uint256;
+    IUniswapV2Router02 public uniswapV2Router;
+    address public uniswapV2Pair;
+    uint256 public _totalSupply = 1e12 * 1e18; // 1T tokens
+    uint256 public swapTokensAtAmount = 1e9 * 1e18; // 1b = Threshold for swap (0.1%)
+    uint256 public maxWalletHoldings = 3e9 * 1e18; // 0.3% max wallet holdings (mutable)
+
+    address public marketingAddress;
+    uint256 public marketingFee = 10;
+
+    uint256 public liquidityBuyFee = 5;
+    uint256 public liquiditySellFee = 10;
+
+    address private devAddress;
+    address private lpAddress;
+
+    bool public _hasLiqBeenAdded = false;
+
+    uint256 public launchedAt = 0;
+
+    uint256 public swapAndLiquifycount = 0;
+    uint256 public snipersCaught = 0;
+
+    mapping(address => bool) private whitelisted;
+    mapping(address => bool) public blacklisted;
+    bool private swapping;
+    mapping(address => bool) public automatedMarketMakerPairs;
+
+    event UpdateUniswapV2Router(
+        address indexed newAddress,
+        address indexed oldAddress
+    );
+    event SendDividends(uint256 tokensSwapped, uint256 amount);
+    event AddToWhitelist(address indexed account, bool isWhitelisted);
+    event AddToBlacklist(address indexed account, bool isBlacklisted);
+    event MarketingAddressUpdated(
+        address indexed newMarketingWallet,
+        address indexed oldMarketingWallet
+    );
+    event SetAutomatedMarketMakerPair(address indexed pair, bool indexed value);
+
+    event SwapAndLiquify(
+        uint256 tokensSwapped,
+        uint256 ethReceived,
+        uint256 tokensIntoLiqudity
+    );
+
+    receive() external payable {}
+
+    constructor(
+        address _marketingAddress,
+        address _devAddress,
+        address _lpAddress,
+        address _uniswapAddress
+    ) ERC20("KENJA", "KENJA") {
+        marketingAddress = _marketingAddress;
+        devAddress = _devAddress;
+        lpAddress = _lpAddress;
+
+        // Set Uniswap Address
+        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(
+            address(_uniswapAddress)
+        );
+
+        address _uniswapV2Pair = IUniswapV2Factory(_uniswapV2Router.factory())
+            .createPair(address(this), _uniswapV2Router.WETH());
+
+        uniswapV2Router = _uniswapV2Router;
+        uniswapV2Pair = _uniswapV2Pair;
+
+        _setAutomatedMarketMakerPair(_uniswapV2Pair, true);
+        whitelist(address(this), true);
+        whitelist(owner(), true);
+        whitelist(marketingAddress, true);
+        whitelist(devAddress, true);
+        super._mint(owner(), _totalSupply);
+    }
+
+    /**
+     * ADMIN SETTINGS
+     */
+
+    function updateAddresses(address newmarketingAddress, address newLpAddress)
+        public
+        onlyOwner
+    {
+        whitelist(newmarketingAddress, true);
+        whitelist(newLpAddress, true);
+        emit MarketingAddressUpdated(newmarketingAddress, marketingAddress);
+        marketingAddress = newmarketingAddress;
+        lpAddress = newLpAddress;
+    }
+
+    function updateMarketingVariables(
+        uint256 _marketingFee,
+        uint256 _swapTokensAtAmount,
+        uint256 _liquidityBuyFee,
+        uint256 _liquiditySellFee,
+        uint256 _maxWalletHoldings
+    ) public onlyOwner {
+        marketingFee = _marketingFee;
+        swapTokensAtAmount = _swapTokensAtAmount;
+        liquidityBuyFee = _liquidityBuyFee;
+        liquiditySellFee = _liquiditySellFee;
+        maxWalletHoldings = _maxWalletHoldings;
+    }
+
+    function updateUniswapV2Router(address newAddress) public onlyOwner {
+        require(
+            newAddress != address(uniswapV2Router),
+            "KENJA: The router already has that address"
+        );
+        emit UpdateUniswapV2Router(newAddress, address(uniswapV2Router));
+        uniswapV2Router = IUniswapV2Router02(newAddress);
+    }
+
+    function swapAndSendDividendsAndLiquidity(uint256 tokens) private {
+        // Tokens to send to liquidity =
+        uint256 totalFeeBps = (liquiditySellFee.add(liquidityBuyFee))
+            .mul(100)
+            .div(2)
+            .add(marketingFee.mul(100));
+        // Handle Marketing Fee
+        uint256 marketingBps = marketingFee.mul(10000).div(totalFeeBps);
+        uint256 tokensForMarketing = tokens.mul(marketingBps).div(100);
+        uint256 tokensForLiquify = tokens.sub(tokensForMarketing);
+        swapTokensForEth(tokensForMarketing);
+        uint256 dividends = address(this).balance;
+        // 10% fee taken for marketing. 1% to dev. (10% total fee goes to dev)
+        (bool successDev, ) = address(devAddress).call{
+            value: dividends.mul(100).div(1000)
+        }("");
+        (bool successMarketing, ) = address(marketingAddress).call{
+            value: address(this).balance
+        }("");
+        if (successDev && successMarketing) {
+            emit SendDividends(tokens, dividends);
+        }
+        swapAndLiquify(tokensForLiquify);
+        swapAndLiquifycount = swapAndLiquifycount.add(1);
+    }
+
+    function swapAndLiquify(uint256 contractTokenBalance) internal {
+        // split the contract balance into halves
+        uint256 half = contractTokenBalance.div(2);
+        uint256 otherHalf = contractTokenBalance.sub(half);
+
+        uint256 initialBalance = address(this).balance;
+
+        // swap tokens for ETH
+        swapTokensForEth(half);
+
+        // how much BNB did we just swap into?
+        uint256 newBalance = address(this).balance.sub(initialBalance);
+
+        // add liquidity
+        addLiquidity(otherHalf, newBalance);
+        initialBalance = address(this).balance;
+        emit SwapAndLiquify(half, newBalance, otherHalf);
+    }
+
+    function _transfer(
+        address from,
+        address to,
+        uint256 amount
+    ) internal override {
+        require(from != address(0), "ERC20: transfer from the zero address");
+        require(to != address(0), "ERC20: transfer to the zero address");
+        require(!blacklisted[from], "KENJA: Blocked Transfer");
+
+        // Sniper Protection
+        if (!_hasLiqBeenAdded) {
+            // If no liquidity yet, allow owner to add liquidity
+            _checkLiquidityAdd(from, to);
+        } else {
+            // if liquidity has already been added.
+            if (
+                launchedAt > 0 &&
+                from == uniswapV2Pair &&
+                devAddress != from &&
+                devAddress != to
+            ) {
+                if (block.number - launchedAt < 10) {
+                    _blacklist(to, true);
+                    snipersCaught++;
+                }
+            }
+        }
+
+        if (amount == 0) {
+            super._transfer(from, to, 0);
+            return;
+        }
+        uint256 contractTokenBalance = balanceOf(address(this));
+        bool canSwap = contractTokenBalance >= swapTokensAtAmount;
+        if (
+            canSwap &&
+            !swapping &&
+            !automatedMarketMakerPairs[from] &&
+            from != marketingAddress &&
+            to != marketingAddress
+        ) {
+            swapping = true;
+            uint256 sellTokens = balanceOf(address(this));
+            swapAndSendDividendsAndLiquidity(sellTokens);
+            swapping = false;
+        }
+        bool takeFee = !swapping;
+        // if any account is whitelisted account then remove the fee
+
+        if (whitelisted[from] || whitelisted[to]) {
+            takeFee = false;
+        }
+
+        if (takeFee) {
+            if (!automatedMarketMakerPairs[to]) {
+                require(
+                    balanceOf(address(to)).add(amount) < maxWalletHoldings,
+                    "Max Wallet Limit"
+                );
+            }
+            uint256 fees = amount.mul(marketingFee).div(100);
+            if (automatedMarketMakerPairs[from]) {
+                fees = fees.add(amount.mul(liquidityBuyFee).div(100));
+            } else {
+                fees = fees.add(amount.mul(liquiditySellFee).div(100));
+            }
+            amount = amount.sub(fees);
+            super._transfer(from, address(this), fees);
+        }
+        super._transfer(from, to, amount);
+    }
+
+    function _checkLiquidityAdd(address from, address to) private {
+        // if liquidity is added by the _liquidityholders set
+        // trading enables to true and start the anti sniper timer
+        require(!_hasLiqBeenAdded, "Liquidity already added and marked.");
+        // require liquidity has been added == false (not added).
+        // This is basically only called when owner is adding liquidity.
+
+        if (from == devAddress && to == uniswapV2Pair) {
+            _hasLiqBeenAdded = true;
+            launchedAt = block.number;
+        }
+    }
+
+    function addLiquidity(uint256 tokenAmount, uint256 ethAmount) private {
+        // Approve token transfer to cover all possible scenarios
+        _approve(address(this), address(uniswapV2Router), tokenAmount);
+
+        // Add the liquidity
+        uniswapV2Router.addLiquidityETH{value: ethAmount}(
+            address(this),
+            tokenAmount,
+            0, // Slippage is unavoidable
+            0, // Slippage is unavoidable
+            lpAddress,
+            block.timestamp
+        );
+    }
+
+    function whitelist(address account, bool isWhitelisted) public onlyOwner {
+        whitelisted[account] = isWhitelisted;
+        emit AddToWhitelist(account, isWhitelisted);
+        (account, isWhitelisted);
+    }
+
+    function blacklist(address account, bool isBlacklisted) public onlyOwner {
+        _blacklist(account, isBlacklisted);
+    }
+
+    function launched() internal view returns (bool) {
+        return launchedAt != 0;
+    }
+
+    function launch() public onlyOwner {
+        launchedAt = block.number;
+        _hasLiqBeenAdded = true;
+    }
+
+    /**********/
+    /* PRIVATE FUNCTIONS */
+    /**********/
+
+    function _blacklist(address account, bool isBlacklisted) private {
+        blacklisted[account] = isBlacklisted;
+        emit AddToBlacklist(account, isBlacklisted);
+        (account, isBlacklisted);
+    }
+
+    function swapTokensForEth(uint256 tokenAmount) private {
+        // generate the uniswap pair path of token -> weth
+        address[] memory path = new address[](2);
+        path[0] = address(this);
+        path[1] = uniswapV2Router.WETH();
+        _approve(address(this), address(uniswapV2Router), tokenAmount);
+        // make the swap
+        uniswapV2Router.swapExactTokensForETHSupportingFeeOnTransferTokens(
+            tokenAmount,
+            0, // accept any amount of ETH
+            path,
+            address(this),
+            block.timestamp
+        );
+    }
+
+    function setAutomatedMarketMakerPair(address pair, bool value)
+        public
+        onlyOwner
+    {
+        require(
+            pair != uniswapV2Pair,
+            "KENJA: The Uniswap pair cannot be removed from automatedMarketMakerPairs"
+        );
+
+        _setAutomatedMarketMakerPair(pair, value);
+    }
+
+    function _setAutomatedMarketMakerPair(address pair, bool value) private {
+        require(
+            automatedMarketMakerPairs[pair] != value,
+            "KENJA: Automated market maker pair is already set to that value"
+        );
+        automatedMarketMakerPairs[pair] = value;
+        emit SetAutomatedMarketMakerPair(pair, value);
+    }
+}
