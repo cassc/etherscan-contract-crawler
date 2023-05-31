@@ -343,7 +343,7 @@ def load_addresses_from_csv(csv_path: str, csv_col_index: int = 0):
     import csv
     with open(csv_path, 'r') as f:
         reader = csv.reader(f)
-        return [row[csv_col_index] for row in reader]
+        return [row[csv_col_index].lower() for row in reader]
 
 def build_existing_contracts(root: str):
     return [f.split('_')[0].lower() for f in os.listdir(root) if os.path.isdir(os.path.join(root, f))]
@@ -368,9 +368,9 @@ if __name__ == '__main__':
 
     web = args.web
 
-    addresses = []
+    addresses = set()
     if args.csv:
-        addresses = load_addresses_from_csv(args.csv, args.csv_col_index)
+        addresses = set(load_addresses_from_csv(args.csv, args.csv_col_index))
         print(f'Found {len(addresses)} addresses in {args.csv}')
 
     if web == 'etherscan':
@@ -415,26 +415,27 @@ if __name__ == '__main__':
 
         ignored = processed.union(existing)
         f_processed = open('.processed.txt', 'w')
+        addresses = addresses.difference(ignored)
+
+        print(f'Found {len(addresses)} addresses to process')
         for address in addresses:
             if not is_valid_ethereum_address(address):
                 print(f'Invalid address {address}')
                 continue
 
-            if address.lower() not in ignored:
-                url = CONTRACT_SOURCE_URL.format(address)
-                print(f'Processing {url}')
-                try:
-                    fn(url)
-                except KeyError as e:
-                    if 'contract_name' in str(e):
-                        print(f'Probably no code found for {address}')
-                    else:
-                        raise e
-                finally:
-                    f_processed.write(f'{address}\n')
-                    f_processed.flush()
-            else:
-                 print(f'Skipping {address}, already exists')
+            url = CONTRACT_SOURCE_URL.format(address)
+            print(f'Processing {url}')
+            try:
+                fn(url)
+            except KeyError as e:
+                if 'contract_name' in str(e):
+                    print(f'Probably no code found for {address}')
+                else:
+                    raise e
+            finally:
+                f_processed.write(f'{address}\n')
+                f_processed.flush()
+
     else:
         fetch_all()
 
