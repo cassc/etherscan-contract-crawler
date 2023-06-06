@@ -1,0 +1,12 @@
+{
+  "Address": "0x1D40C595A4bbc290794f416Bf7C67d55f4bA8ffe",
+  "Contract Name": "BoringCoin",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "81",
+  "Setting": "",
+  "Verified": "6/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

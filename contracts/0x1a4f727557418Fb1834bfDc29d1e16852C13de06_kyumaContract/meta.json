@@ -1,0 +1,12 @@
+{
+  "Address": "0x1a4f727557418Fb1834bfDc29d1e16852C13de06",
+  "Contract Name": "kyumaContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "10",
+  "Setting": "",
+  "Verified": "6/5/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
