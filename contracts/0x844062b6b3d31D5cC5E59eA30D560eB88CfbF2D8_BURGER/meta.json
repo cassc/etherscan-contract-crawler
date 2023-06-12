@@ -1,0 +1,12 @@
+{
+  "Address": "0x844062b6b3d31D5cC5E59eA30D560eB88CfbF2D8",
+  "Contract Name": "BURGER",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "24",
+  "Setting": "",
+  "Verified": "6/11/2023",
+  "Audit": "-",
+  "License": "GNU GPLv3"
+}

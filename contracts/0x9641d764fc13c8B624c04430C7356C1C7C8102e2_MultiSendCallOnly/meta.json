@@ -1,0 +1,12 @@
+{
+  "Address": "0x9641d764fc13c8B624c04430C7356C1C7C8102e2",
+  "Contract Name": "MultiSendCallOnly",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.7.6",
+  "Balance": "0 ETH",
+  "Txns": "0",
+  "Setting": "-",
+  "Verified": "6/11/2023",
+  "Audit": "-",
+  "License": "GNU LGPLv3"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x13B9326C8079E92A35090A65887fd1bDbEe4dC70",
+  "Contract Name": "CatGPT",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "140",
+  "Setting": "-",
+  "Verified": "6/11/2023",
+  "Audit": "-",
+  "License": "MIT"
+}

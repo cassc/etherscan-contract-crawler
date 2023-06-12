@@ -1,0 +1,12 @@
+{
+  "Address": "0x2EcEE9a7A8c02b9dCc5034AdE918e21D8B86AcDC",
+  "Contract Name": "SettingsFacet",
+  "Compiler": "Solidity",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "6/11/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

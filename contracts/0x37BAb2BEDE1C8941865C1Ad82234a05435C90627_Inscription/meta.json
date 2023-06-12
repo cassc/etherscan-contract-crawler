@@ -1,0 +1,12 @@
+{
+  "Address": "0x37BAb2BEDE1C8941865C1Ad82234a05435C90627",
+  "Contract Name": "Inscription",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.18",
+  "Balance": "0.0025 ETH",
+  "Txns": "7415",
+  "Setting": "",
+  "Verified": "6/11/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
