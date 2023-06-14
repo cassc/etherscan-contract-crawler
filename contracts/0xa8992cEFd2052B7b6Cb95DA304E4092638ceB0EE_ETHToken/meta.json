@@ -1,0 +1,12 @@
+{
+  "Address": "0xa8992cEFd2052B7b6Cb95DA304E4092638ceB0EE",
+  "Contract Name": "ETHToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.7",
+  "Balance": "0 ETH",
+  "Txns": "22",
+  "Setting": "",
+  "Verified": "6/14/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

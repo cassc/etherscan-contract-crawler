@@ -1,0 +1,12 @@
+{
+  "Address": "0x7eFA9AE3c65CB4A835Db6f34ECA4D05A7CDb4c64",
+  "Contract Name": "SimpleToken",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.7.6",
+  "Balance": "0 ETH",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "6/13/2023",
+  "Audit": "-",
+  "License": "-"
+}

@@ -1,0 +1,12 @@
+{
+  "Address": "0x2cafb99A5DC02A638D4Bc88865827b4D4c2865b2",
+  "Contract Name": "OverpoweredERC",
+  "Compiler": "Solidity",
+  "Version": "0.8.20",
+  "Balance": "1 wei",
+  "Txns": "13",
+  "Setting": "",
+  "Verified": "6/14/2023",
+  "Audit": "-",
+  "License": "Unlicense"
+}

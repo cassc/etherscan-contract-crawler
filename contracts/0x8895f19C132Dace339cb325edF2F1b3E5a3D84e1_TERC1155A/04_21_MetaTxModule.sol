@@ -1,0 +1,50 @@
+// SPDX-License-Identifier: MPL-2.0
+// Source: CMTAT
+// https://github.com/CMTA/CMTAT
+
+pragma solidity ^0.8.17;
+
+// OZ imports
+import "../../openzeppelin-contracts-upgradeable/contracts/metatx/ERC2771ContextUpgradeable.sol";
+import "../../openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol";
+
+/**
+ * @title Meta transaction (gasless) module.
+ * @dev
+ * To follow OpenZeppelin, this contract does not implement
+ * the functions init & init_unchained.
+ */
+abstract contract MetaTxModule is ERC2771ContextUpgradeable {
+    /// @custom:oz-upgrades-unsafe-allow constructor
+    constructor(
+        address trustedForwarder
+    ) ERC2771ContextUpgradeable(trustedForwarder) {
+        // Nothing to do
+    }
+
+    function _msgSender()
+        internal
+        view
+        virtual
+        override
+        returns (address sender)
+    {
+        return ERC2771ContextUpgradeable._msgSender();
+    }
+
+    function _msgData()
+        internal
+        view
+        virtual
+        override
+        returns (bytes calldata)
+    {
+        return ERC2771ContextUpgradeable._msgData();
+    }
+
+    /**
+     * @dev This empty reserved space is put in place to allow future versions to add new
+     * variables without shifting down storage in the inheritance chain.
+     */
+    uint256[50] private __gap;
+}

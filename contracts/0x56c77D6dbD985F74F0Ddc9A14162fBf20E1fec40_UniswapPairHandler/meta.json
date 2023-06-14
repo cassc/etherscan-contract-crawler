@@ -1,0 +1,12 @@
+{
+  "Address": "0x56c77D6dbD985F74F0Ddc9A14162fBf20E1fec40",
+  "Contract Name": "UniswapPairHandler",
+  "Compiler": "Solidity",
+  "Version": "0.8.9",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "6/13/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
