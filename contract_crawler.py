@@ -74,7 +74,7 @@ def get_session_from_chromedriver(url):
     # options.add_argument('--headless')
 
     # driver = uc.Chrome(options=options)
-    driver = uc.Chrome(options=options, browser_executable_path='/usr/bin/brave', enable_cdp_events=True, version_main=112)
+    driver = uc.Chrome(options=options, browser_executable_path='/usr/bin/brave', enable_cdp_events=True, version_main=114)
 
     user_agent = driver.execute_script("return navigator.userAgent;")
 
