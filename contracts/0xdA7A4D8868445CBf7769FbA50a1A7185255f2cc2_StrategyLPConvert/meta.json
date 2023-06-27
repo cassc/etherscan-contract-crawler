@@ -1,0 +1,12 @@
+{
+  "Address": "0xdA7A4D8868445CBf7769FbA50a1A7185255f2cc2",
+  "Contract Name": "StrategyLPConvert",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.15",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "6/26/2023",
+  "Audit": "-",
+  "License": "GNU AGPLv3"
+}

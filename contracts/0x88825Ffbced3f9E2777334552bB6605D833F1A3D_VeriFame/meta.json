@@ -1,0 +1,12 @@
+{
+  "Address": "0x88825Ffbced3f9E2777334552bB6605D833F1A3D",
+  "Contract Name": "VeriFame",
+  "Compiler": "Solidity",
+  "Version": "0.8.20",
+  "Balance": "0.00344 ETH",
+  "Txns": "4",
+  "Setting": "",
+  "Verified": "6/26/2023",
+  "Audit": "-",
+  "License": "Apache-2.0"
+}

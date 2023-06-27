@@ -1,0 +1,12 @@
+{
+  "Address": "0xCC9Dc9034B6d198EA908B974d6c109FB8edf621d",
+  "Contract Name": "ERC721DeterministicCollection",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.12",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "6/26/2023",
+  "Audit": "-",
+  "License": "-"
+}

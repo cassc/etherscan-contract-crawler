@@ -1,0 +1,12 @@
+{
+  "Address": "0x100F27d39B2fb5c313d9032A46084fADce19AcDd",
+  "Contract Name": "DigitalMemeToken",
+  "Compiler": "Solidity",
+  "Version": "0.8.18",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "6/26/2023",
+  "Audit": "-",
+  "License": "MIT"
+}
