@@ -1,0 +1,338 @@
+// SPDX-License-Identifier: MIT
+// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)
+
+import "./IOnChainPixelArtv2.sol";
+
+pragma solidity ^0.8.0;
+
+contract MFiendsAssets {
+  IOnChainPixelArtv2 private renderer;
+
+  uint256[][96] public assets;
+  uint256 public constant X = 21;
+  uint256 public constant Y = 21;
+
+  constructor(IOnChainPixelArtv2 _renderer) {
+    renderer = _renderer;
+
+    // Arms1
+    assets[0] = [0x4611210510511d10510611d10520d20512510521520512521d22912510830024, 0x232e312144d];
+
+    // Arms10
+    assets[1] = [0x118d13d28d23530d33121523121522b14874b12314874b12331f306d0034];
+
+    // Arms11
+    assets[2] = [0x446f90df223e447d534254f623e447c86f90df10430014];
+
+    // Arms12
+    assets[3] = [0x8513d18424cd4c344344744344684148548184e3d22522512510830024];
+
+    // Arms13
+    assets[4] = [
+      0x112c4341c8510c4b10c4520c4b22c8b12c8f2545315453144d332c9b202c0014,
+      0x24792622896228ae258a681
+    ];
+
+    // Arms14
+    assets[5] = [
+      0x4611913221d13511513d11513511d31d32118521528512131d32512510830024,
+      0x8520cf8520cf8c9
+    ];
+
+    // Arms15
+    assets[6] = [0x111cd73244315c431251342c4314c4313587644531544312c431548f20830014, 0x444f];
+
+    // Arms16
+    assets[7] = [0x8853e104f9413e10510cf8424423e20913e11521d48864874828833e10810024];
+
+    // Arms2
+    assets[8] = [0x045f11cdb31c5f13493244cf34ccb35c4f10990014];
+
+    // Arms3
+    assets[9] = [0x1f12f31732b18711718712e11e12928511518521d306116105311525507f0034, 0x31];
+
+    // Arms4
+    assets[10] = [0x044cf895f10be41905f43ccb30c8d33c8f44c4f21be447c88f899f10270014];
+
+    // Arms5
+    assets[11] = [
+      0x044443920484222628490526090834c1c883421510d42107a162107b10570044,
+      0x1ec50841e8428f42147a10e885a10e885a1621520b22150b144288b142110b1,
+      0x1884
+    ];
+
+    // Arms6
+    assets[12] = [0x3210fc893cf9038d21d28c39131551d28858921720918478511b20900034];
+
+    // Arms7
+    assets[13] = [0x113511513d11113d11123521532532518458512d18478512a12610830024];
+
+    // Arms8
+    assets[14] = [0xc443f228f3e210f8813d221225221220f3e210f88a3cfc843f10270034];
+
+    // Arms9
+    assets[15] = [0x4464cb44644244944b485488843447447871841449446c610921d21a10670034];
+
+    // Back1
+    assets[16] = [0x112c5f11c4ef7bdef7c4511c4514c4512c4513c4513c451445314c5710190014, 0x89e2d];
+
+    // Back10
+    assets[17] = [0x044b1748726c4f14cd334453134c314c433245b1345b10030014];
+
+    // Back11
+    assets[18] = [0x45714c4312c4313d4f5349323c972345b1345b10180014];
+
+    // Back12
+    assets[19] = [0x04473d10d13d18511912918d11118512918510511112110d10020024];
+
+    // Back13
+    assets[20] = [0x45b12c4523c851251342c5b1244515c451144515c4511c9b20020014];
+
+    // Back14
+    assets[21] = [0x44f15c8f24ccf344cf344932445710040014];
+
+    // Back15
+    assets[22] = [0x123c9722c9b12c4af7c4b16c8b25c8f2545310590014];
+
+    // Back16
+    assets[23] = [0x0241905f20c8af7cc7364c7364c734513425134251342513402c0014];
+
+    // Back2
+    assets[24] = [0x120d22e14c54e11e14c74e11614c94e112148b4a11513510180024];
+
+    // Back3
+    assets[25] = [0x089225892239866598661b9ee97c5d102c0014];
+
+    // Back4
+    assets[26] = [0x44323c8313c9323c8313c432344314c4314c4d101c0014];
+
+    // Back5
+    assets[27] = [0x048f25c4f1549323c9722c5f10170014];
+
+    // Back6
+    assets[28] = [0x0214874a12224474621e14621e246119184b8511613e10170024];
+
+    // Back7
+    assets[29] = [0x1d12510518511518510511530511d10530d28522528520d32d31513510030024, 0x11];
+
+    // Back8
+    assets[30] = [0x134cd6f9ae687d1b40150014];
+
+    // Back9
+    assets[31] = [0x088a4790a2388a4990a228864b90622889f11c5f10170014];
+
+    // Body
+    assets[32] = [0x448f98df31be637cc6f989f57ddb90840014];
+
+    // Body10
+    assets[33] = [0x000112be647c82fa85f50be447c88fa89f30870014];
+
+    // Body11
+    assets[34] = [0x0001123e627d44f98df31be637cc4fa89f30870014];
+
+    // Body12
+    assets[35] = [0x0001123e647c4af895f123e627d44f991f10880014];
+
+    // Body13
+    assets[36] = [0x4c23d10d104f4434423d308f4434413d106105104f4434423d30870024];
+
+    // Body14
+    assets[37] = [0x044af90df223e247cc8f906227ccaf891f20870014];
+
+    // Body15
+    assets[38] = [0x1123e6a7be2a7be627d42fa8df10880014];
+
+    // Body16
+    assets[39] = [0x4443d308f4414414423d308f5423d308f5413d53930d331215235115105b0024];
+
+    // Body2
+    assets[40] = [0x44af891f10c46f98df31be627d5f1144516c4f106f0014];
+
+    // Body3
+    assets[41] = [0x131be21891f123e637cc4fa8df10880014];
+
+    // Body4
+    assets[42] = [0x02247cc4fa8df123e637cc6f991f10880014];
+
+    // Body5
+    assets[43] = [0x002627c47113e647c48f98df323e247c4310870014];
+
+    // Body6
+    assets[44] = [0x04c4fa89f31be457c4af909f675db20cc320840014];
+
+    // Body7
+    assets[45] = [0x02817d02fa11f12be237d06fa0df40850014];
+
+    // Body8
+    assets[46] = [0x0001123e457c88f90df223e457c88f911f10880014];
+
+    // Body9
+    assets[47] = [0x0991f123e627d44f98df31be627d5f20c4327c4710710014];
+
+    // Head1
+    assets[48] = [0x224433e14610cf4620480024];
+
+    // Head10
+    assets[49] = [0x004c43d110f4614423d285204f4e14423d30090024];
+
+    // Head11
+    assets[50] = [0x0130cf8718433d1c463d101e0034];
+
+    // Head12
+    assets[51] = [0x8833e14a104f8434613d10710d101c0034];
+
+    // Head13
+    assets[52] = [0x04433d310f85204f8424823d301e0024];
+
+    // Head14
+    assets[53] = [0x08518423e14614613e14814a13911513d10d101d0024];
+
+    // Head15
+    assets[54] = [0x210510613e10530613d28523e10530613e105106101d0024];
+
+    // Head16
+    assets[55] = [0x01308f4a14833e14423d18443d20200024];
+
+    // Head2
+    assets[56] = [0x2105110f8510cf4614433d18443d10200024];
+
+    // Head3
+    assets[57] = [0x01114f4443d308f4a14813d205201d0024];
+
+    // Head4
+    assets[58] = [0x4414433d30cf4614423d53930d301b0024];
+
+    // Head5
+    assets[59] = [0x1508f4614433d18510cf4614433d301e0024];
+
+    // Head6
+    assets[60] = [0x4434423d310f8510cfc414433d301e0034];
+
+    // Head7
+    assets[61] = [0x230cf85304f85285104f5023d305101d0024];
+
+    // Head8
+    assets[62] = [0x110cf5413d106105104f4418414413d10d101d0024];
+
+    // Head9
+    assets[63] = [0x004614423d30cf4418443d40cf8414433d20090024];
+
+    // Legs1
+    assets[64] = [0x0886218862f88e217c4710bea27cc4f88e217c4711040014];
+
+    // Legs10
+    assets[65] = [0x094719172c54173045b14ec46a12a84791820609112e0044];
+
+    // Legs11
+    assets[66] = [
+      0x3120910923528518523610510510510613511513210910d10a12d21520ed0024,
+      0x8433e10e13e10a10a13620910a2
+    ];
+
+    // Legs12
+    assets[67] = [0x2227c451145910c4511443154431144510c5510dc3155435648721180014];
+
+    // Legs13
+    assets[68] = [0x212cf3d110f4c23d504f5423d105112f0024];
+
+    // Legs14
+    assets[69] = [0x04c4f9064f9062193a219862f906417c47112e0014];
+
+    // Legs15
+    assets[70] = [0x111c42f88e217c8327cc3374c33748726c8b2648b2644f10d80014];
+
+    // Legs16
+    assets[71] = [0x0886227c4716c853744511c5bb744311c5b11c4321160014];
+
+    // Legs2
+    assets[72] = [0x0054f46154d4e14e144d56144f4e14423d312f0024];
+
+    // Legs3
+    assets[73] = [0x88e217c8320be23885f11c42f906417c83212e0014];
+
+    // Legs4
+    assets[74] = [0x4c63e108f4c144e4611113910518510513920d212d0024];
+
+    // Legs5
+    assets[75] = [0x2217c45114491544511443264c510c5f664871744340cccf915f11010014];
+
+    // Legs6
+    assets[76] = [0x5074550745cc736c8727487274872748727c4711190014];
+
+    // Legs7
+    assets[77] = [
+      0x05104f8418413d1073051391c63c513b18510518713a14434613d10d11040034,
+      0x210cf8433d10e1
+    ];
+
+    // Legs8
+    assets[78] = [0x0220e23918438513911513930533a15613d205212e0024];
+
+    // Legs9
+    assets[79] = [0x08443d105108f8510518413e144146104f8510518413e10e11190024];
+
+    // Rune1
+    assets[80] = [0x44cf895f12be237c45109b0014];
+
+    // Rune10
+    assets[81] = [0x448f991f10b20014];
+
+    // Rune11
+    assets[82] = [0x44cf899f10b10014];
+
+    // Rune12
+    assets[83] = [0x221891f12be257c8af88df109e0014];
+
+    // Rune13
+    assets[84] = [0x2257c8af915f10b10014];
+
+    // Rune14
+    assets[85] = [0x44cf895f123e2188df109e0014];
+
+    // Rune15
+    assets[86] = [0x44af891f10c48f895f109d0014];
+
+    // Rune16
+    assets[87] = [0x02437c4cf8a9ef991f109d0014];
+
+    // Rune2
+    assets[88] = [0x899f133e237c43109c0014];
+
+    // Rune3
+    assets[89] = [0x0899f12be447c48f915f109d0014];
+
+    // Rune4
+    assets[90] = [0x02437c4311be2188df20b20014];
+
+    // Rune5
+    assets[91] = [0x0456f7c4af911f109d0014];
+
+    // Rune6
+    assets[92] = [0x0125bdf15bdf209c0014];
+
+    // Rune7
+    assets[93] = [0x2257c4af895f209c0014];
+
+    // Rune8
+    assets[94] = [0x0452f7c8af895f109d0014];
+
+    // Rune9
+    assets[95] = [0x02247c56f7c48f98df109e0014];
+  }
+
+  function composeLayers(uint256[] memory layerIds)
+    public
+    view
+    returns (uint256[] memory composed)
+  {
+    uint256[] memory composedLayers = assets[layerIds[0]];
+    uint256 nextLayer;
+
+    for (uint256 i; i < layerIds.length - 1; i += 1) {
+      nextLayer = layerIds[i + 1];
+      composedLayers = renderer.composeLayers(composedLayers, assets[nextLayer], X * Y);
+    }
+
+    return composedLayers;
+  }
+}

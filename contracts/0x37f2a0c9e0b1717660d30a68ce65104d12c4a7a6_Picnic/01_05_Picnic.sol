@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+/// @title: Picnic Symphonies
+/// @author: manifold.xyz
+
+import "./manifold/ERC721Creator.sol";
+
+///////////////////////////////////////////////////////////////////////////////////
+//                                                                               //
+//                                                                               //
+//     ___       ___  __   __   __   ___  ___          __       __  ___  __      //
+//    |__  \  / |__  |__) / _` |__) |__  |__  |\ |    |  \  /\   / |__  |  \     //
+//    |___  \/  |___ |  \ \__> |  \ |___ |___ | \|    |__/ /~~\ /_ |___ |__/     //
+//                                                                               //
+//                                                                               //
+//                                                                               //
+///////////////////////////////////////////////////////////////////////////////////
+
+
+contract Picnic is ERC721Creator {
+    constructor() ERC721Creator("Picnic Symphonies", "Picnic") {}
+}
