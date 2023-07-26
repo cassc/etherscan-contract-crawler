@@ -1,0 +1,687 @@
+// SPDX-License-Identifier: MIT
+// Based on ERC721-A, Created by Swifty.eth
+
+pragma solidity ^0.8.4;
+
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol";
+import "@openzeppelin/contracts/utils/Address.sol";
+import "@openzeppelin/contracts/utils/Context.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
+
+
+error ApprovalCallerNotOwnerNorApproved();
+error ApprovalQueryForNonexistentToken();
+error ApproveToCaller();
+error ApprovalToCurrentOwner();
+error BalanceQueryForZeroAddress();
+error MintToZeroAddress();
+error MintZeroQuantity();
+error ExceedsAllowedBatch();
+error OwnerQueryForNonexistentToken();
+error TransferCallerNotOwnerNorApproved();
+error TransferFromIncorrectOwner();
+error TransferToNonERC721ReceiverImplementer();
+error TransferToZeroAddress();
+error URIQueryForNonexistentToken();
+error ExceedsCurrentSupply();
+error IndexExceedsOwnerBounds();
+
+/**
+ * @dev Implementation of https://eips.ethereum.org/EIPS/eip-721[ERC721] Non-Fungible Token Standard, including
+ * the Metadata extension. Built to optimize for lower gas during batch mints and non serialized minting such as for migration/non sequence minting.
+ *
+ * Assumes that an owner cannot have more than 2**64 - 1 (max value of uint64) of supply.
+ *
+ * Assumes that the maximum token id cannot exceed 2**256 - 1 (max value of uint256).
+ */
+contract ERC721SW is Context, ERC165, IERC721, IERC721Metadata {
+    using Address for address;
+    using Strings for uint256;
+
+    // Compiler will pack this into a single 256bit word.
+    struct TokenOwnership {
+        // The address of the owner.
+        address addr;
+        //used to figure out gaps with non sequened minting...
+        uint64 quantity; //uint64 should suffice as projects using this will not have a single user have a supply greater than 2**64-1
+    }
+
+    // Compiler will pack this into a single 256bit word.
+    struct AddressData {
+        // Realistically, 2**64-1 is more than enough.
+        uint64 balance;
+        // Keeps track of mint count with minimal overhead for tokenomics.
+        uint64 numberMinted;
+    }
+
+    // The tokenId of the next token to be minted.
+    uint256 internal _currentIndex;
+
+    // Token name
+    string private _name;
+
+    // Token symbol
+    string private _symbol;
+
+    // Mapping from token ID to ownership details
+    // An empty struct value does not necessarily mean the token is unowned. See _ownershipOf implementation for details.
+    mapping(uint256 => TokenOwnership) internal _ownerships;
+
+    // Mapping owner address to address data
+    mapping(address => AddressData) private _addressData;
+
+    // Mapping from token ID to approved address
+    mapping(uint256 => address) private _tokenApprovals;
+
+    // Mapping from owner to operator approvals
+    mapping(address => mapping(address => bool)) private _operatorApprovals;
+
+    constructor(string memory name_, string memory symbol_) {
+        _name = name_;
+        _symbol = symbol_;
+        _currentIndex = _startTokenId();
+    }
+
+    /**
+     * To change the starting tokenId, please override this function.
+     */
+    function _startTokenId() internal view virtual returns (uint256) {
+        return 1;
+    }
+
+    function totalSupply() public view returns (uint256) {
+        // Counter underflow is impossible as _burnCounter cannot be incremented
+        // more than _currentIndex - _startTokenId() times
+        unchecked {
+            return _currentIndex - _startTokenId();
+        }
+    }
+    /**
+     * Returns the total amount of tokens minted in the contract.
+     */
+    function _totalMinted() internal view returns (uint256) {
+        // Counter underflow is impossible as _currentIndex does not decrement,
+        // and it is initialized to _startTokenId()
+        unchecked {
+            return _currentIndex - _startTokenId();
+        }
+    }
+
+    /**
+     * @dev See {IERC165-supportsInterface}.
+     */
+    function supportsInterface(bytes4 interfaceId)
+        public
+        view
+        virtual
+        override(ERC165, IERC165)
+        returns (bool)
+    {
+        return
+            interfaceId == type(IERC721).interfaceId ||
+            interfaceId == type(IERC721Metadata).interfaceId ||
+            super.supportsInterface(interfaceId);
+    }
+
+    /**
+     * @dev See {IERC721-balanceOf}.
+     */
+    function balanceOf(address owner) public view override returns (uint256) {
+        if (owner == address(0)) revert BalanceQueryForZeroAddress();
+        return uint256(_addressData[owner].balance);
+    }
+
+    /**
+     * Returns the number of tokens minted by `owner`.
+     */
+    function _numberMinted(address owner) internal view returns (uint256) {
+        return uint256(_addressData[owner].numberMinted);
+    }
+
+
+    function tokenByIndex(uint256 index) public view returns (uint256) {
+        if (index > totalSupply()) revert ExceedsCurrentSupply();
+        return index;
+    }
+
+    /**
+    * @dev See {IERC721Enumerable-tokenOfOwnerByIndex}.
+    * This read function is O(collectionSize). If calling from a separate contract, be sure to test gas first.
+    * It may also degrade with extremely large collection sizes (e.g >> 10000), test for your use case.
+    */
+    function tokenOfOwnerByIndex(address owner, uint256 index)
+        public
+        view
+        returns (uint256)
+    {
+        if (index > balanceOf(owner)) revert IndexExceedsOwnerBounds();
+        uint256 numMintedSoFar = totalSupply();
+        uint256 tokenIdsIdx = 0;
+        address currOwnershipAddr = address(0);
+        uint256 currentOwnershipSize = 0;
+        uint256 currTokensPassed = 0;
+        for (uint256 tokenId = 0; tokenId < numMintedSoFar; tokenId++) {
+            TokenOwnership memory ownership = _ownerships[tokenId];
+            if (ownership.addr != address(0)) {
+                currOwnershipAddr = ownership.addr;
+                currentOwnershipSize = ownership.quantity;
+                currTokensPassed = 0;
+            }
+            if (currOwnershipAddr == owner && (currTokensPassed < currentOwnershipSize)) {
+                if ((tokenIdsIdx == index)) {
+                    return tokenId;
+                }
+                tokenIdsIdx++;
+                currTokensPassed++;
+            }
+        }
+    revert OwnerQueryForNonexistentToken();
+  }
+
+
+    /**
+     * Gas spent here starts off proportional to the maximum mint batch size.
+     * It gradually moves to O(1) as tokens get transferred around in the collection over time.
+     */
+    function _ownershipOf(uint256 tokenId)
+        internal
+        view
+        returns (TokenOwnership memory)
+    {
+        uint256 curr = tokenId;
+        uint256 skipped = 0;
+        unchecked {
+            if ((_startTokenId() <= curr) && (curr < _currentIndex)) {
+                TokenOwnership memory ownership = _ownerships[curr];
+                if (ownership.addr != address(0)) {
+                    return ownership;
+                }
+                
+                while (true) {
+                    curr--;
+                    skipped++;
+                    ownership = _ownerships[curr];
+
+                    if (
+                        (ownership.addr != address(0)) &&
+                        (ownership.quantity > (tokenId - curr))
+                    ) {
+                        return ownership;
+                    } else if (_startTokenId() > curr) {
+                        //incase it cant find to avoid infinite loop..
+                        break;
+                    } else if (skipped > 16) {
+                        break;
+                    }
+                }
+            }
+        }
+        revert OwnerQueryForNonexistentToken();
+    }
+
+    /**
+     * @dev See {IERC721-ownerOf}.
+     */
+    function ownerOf(uint256 tokenId) public view override returns (address) {
+        return _ownershipOf(tokenId).addr;
+    }
+
+    /**
+     * @dev See {IERC721Metadata-name}.
+     */
+    function name() public view virtual override returns (string memory) {
+        return _name;
+    }
+
+    /**
+     * @dev See {IERC721Metadata-symbol}.
+     */
+    function symbol() public view virtual override returns (string memory) {
+        return _symbol;
+    }
+
+    /**
+     * @dev See {IERC721Metadata-tokenURI}.
+     */
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        virtual
+        override
+        returns (string memory)
+    {
+        if (!_exists(tokenId)) revert URIQueryForNonexistentToken();
+
+        string memory baseURI = _baseURI();
+        return
+            bytes(baseURI).length != 0
+                ? string(abi.encodePacked(baseURI, tokenId.toString()))
+                : "";
+    }
+
+    /**
+     * @dev Base URI for computing {tokenURI}. If set, the resulting URI for each
+     * token will be the concatenation of the `baseURI` and the `tokenId`. Empty
+     * by default, can be overriden in child contracts.
+     */
+    function _baseURI() internal view virtual returns (string memory) {
+        return "";
+    }
+
+    /**
+     * @dev See {IERC721-approve}.
+     */
+    function approve(address to, uint256 tokenId) public override {
+        address owner = ERC721SW.ownerOf(tokenId);
+        if (to == owner) revert ApprovalToCurrentOwner();
+
+        if (_msgSender() != owner && !isApprovedForAll(owner, _msgSender())) {
+            revert ApprovalCallerNotOwnerNorApproved();
+        }
+
+        _approve(to, tokenId, owner);
+    }
+
+    /**
+     * @dev See {IERC721-getApproved}.
+     */
+    function getApproved(uint256 tokenId)
+        public
+        view
+        override
+        returns (address)
+    {
+        if (!_exists(tokenId)) revert ApprovalQueryForNonexistentToken();
+
+        return _tokenApprovals[tokenId];
+    }
+
+    /**
+     * @dev See {IERC721-setApprovalForAll}.
+     */
+    function setApprovalForAll(address operator, bool approved)
+        public
+        virtual
+        override
+    {
+        if (operator == _msgSender()) revert ApproveToCaller();
+
+        _operatorApprovals[_msgSender()][operator] = approved;
+        emit ApprovalForAll(_msgSender(), operator, approved);
+    }
+
+    /**
+     * @dev See {IERC721-isApprovedForAll}.
+     */
+    function isApprovedForAll(address owner, address operator)
+        public
+        view
+        virtual
+        override
+        returns (bool)
+    {
+        return _operatorApprovals[owner][operator];
+    }
+
+    /**
+     * @dev See {IERC721-transferFrom}.
+     */
+    function transferFrom(
+        address from,
+        address to,
+        uint256 tokenId
+    ) public virtual override {
+        _transfer(from, to, tokenId);
+    }
+
+    /**
+     * @dev See {IERC721-safeTransferFrom}.
+     */
+    function safeTransferFrom(
+        address from,
+        address to,
+        uint256 tokenId
+    ) public virtual override {
+        safeTransferFrom(from, to, tokenId, "");
+    }
+
+    /**
+     * @dev See {IERC721-safeTransferFrom}.
+     */
+    function safeTransferFrom(
+        address from,
+        address to,
+        uint256 tokenId,
+        bytes memory _data
+    ) public virtual override {
+        _transfer(from, to, tokenId);
+        if (
+            to.isContract() &&
+            !_checkContractOnERC721Received(from, to, tokenId, _data)
+        ) {
+            revert TransferToNonERC721ReceiverImplementer();
+        }
+    }
+
+    /**
+     * @dev Returns whether `tokenId` exists.
+     *
+     * Tokens can be managed by their owner or approved accounts via {approve} or {setApprovalForAll}.
+     *
+     * Tokens start existing when they are minted (`_mint`),
+     */
+    function _exists(uint256 tokenId) internal view returns (bool) {
+        uint256 curr = tokenId;
+
+        unchecked {
+            if ((_startTokenId() <= curr) && (curr < _currentIndex)) {
+                TokenOwnership memory ownership = _ownerships[curr];
+                if (ownership.addr != address(0)) {
+                    return true;
+                }
+                uint256 TotalChecked = 0;
+                while (true) {
+                    curr--;
+                    ownership = _ownerships[curr];
+                    TotalChecked += 1;
+                    if (
+                        (ownership.addr != address(0)) &&
+                        (ownership.quantity > (tokenId - curr))
+                    ) {
+                        return true;
+                    } else if (_startTokenId() > curr) {
+                        //incase it cant find to avoid infinite loop..
+                        break;
+                    } else if (TotalChecked > 15) {
+                        break;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    function _safeMint(
+        address to,
+        uint256 quantity,
+        uint256 startingAddress
+    ) internal {
+        _safeMint(to, quantity, "", startingAddress);
+    }
+
+    /**
+     * @dev Safely mints `quantity` tokens and transfers them to `to`.
+     *
+     * Requirements:
+     *
+     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called for each safe transfer.
+     * - `quantity` must be greater than 0.
+     *
+     * Emits a {Transfer} event.
+     */
+    function _safeMint(
+        address to,
+        uint256 quantity,
+        bytes memory _data,
+        uint256 startingAddress
+    ) internal {
+        _mint(to, quantity, _data, true, startingAddress);
+    }
+
+    /**
+     * @dev Mints `quantity` tokens and transfers them to `to`.
+     *
+     * Requirements:
+     *
+     * - `to` cannot be the zero address.
+     * - `quantity` must be greater than 0.
+     *
+     * Emits a {Transfer} event.
+     */
+    function _mint(
+        address to,
+        uint256 quantity,
+        bytes memory _data,
+        bool safe,
+        uint256 startingAddress
+    ) internal {
+
+        uint256 startTokenId = startingAddress;
+        if (to == address(0)) revert MintToZeroAddress();
+        if (quantity == 0) revert MintZeroQuantity();
+        if (quantity > 15) revert ExceedsAllowedBatch();
+        _beforeTokenTransfers(address(0), to, startTokenId, quantity);
+
+        // Overflows are incredibly unrealistic.
+        // balance or numberMinted overflow if current value of either + quantity > 1.8e19 (2**64) - 1
+        // updatedIndex overflows if _currentIndex + quantity > 1.2e77 (2**256) - 1
+        unchecked {
+            _addressData[to].balance += uint64(quantity);
+            _addressData[to].numberMinted += uint64(quantity);
+
+            _ownerships[startTokenId].addr = to;
+            _ownerships[startTokenId].quantity = uint64(quantity);
+
+            uint256 updatedIndex = startTokenId;
+            uint256 end = updatedIndex + quantity;
+
+            if (safe && to.isContract()) {
+                do {
+                    emit Transfer(address(0), to, updatedIndex);
+
+                    if (_exists(updatedIndex)) revert();
+
+                    if (
+                        !_checkContractOnERC721Received(
+                            address(0),
+                            to,
+                            updatedIndex++,
+                            _data
+                        )
+                    ) {
+                        revert TransferToNonERC721ReceiverImplementer();
+                    }
+                } while (updatedIndex != end);
+            } else {
+                do {
+                    emit Transfer(address(0), to, updatedIndex++);
+                } while (updatedIndex != end);
+            }
+            if (_currentIndex == startingAddress) {
+                _currentIndex = updatedIndex;
+            }
+        }
+        _afterTokenTransfers(address(0), to, startTokenId, quantity);
+    }
+
+    /**
+     * @dev Transfers `tokenId` from `from` to `to`.
+     *
+     * Requirements:
+     *
+     * - `to` cannot be the zero address.
+     * - `tokenId` token must be owned by `from`.
+     *
+     * Emits a {Transfer} event.
+     */
+    function _transfer(
+        address from,
+        address to,
+        uint256 tokenId
+    ) private {
+        TokenOwnership memory prevOwnership = _ownershipOf(tokenId);
+
+        if (prevOwnership.addr != from) revert TransferFromIncorrectOwner();
+
+        bool isApprovedOrOwner = (_msgSender() == from ||
+            isApprovedForAll(from, _msgSender()) ||
+            getApproved(tokenId) == _msgSender());
+
+        if (!isApprovedOrOwner) revert TransferCallerNotOwnerNorApproved();
+        if (to == address(0)) revert TransferToZeroAddress();
+
+        _beforeTokenTransfers(from, to, tokenId, 1);
+
+        // Clear approvals from the previous owner
+        _approve(address(0), tokenId, from);
+
+        // Underflow of the sender's balance is impossible because we check for
+        // ownership above and the recipient's balance can't realistically overflow.
+        // Counter overflow is incredibly unrealistic as tokenId would have to be 2**256.
+        unchecked {
+            _addressData[from].balance -= 1;
+            _addressData[to].balance += 1;
+
+            TokenOwnership storage currSlot = _ownerships[tokenId];
+
+            uint64 qtyLeft = 0;
+
+            if (currSlot.addr != address(0)) {
+                qtyLeft = currSlot.quantity-1;
+            }
+
+            currSlot.addr = to;
+
+            uint256 nextTokenId = tokenId + 1;
+            
+
+
+            uint256 curr = tokenId;
+
+            uint256 amountSeen = 0;
+
+            if ((_startTokenId() <= curr) && (curr < _currentIndex) && (qtyLeft == 0)) {
+                while (true) {
+                    curr--;
+                    amountSeen++;
+                    TokenOwnership storage ownership = _ownerships[curr];
+                    if (
+                        (ownership.addr != address(0)) &&
+                        (ownership.quantity > (tokenId - curr)) &&
+                        (ownership.quantity > 0)
+                    ) {
+                        uint128 amountLeft = (ownership.quantity-uint128(tokenId - curr))-1;
+                        ownership.quantity -= 1;
+                        qtyLeft = uint64(amountLeft);
+                        break;
+                    } else if (_startTokenId() > curr) {
+                        //incase it cant find to avoid infinite loop..
+                        break;
+                    } else if (amountSeen > 16) {
+                        break;
+                    }
+                }
+            }
+
+            TokenOwnership storage nextSlot = _ownerships[nextTokenId];
+            if (nextSlot.addr == address(0) && (qtyLeft > 0)) {
+                
+                // This will suffice for checking _exists(nextTokenId),
+                if (nextTokenId != _currentIndex+1) {
+                    nextSlot.addr = from;
+                    nextSlot.quantity = qtyLeft;
+                }
+            }
+        }
+
+        emit Transfer(from, to, tokenId);
+        _afterTokenTransfers(from, to, tokenId, 1);
+    }
+
+    /**
+     * @dev Approve `to` to operate on `tokenId`
+     *
+     * Emits a {Approval} event.
+     */
+    function _approve(
+        address to,
+        uint256 tokenId,
+        address owner
+    ) private {
+        _tokenApprovals[tokenId] = to;
+        emit Approval(owner, to, tokenId);
+    }
+
+    /**
+     * @dev Internal function to invoke {IERC721Receiver-onERC721Received} on a target contract.
+     *
+     * @param from address representing the previous owner of the given token ID
+     * @param to target address that will receive the tokens
+     * @param tokenId uint256 ID of the token to be transferred
+     * @param _data bytes optional data to send along with the call
+     * @return bool whether the call correctly returned the expected magic value
+     */
+    function _checkContractOnERC721Received(
+        address from,
+        address to,
+        uint256 tokenId,
+        bytes memory _data
+    ) private returns (bool) {
+        try
+            IERC721Receiver(to).onERC721Received(
+                _msgSender(),
+                from,
+                tokenId,
+                _data
+            )
+        returns (bytes4 retval) {
+            return retval == IERC721Receiver(to).onERC721Received.selector;
+        } catch (bytes memory reason) {
+            if (reason.length == 0) {
+                revert TransferToNonERC721ReceiverImplementer();
+            } else {
+                assembly {
+                    revert(add(32, reason), mload(reason))
+                }
+            }
+        }
+    }
+
+    /**
+     * @dev Hook that is called before a set of serially-ordered token ids are about to be transferred. This includes minting.
+     * And also called before burning one token.
+     *
+     * startTokenId - the first token id to be transferred
+     * quantity - the amount to be transferred
+     *
+     * Calling conditions:
+     *
+     * - When `from` and `to` are both non-zero, `from`'s `tokenId` will be
+     * transferred to `to`.
+     * - When `from` is zero, `tokenId` will be minted for `to`.
+     * - When `to` is zero, `tokenId` will be burned by `from`.
+     * - `from` and `to` are never both zero.
+     */
+    function _beforeTokenTransfers(
+        address from,
+        address to,
+        uint256 startTokenId,
+        uint256 quantity
+    ) internal virtual {}
+
+    /**
+     * @dev Hook that is called after a set of serially-ordered token ids have been transferred. This includes
+     * minting.
+     * And also called after one token has been burned.
+     *
+     * startTokenId - the first token id to be transferred
+     * quantity - the amount to be transferred
+     *
+     * Calling conditions:
+     *
+     * - When `from` and `to` are both non-zero, `from`'s `tokenId` has been
+     * transferred to `to`.
+     * - When `from` is zero, `tokenId` has been minted for `to`.
+     * - When `to` is zero, `tokenId` has been burned by `from`.
+     * - `from` and `to` are never both zero.
+     */
+    function _afterTokenTransfers(
+        address from,
+        address to,
+        uint256 startTokenId,
+        uint256 quantity
+    ) internal virtual {}
+}

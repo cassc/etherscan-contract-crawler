@@ -1,0 +1,13 @@
+{
+  "Address": "0x7Eec3e2f4d567794B927B6d904Fbf973bC8D15e6",
+  "Contract Name": "Compass-EVM",
+  "Compiler": "Vyper",
+  "Version": "vyper:0.3.7",
+  "Balance": "0 ETH",
+  "Txns": "2138",
+  "Setting": "",
+  "Verified": "7/20/2023",
+  "Audit": "-",
+  "License": "Apache-2.0",
+  "Similar Contract": "Search"
+}
