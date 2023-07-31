@@ -1,0 +1,13 @@
+{
+  "Address": "0x3D8faCB2b65B8CEB682ADE00E016c672Ee6262c0",
+  "Contract Name": "Voting Escrow",
+  "Compiler": "Vyper",
+  "Version": "vyper:0.3.1",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "7/30/2023",
+  "Audit": "-",
+  "License": "MIT",
+  "Similar Contract": "Search"
+}

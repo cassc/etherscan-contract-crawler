@@ -1,0 +1,13 @@
+{
+  "Address": "0xE10CC35487b4770adf9aeFb1D9f8F3a2Eaae562A",
+  "Contract Name": "Curve DAO Token",
+  "Compiler": "Vyper",
+  "Version": "vyper:0.3.1",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "7/30/2023",
+  "Audit": "-",
+  "License": "MIT",
+  "Similar Contract": "Search"
+}

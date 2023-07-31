@@ -1,0 +1,13 @@
+{
+  "Address": "0xEbA9A8fdd2539d33e070c66Afc1127478bA78054",
+  "Contract Name": "Token Minter",
+  "Compiler": "Vyper",
+  "Version": "vyper:0.3.1",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "7/30/2023",
+  "Audit": "-",
+  "License": "MIT",
+  "Similar Contract": "Search"
+}
