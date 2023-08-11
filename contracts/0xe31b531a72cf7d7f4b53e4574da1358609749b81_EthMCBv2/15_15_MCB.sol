@@ -1,0 +1,137 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.6.10;
+
+import "./ERC20PresetMinterPauserV300.sol";
+
+/**
+ * @dev MCB token
+ */
+contract MCB is ERC20PresetMinterPauserUpgradeSafe {
+    /**
+     * @dev proposal 19: MCB new tokenomics
+     *
+     * https://forum.mcdex.io/t/proposal-19-mcb-new-tokenomics/262
+     */
+    function proposal19() public virtual {
+        require(
+            msg.sender == 0xD18019DbD648F9c2794Dd3F130ad7490f7F3c173,
+            "proxyAdmin only"
+        );
+        _burn(
+            0x38ca50c6E3391A5bf73c2504bd9Cd9c0b9D89053,
+            balanceOf(0x38ca50c6E3391A5bf73c2504bd9Cd9c0b9D89053)
+        );
+        _burn(
+            0xA8f13A7E97a624e6d0B88D0a4fe7080BE7b6cA21,
+            balanceOf(0xA8f13A7E97a624e6d0B88D0a4fe7080BE7b6cA21)
+        );
+        _burn(
+            0xE26b8A84028Fe92A2f473B7C114Ec95cEF73927E,
+            balanceOf(0xE26b8A84028Fe92A2f473B7C114Ec95cEF73927E)
+        );
+        _burn(
+            0x34A99cb066777495Ad8Ff3Def0C39bDeC72AdaE3,
+            balanceOf(0x34A99cb066777495Ad8Ff3Def0C39bDeC72AdaE3)
+        );
+        _burn(
+            0x42fF3D43979F083c8aa3166298789261B66DC926,
+            balanceOf(0x42fF3D43979F083c8aa3166298789261B66DC926)
+        );
+        _burn(
+            0x89108A54d94152DB363318f8085dc8b7ABF03323,
+            balanceOf(0x89108A54d94152DB363318f8085dc8b7ABF03323)
+        );
+        _burn(
+            0xe078bE6AcC9c1e23474d23E2AB2Aa0c528c1494E,
+            balanceOf(0xe078bE6AcC9c1e23474d23E2AB2Aa0c528c1494E)
+        );
+        _burn(
+            0x490a11E5195Bb6f1C9c555E744F6bC1B35A3EaEA,
+            balanceOf(0x490a11E5195Bb6f1C9c555E744F6bC1B35A3EaEA)
+        );
+        _burn(
+            0xE87352f80CF096584d473D7821ffB220ffCCEEDD,
+            balanceOf(0xE87352f80CF096584d473D7821ffB220ffCCEEDD)
+        );
+        _burn(
+            0xDd35BD8A76c711783Ae2EF5Ed0d6bb3fee18fDC3,
+            balanceOf(0xDd35BD8A76c711783Ae2EF5Ed0d6bb3fee18fDC3)
+        );
+        _burn(
+            0x21c09C55Af2643023eFE8775Ae20dd23a53585aB,
+            balanceOf(0x21c09C55Af2643023eFE8775Ae20dd23a53585aB)
+        );
+        _burn(
+            0x5BBbAf040a017966c9e966eDBb9221b37B2C2923,
+            balanceOf(0x5BBbAf040a017966c9e966eDBb9221b37B2C2923)
+        );
+        _burn(
+            0xd72a41aa286F045e9A4d55F589EdaE141CfC4952,
+            balanceOf(0xd72a41aa286F045e9A4d55F589EdaE141CfC4952)
+        );
+        _burn(
+            0x92D8736ce002E9CA4b864377A2FF65b74340D04c,
+            balanceOf(0x92D8736ce002E9CA4b864377A2FF65b74340D04c)
+        );
+        _burn(
+            0xBa9a70A5dD74343C0dfAA3826D14e96297da171C,
+            balanceOf(0xBa9a70A5dD74343C0dfAA3826D14e96297da171C)
+        );
+        _burn(
+            0xb7F09DA3E0E75D7342d3Ec01649903857F0b5075,
+            balanceOf(0xb7F09DA3E0E75D7342d3Ec01649903857F0b5075)
+        );
+        _burn(
+            0xa9e23857CD6eb5c7ED2159edD68aB5B24285F977,
+            balanceOf(0xa9e23857CD6eb5c7ED2159edD68aB5B24285F977)
+        );
+        _burn(
+            0x9cc56b52387ed71C8C29fFAD7416f973f0555902,
+            balanceOf(0x9cc56b52387ed71C8C29fFAD7416f973f0555902)
+        );
+        _burn(
+            0x7dbCC4335cCADc2993279052eA070Bd2C0786D85,
+            balanceOf(0x7dbCC4335cCADc2993279052eA070Bd2C0786D85)
+        );
+        _burn(
+            0x4add71348F750B038869AB0ce6C3309a922d1892,
+            balanceOf(0x4add71348F750B038869AB0ce6C3309a922d1892)
+        );
+        _burn(
+            0x532fe523A638b714dDfBd820D41C68f9E2C6E1Db,
+            balanceOf(0x532fe523A638b714dDfBd820D41C68f9E2C6E1Db)
+        );
+        _burn(
+            0xB0F0E4C0615E1905ED08905BF4486f73E7eddD63,
+            balanceOf(0xB0F0E4C0615E1905ED08905BF4486f73E7eddD63)
+        );
+        _burn(
+            0x21C6E6b19AD4011a5bd270214d98382319de1BcB,
+            balanceOf(0x21C6E6b19AD4011a5bd270214d98382319de1BcB)
+        );
+        _burn(
+            0xf6e88D5acA2D9FbEd26de198D2f78DEE1c97a369,
+            balanceOf(0xf6e88D5acA2D9FbEd26de198D2f78DEE1c97a369)
+        );
+        _burn(
+            0x6AE6BE7B8E48F8Ad3ebCCcEDAc31841BC1516239,
+            balanceOf(0x6AE6BE7B8E48F8Ad3ebCCcEDAc31841BC1516239)
+        );
+        _burn(
+            0x17eC352286D1a8117d39674B6FD20f1E06969408,
+            balanceOf(0x17eC352286D1a8117d39674B6FD20f1E06969408)
+        );
+        _burn(
+            0x278d33A37c206966Cb6447963ccA9246c137A036,
+            balanceOf(0x278d33A37c206966Cb6447963ccA9246c137A036)
+        );
+        _burn(
+            0xdCa445B99eA5E9bDe70169fC9977032535B1ee02,
+            balanceOf(0xdCa445B99eA5E9bDe70169fC9977032535B1ee02)
+        );
+        _burn(
+            0x5910a985197cEDCCFba0C3A27bD37A46cB0F8011,
+            balanceOf(0x5910a985197cEDCCFba0C3A27bD37A46cB0F8011)
+        );
+    }
+}

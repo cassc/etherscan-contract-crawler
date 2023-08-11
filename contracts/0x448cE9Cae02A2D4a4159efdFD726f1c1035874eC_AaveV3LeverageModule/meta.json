@@ -1,0 +1,13 @@
+{
+  "Address": "0x448cE9Cae02A2D4a4159efdFD726f1c1035874eC",
+  "Contract Name": "AaveV3LeverageModule",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.6.10",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "8/10/2023",
+  "Audit": "-",
+  "License": "Apache-2.0",
+  "Similar Contract": "Search"
+}

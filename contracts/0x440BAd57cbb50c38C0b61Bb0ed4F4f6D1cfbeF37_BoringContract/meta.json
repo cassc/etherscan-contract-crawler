@@ -1,0 +1,13 @@
+{
+  "Address": "0x440BAd57cbb50c38C0b61Bb0ed4F4f6D1cfbeF37",
+  "Contract Name": "BoringContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.20",
+  "Balance": "1 wei",
+  "Txns": "49",
+  "Setting": "-",
+  "Verified": "8/7/2023",
+  "Audit": "-",
+  "License": "MIT",
+  "Similar Contract": "Search"
+}

@@ -1,0 +1,13 @@
+{
+  "Address": "0x274b4031C80F4F8ebe85Dff9e7a31C0449C72C60",
+  "Contract Name": "ChainlinkPriceFeedAggregator",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.20",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "",
+  "Verified": "8/10/2023",
+  "Audit": "-",
+  "License": "-",
+  "Similar Contract": "Search"
+}
