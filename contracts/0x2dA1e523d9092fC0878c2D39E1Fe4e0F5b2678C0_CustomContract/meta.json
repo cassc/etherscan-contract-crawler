@@ -1,0 +1,13 @@
+{
+  "Address": "0x2dA1e523d9092fC0878c2D39E1Fe4e0F5b2678C0",
+  "Contract Name": "CustomContract",
+  "Compiler": "Solidity",
+  "Version": "0.8.20",
+  "Balance": "0 ETH",
+  "Txns": "2",
+  "Setting": "-",
+  "Verified": "8/15/2023",
+  "Audit": "-",
+  "License": "MIT",
+  "Similar Contract": "Search"
+}
