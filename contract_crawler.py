@@ -31,6 +31,11 @@ INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
                     'Optimization Enabled': 'optimizations',
                     'Other Settings:': 'settings'}
 
+
+def to_path_name(s, max_length=255):
+    s = re.sub(r'[^a-zA-Z0-9\-_\.]', '_', s)
+    return s[:max_length]
+
 def starts_with_digit(s):
     return bool(re.match(r'^\d', s))
 
@@ -74,7 +79,7 @@ def get_session_from_chromedriver(url):
     # options.add_argument('--headless')
 
     # driver = uc.Chrome(options=options)
-    driver = uc.Chrome(options=options, browser_executable_path='/usr/bin/brave', enable_cdp_events=True, version_main=114)
+    driver = uc.Chrome(options=options, browser_executable_path='/usr/bin/brave', enable_cdp_events=True, version_main=116, force=True)
 
     user_agent = driver.execute_script("return navigator.userAgent;")
 
@@ -216,10 +221,12 @@ def parse_source_soup(soup, address=None, contract_name=None):
     address = address or soup.select('title')[0].text.split(r'|')[1].strip().split()[-1]
     contract_name = contract_name or parse_for_contract_name(soup) or ''
 
+    safe_contract_name = to_path_name(contract_name)
+
     if not contract_name:
         print(f'ERROR: No contract name found in {address}')
 
-    parent = f'{ROOT_DIR}/{address}_{contract_name}'
+    parent = f'{ROOT_DIR}/{address}_{safe_contract_name}'
     os.makedirs(parent, exist_ok=True)
 
 
@@ -245,7 +252,7 @@ def parse_source_soup(soup, address=None, contract_name=None):
         raise Exception(f'Multiple source with no file name? {address} {contract_name}')
 
     if len(sources) == 1 and len(files) == 0:
-        write_source_file(f'{contract_name}.sol', sources[0])
+        write_source_file(f'{safe_contract_name}.sol', sources[0])
         return
 
     # if len(sources) != len(files): the extra source appearing in the sources might just be `settings`
@@ -397,8 +404,7 @@ if __name__ == '__main__':
         raise Exception('Invalid website, choose etherscan or bscscan')
 
     print(VERIFIED_CONTRACT_URL)
-    print(CONTRACT_SOURCE_URL)
-    print(ROOT_DIR)
+
     url = args.url
 
     load_session(args.session_url or VERIFIED_CONTRACT_URL)

