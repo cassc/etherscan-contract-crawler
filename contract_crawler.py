@@ -11,6 +11,8 @@ import requests
 from datetime import datetime
 import time
 import re
+from ratelimit import limits, sleep_and_retry
+
 
 import undetected_chromedriver as uc
 from selenium.webdriver.support.ui import WebDriverWait
@@ -359,6 +361,35 @@ def is_valid_ethereum_address(address):
     pattern = "^0x[a-fA-F0-9]{40}$"
     return bool(re.match(pattern, address))
 
+
+@sleep_and_retry
+@limits(calls=5, period=1)
+def throttled_get(url):
+    return requests.get(url)
+
+def retrieve_standard_json_input_by_api(network, api_key, address, root):
+    if os.path.exists(root):
+        return
+
+    base_url = 'https://api.etherscan.io/api' if network == 'etherscan' else 'https://api.bscscan.com/api'
+    url = f'{base_url}?module=contract&action=getsourcecode&address={address}&apikey={api_key}'
+    response = requests.get(url)
+    data = json.loads(response.text)
+    if data['status'] == '1':
+        result = data['result'][0]
+        contract_name = result.get('ContractName')
+        if not contract_name:
+            print(f'Contract name not found for {address}')
+            return
+        output = os.path.join(root, f'{address}_{to_path_name(contract_name, 20)}.json')
+        os.mkdir(root)
+        with open(output, 'w') as f:
+            print(f'Writing {output} for {contract_name}')
+            json.dump(result, f)
+
+
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument("--web", default="etherscan",type=str, help="Choose website, etherscan(default) or bscscan")
@@ -367,33 +398,33 @@ if __name__ == '__main__':
     ap.add_argument("--session-url", type=str, help="URL to load the first session from")
     ap.add_argument("--csv", type=str, help="Load address from csv file")
     ap.add_argument("--csv-col-index", type=int, help="Column index of address in csv file", default=-1)
+    ap.add_argument("--use-api", action='store_true', help="Use API to download source code")
+    ap.add_argument("--etherscan-api-key", type=str, help="API key for etherscan or bscscan")
 
     args = ap.parse_args()
     OUTPUT_DIR = args.output_dir
     OUTPUT_DIR = OUTPUT_DIR[:-1] if OUTPUT_DIR.endswith('/') else OUTPUT_DIR
     ROOT_DIR = f'{OUTPUT_DIR}/contracts'
 
-    web = args.web
-
     addresses = set()
     if args.csv:
         addresses = set(load_addresses_from_csv(args.csv, args.csv_col_index))
         print(f'Found {len(addresses)} addresses in {args.csv}')
 
-    if web == 'etherscan':
+    if args.web == 'etherscan':
         VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
         CONTRACT_SOURCE_URL   = 'https://etherscan.io/address/{}#code'
         os.makedirs(ROOT_DIR, exist_ok=True)
         fn = download_url
 
-    elif web == 'bscscan':
+    elif args.web == 'bscscan':
         VERIFIED_CONTRACT_URL = 'https://bscscan.com/contractsVerified'
         CONTRACT_SOURCE_URL   = 'https://bscscan.com/address/{}#code'
         ROOT_DIR = f'{OUTPUT_DIR}/bsc_contracts'
         os.makedirs(ROOT_DIR, exist_ok=True)
         fn = download_url
 
-    elif web == "polygon":
+    elif args.web == "polygon":
         VERIFIED_CONTRACT_URL = 'https://polygonscan.com/contractsVerified'
         CONTRACT_SOURCE_URL   = 'https://polygonscan.com/address/{}#code'
         ROOT_DIR = f'{OUTPUT_DIR}/polygon_contracts'
@@ -407,7 +438,8 @@ if __name__ == '__main__':
 
     url = args.url
 
-    load_session(args.session_url or VERIFIED_CONTRACT_URL)
+    if not args.use_api:
+        load_session(args.session_url or VERIFIED_CONTRACT_URL)
 
     if url:
         fn(url)
@@ -432,7 +464,10 @@ if __name__ == '__main__':
             url = CONTRACT_SOURCE_URL.format(address)
             print(f'Processing {url}')
             try:
-                fn(url)
+                if args.web=="etherscan" and args.use_api and args.etherscan_api_key:
+                    retrieve_standard_json_input_by_api(args.web, args.etherscan_api_key, address, f'{ROOT_DIR}/{address}')
+                else:
+                    fn(url)
             except KeyError as e:
                 if 'contract_name' in str(e):
                     print(f'Probably no code found for {address}')
