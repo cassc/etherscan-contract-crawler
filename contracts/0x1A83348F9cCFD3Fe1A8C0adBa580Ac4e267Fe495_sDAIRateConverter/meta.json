@@ -1,0 +1,13 @@
+{
+  "Address": "0x1A83348F9cCFD3Fe1A8C0adBa580Ac4e267Fe495",
+  "Contract Name": "sDAIRateConverter",
+  "Compiler": "Vyper",
+  "Version": "vyper:0.3.9",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "-",
+  "Verified": "9/27/2023",
+  "Audit": "-",
+  "License": "MIT",
+  "Similar Contract": "Search"
+}

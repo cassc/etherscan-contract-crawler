@@ -1,0 +1,13 @@
+{
+  "Address": "0x8B03d94DC1b338D76F601B9c0e37cf5110f4B37d",
+  "Contract Name": "LybraV2Withdraw",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.19",
+  "Balance": "0 ETH",
+  "Txns": "1",
+  "Setting": "",
+  "Verified": "9/28/2023",
+  "Audit": "-",
+  "License": "GNU LGPLv3",
+  "Similar Contract": "Search"
+}
