@@ -1,0 +1,13 @@
+{
+  "Address": "0x2906d67A0929e1E6C9102AA4d97e1f1F9B112153",
+  "Contract Name": "MockERC20",
+  "Compiler": "Solidity(Json)",
+  "Version": "0.8.17",
+  "Balance": "0 ETH",
+  "Txns": "3",
+  "Setting": "",
+  "Verified": "10/24/2023",
+  "Audit": "-",
+  "License": "-",
+  "Similar Contract": "Search"
+}

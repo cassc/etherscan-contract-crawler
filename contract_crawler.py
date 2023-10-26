@@ -1,4 +1,5 @@
 # python contract_crawler.py --web bscscan --session-url https://bscscan.com/address/0x2D530a3b07F2a9Cc3B9043356Af293aEE09ED103#code
+# python contract_crawler.py --web polygon --use-api --api-key $POLYGONSCAN_API_KEY --csv ../py-scripts/polygon.addresses.csv
 
 import argparse
 import os
@@ -27,6 +28,13 @@ REQ_HEADER = {
 
 VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
 CONTRACT_SOURCE_URL   = 'https://etherscan.io/address/{}#code'
+
+
+BASE_URL_BY_NETWORK ={
+    'ethscan': 'https://api.etherscan.io/api',
+    'bscscan': 'https://api.bscscan.com/api',
+    'polygon': 'https://api.polygonscan.com/api'
+}
 
 INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
                     'Compiler Version': 'version',
@@ -371,7 +379,7 @@ def retrieve_standard_json_input_by_api(network, api_key, address, root):
     if os.path.exists(root):
         return
 
-    base_url = 'https://api.etherscan.io/api' if network == 'etherscan' else 'https://api.bscscan.com/api'
+    base_url = BASE_URL_BY_NETWORK.get(network)
     url = f'{base_url}?module=contract&action=getsourcecode&address={address}&apikey={api_key}'
     response = requests.get(url)
     data = json.loads(response.text)
@@ -392,14 +400,14 @@ def retrieve_standard_json_input_by_api(network, api_key, address, root):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument("--web", default="etherscan",type=str, help="Choose website, etherscan(default) or bscscan")
+    ap.add_argument("--web", default="etherscan",type=str, help="Choose website, etherscan(default) or bscscan, polygon")
     ap.add_argument("--url", type=str, help="URL of contract to download")
     ap.add_argument("--output-dir", type=str, help="URL of contract to download", default="./")
     ap.add_argument("--session-url", type=str, help="URL to load the first session from")
     ap.add_argument("--csv", type=str, help="Load address from csv file")
     ap.add_argument("--csv-col-index", type=int, help="Column index of address in csv file", default=-1)
     ap.add_argument("--use-api", action='store_true', help="Use API to download source code")
-    ap.add_argument("--etherscan-api-key", type=str, help="API key for etherscan or bscscan")
+    ap.add_argument("--api-key", type=str, help="API key for etherscan or bscscan or polygonscan")
 
     args = ap.parse_args()
     OUTPUT_DIR = args.output_dir
@@ -464,8 +472,8 @@ if __name__ == '__main__':
             url = CONTRACT_SOURCE_URL.format(address)
             print(f'Processing {url}')
             try:
-                if args.web=="etherscan" and args.use_api and args.etherscan_api_key:
-                    retrieve_standard_json_input_by_api(args.web, args.etherscan_api_key, address, f'{ROOT_DIR}/{address}')
+                if args.use_api:
+                    retrieve_standard_json_input_by_api(args.web, args.api_key, address, f'{ROOT_DIR}/{address}')
                 else:
                     fn(url)
             except KeyError as e:
