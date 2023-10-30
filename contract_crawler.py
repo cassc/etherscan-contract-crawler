@@ -31,7 +31,7 @@ CONTRACT_SOURCE_URL   = 'https://etherscan.io/address/{}#code'
 
 
 BASE_URL_BY_NETWORK ={
-    'ethscan': 'https://api.etherscan.io/api',
+    'etherscan': 'https://api.etherscan.io/api',
     'bscscan': 'https://api.bscscan.com/api',
     'polygon': 'https://api.polygonscan.com/api'
 }
