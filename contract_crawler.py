@@ -392,7 +392,7 @@ def retrieve_standard_json_input_by_api(network, api_key, address, root):
         output = os.path.join(root, f'{address}_{to_path_name(contract_name, 20)}.json')
         os.mkdir(root)
         with open(output, 'w') as f:
-            print(f'Writing {output} for {contract_name}')
+            print(output)
             json.dump(result, f)
 
 
@@ -407,6 +407,7 @@ if __name__ == '__main__':
     ap.add_argument("--csv", type=str, help="Load address from csv file")
     ap.add_argument("--csv-col-index", type=int, help="Column index of address in csv file", default=-1)
     ap.add_argument("--use-api", action='store_true', help="Use API to download source code")
+    ap.add_argument("--address", type=str, help="Address to download (to be used with the `--use-api` flag)")
     ap.add_argument("--api-key", type=str, help="API key for etherscan or bscscan or polygonscan")
 
     args = ap.parse_args()
@@ -418,6 +419,8 @@ if __name__ == '__main__':
     if args.csv:
         addresses = set(load_addresses_from_csv(args.csv, args.csv_col_index))
         print(f'Found {len(addresses)} addresses in {args.csv}')
+    elif args.address:
+        addresses = set([args.address])
 
     if args.web == 'etherscan':
         VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
@@ -450,8 +453,8 @@ if __name__ == '__main__':
         load_session(args.session_url or VERIFIED_CONTRACT_URL)
 
     if url:
-        fn(url)
-    elif args.csv:
+        fn(url)        
+    elif args.csv or args.address:
         existing = build_existing_contracts(ROOT_DIR)
         processed = set()
         if os.path.exists('.processed.txt'):
