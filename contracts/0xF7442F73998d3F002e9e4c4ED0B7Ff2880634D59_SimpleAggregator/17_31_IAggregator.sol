@@ -1,7 +1,0 @@
-//SPDX-License-Identifier: Unlicense
-pragma solidity ^0.8.16;
-
-
-interface IAggregator {
-  function latestAnswer() external view returns (int256);
-}

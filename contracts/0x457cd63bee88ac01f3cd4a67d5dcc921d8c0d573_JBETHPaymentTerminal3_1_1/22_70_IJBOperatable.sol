@@ -1,8 +1,0 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-import {IJBOperatorStore} from './IJBOperatorStore.sol';
-
-interface IJBOperatable {
-  function operatorStore() external view returns (IJBOperatorStore);
-}

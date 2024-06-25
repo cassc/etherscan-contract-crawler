@@ -1,6 +1,0 @@
-// SPDX-License-Identifier: Apache-2.0
-pragma solidity 0.8.20;
-
-interface IParty1_1 {
-    function mintAuthority() external view returns (address);
-}
