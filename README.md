@@ -1,9 +1,21 @@
+# Usage
+
+Download contracts from etherscan:
+
+``` bash
+python contract_crawler.py --web etherscan  --use-api --api-key $ETHERSCAN_APIKEYS --csv eth-addresses.csv --output-dir ../verified_contracts/
+```
+
+Download contracts can be found in https://github.com/cassc/verified_contracts
+
+# Deprecated
+
 Crawl the latest verified contract source code from Etherscan. Usage:
 
 ``` bash
 python etherscan_contract_crawler.py
 
-python etherscan_contract_crawler.py --url 
+python etherscan_contract_crawler.py --url
 ```
 
 To use a unified crawler for etherscan and bscscan:
@@ -38,4 +50,3 @@ contracts
 ├── contracts/contracts_20220602_174048.json
 ...
 ```
-

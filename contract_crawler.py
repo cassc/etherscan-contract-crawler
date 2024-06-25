@@ -412,7 +412,6 @@ if __name__ == '__main__':
     args = ap.parse_args()
     OUTPUT_DIR = args.output_dir
     OUTPUT_DIR = OUTPUT_DIR[:-1] if OUTPUT_DIR.endswith('/') else OUTPUT_DIR
-    ROOT_DIR = f'{OUTPUT_DIR}/contracts'
 
     addresses = set()
     if args.csv:
@@ -424,6 +423,7 @@ if __name__ == '__main__':
     if args.web == 'etherscan':
         VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
         CONTRACT_SOURCE_URL   = 'https://etherscan.io/address/{}#code'
+        ROOT_DIR = f'{OUTPUT_DIR}/eth_contracts'
         os.makedirs(ROOT_DIR, exist_ok=True)
         fn = download_url
 
