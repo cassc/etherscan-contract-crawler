@@ -6,7 +6,14 @@ Download contracts from etherscan:
 python contract_crawler.py --web etherscan  --use-api --api-key $ETHERSCAN_APIKEYS --csv eth-addresses.csv --output-dir ../verified_contracts/
 ```
 
-Download contracts can be found in https://github.com/cassc/verified_contracts
+The contract addresses are loaded using the script:
+
+``` bash
+# Monitoring online transactions to discover possible contracts addresses
+python blockchain-multichain-monitor.py  --endpoint $ETH_RPC_ENDPOINT eth-addresses.csv
+```
+
+Downloaded contracts can be found at https://github.com/cassc/verified_contracts
 
 # Deprecated
 
