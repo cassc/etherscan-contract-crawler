@@ -3,3 +3,6 @@
 .DS_Store
 .example.html
 .processed.txt
+.projectile
+.lh/
+.history/
