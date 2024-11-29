@@ -381,7 +381,9 @@ def retrieve_standard_json_input_by_api(network, api_key, address, root):
     base_url = BASE_URL_BY_NETWORK.get(network)
     url = f'{base_url}?module=contract&action=getsourcecode&address={address}&apikey={api_key}'
     response = requests.get(url)
+    response.raise_for_status()
     data = json.loads(response.text)
+
     if data['status'] == '1':
         result = data['result'][0]
         contract_name = result.get('ContractName')
