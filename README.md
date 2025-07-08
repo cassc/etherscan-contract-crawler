@@ -3,10 +3,14 @@
 Download contracts from etherscan:
 
 ``` bash
+# Download all the contracts from etherscan.io for the given addresses in eth-addresses.csv
 python contract_crawler.py --web etherscan  --use-api --api-key $ETHERSCAN_APIKEYS --csv eth-addresses.csv --output-dir ../verified_contracts/
+
+# Download a specific contract from etherscan.io
+python contract_crawler.py --web bscscan  --use-api --api-key $ETHERSCAN_API_KEY --address 0x42e2773508e2ae8ff9434bea599812e28449e2cd --output-dir LifeProtocolContract
 ```
 
-The contract addresses are loaded using the script:
+The contract addresses are discovered using the script:
 
 ``` bash
 # Monitoring online transactions to discover possible contracts addresses

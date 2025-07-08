@@ -27,13 +27,14 @@ REQ_HEADER = {
 
 VERIFIED_CONTRACT_URL = 'https://etherscan.io/contractsVerified'
 CONTRACT_SOURCE_URL   = 'https://etherscan.io/address/{}#code'
+ETHERSCAN_BASE_URL = 'https://api.etherscan.io/v2/api'
 
-
-BASE_URL_BY_NETWORK ={
-    'etherscan': 'https://api.etherscan.io/api',
-    'bscscan': 'https://api.bscscan.com/api',
-    'polygon': 'https://api.polygonscan.com/api'
+CHAIN_ID_BY_NETWORK = {
+    'etherscan': 1,
+    'bscscan': 56,
+    'polygon': 137,
 }
+
 
 INPAGE_META_TEXT = {'Contract Name:': 'contract_name',
                     'Compiler Version': 'version',
@@ -378,8 +379,10 @@ def retrieve_standard_json_input_by_api(network, api_key, address, root):
     if os.path.exists(root):
         return
 
-    base_url = BASE_URL_BY_NETWORK.get(network)
-    url = f'{base_url}?module=contract&action=getsourcecode&address={address}&apikey={api_key}'
+    chainId = CHAIN_ID_BY_NETWORK.get(network)
+    base_url = ETHERSCAN_BASE_URL
+    url = f'{base_url}?module=contract&action=getsourcecode&address={address}&apikey={api_key}&chainId={chainId}'
+    print(f'Retrieving standard JSON input from {url}')
     response = requests.get(url)
     response.raise_for_status()
     data = json.loads(response.text)
@@ -395,8 +398,6 @@ def retrieve_standard_json_input_by_api(network, api_key, address, root):
         with open(output, 'w') as f:
             print(output)
             json.dump(result, f)
-
-
 
 
 if __name__ == '__main__':
